@@ -1,0 +1,6 @@
+﻿#content .form-group legend{
+	border-bottom:0 transparent none;
+}
+.form-group-day{
+	display:none;
+}

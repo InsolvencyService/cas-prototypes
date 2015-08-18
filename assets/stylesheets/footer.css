@@ -1,0 +1,103 @@
+﻿
+.ogl-logo {
+    background: url(../img/open-government-licence.png) no-repeat;
+    background-size: 41px 17px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: top;
+    width: 41px;
+    height: 17px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20/10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {
+    .ogl-logo {
+        background-image: url(../img/open-government-licence_2x.png);
+    }
+}
+
+footer {
+    background: #dee0e2;
+    color: #454A4C;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.footer__wrapper {
+    border-top: 1px solid #a1acb2;
+}
+
+.footer__wrapper a {
+    color: #454A4C;
+}
+
+.footer__wrapper a:hover {
+    color: #171819;
+}
+
+.footer__meta {
+    margin: 0 auto;
+    max-width: 1000px;
+    overflow: hidden;
+    padding: 10px 15px 60px;
+}
+
+@media (min-width: 641px) {
+    .footer__meta {
+        padding-top: 60px;
+    }
+}
+
+.footer__nav {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width: 641px) {
+    .footer__nav {
+        margin-bottom: 0;
+        margin-right: -4px;
+        width: 75%;
+    }
+}
+
+.footer__contact {
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    padding-right: 20px;
+    vertical-align: bottom;
+}
+
+@media (min-width: 641px) {
+    .footer__link {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
+
+.footer__ogl {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.footer__copyright {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+@media (min-width: 641px) {
+    .footer__copyright {
+        margin-right: -4px;
+        width: 25%;
+    }
+}
+
+.footer__copyright:hover {
+    text-decoration: underline;
+}
