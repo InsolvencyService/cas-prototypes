@@ -139,12 +139,22 @@ display:block;
                 <div class="col-sm-8">
                     <h1 class="form-title heading-large">Register</h1>
                     <h3>In order to register, please enter your IP Number and Email</h3><br />
+
+                    <div class="validation-summary" style="display:none">
+                        <h2>IP Number is not valid</h2>
+                        <p></p><ol>
+                            <li class="error-message">
+                                <p>Please enter a 4 to 6 digit number</p>
+                            </li>
+                        </ol>
+                    </div>
+
                     <form class="form" method="post">
                         <div class="form-navigation form-group">
                             <div class="msg-no-URN">
                                 <div class="form-group ">
                                     <label class="form-label">IP Number</label>
-                                    <input aria-describedby="applicant_address_line_2_error applicant_address_line_2_help" value="" />
+                                    <input aria-describedby="applicant_address_line_2_error applicant_address_line_2_help" value="" id="urn" />
                                     <br />
                                 </div>
                             </div>
@@ -157,7 +167,7 @@ display:block;
                         </div>
                     </form>
 
-                    <a href="temporarypassword.html" class="button">Register</a>
+                    <a href="temporarypassword.html" class="button" id="next">Register</a>
 
 	                <p divclass="clearfix"><br/></p>
 	            </div>
@@ -188,10 +198,25 @@ display:block;
             </div>
         </footer>
         <!--end footer-->
+        <script type="text/javascript" src="../assets/js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function ()
+            {
+	            $("#next").click(function (e)
+	            {
+	                var ip = $("#urn").val();
+
+	                if ((ip.length < 4 || ip.length > 6))
+	                {
+				        e.preventDefault();
+				        $(".validation-summary").show();
+			        }
+	            });
+            });
+        </script>
 
         <div class="app-error hidden" id="global-app-error"></div>
-            <script type="text/javascript" src="../assets/js/bootstrap-switch/jquery.min.js"></script>
-
             <div id="window-resizer-tooltip" style="display: none;">
                 <a href="/claims/start#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a>
                 <span class="tooltipTitle">Window size: </span>
