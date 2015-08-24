@@ -134,7 +134,7 @@
                     </p>
                     <br />
                     <a href="dashboard.html">Dashboard</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="ipadmins.html">IP Admins</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="ipadmins.html">IP Staff</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="changepassword.html">Change Password</a>
                     <div style="float: right; clear: both;"><a href="logout.html">Logout (Mr D Smith)</a> </div>
                 </div>
@@ -144,45 +144,53 @@
             <div class="content">
                 <div class="row" style="margin-left:15px;margin-right:15px;">
                     <div class="col-sm-8">
-                        <h1 class="form-title heading-large">Case - Directors</h1>
+                        <h1 class="form-title heading-large">Case - Office Holder</h1>
                         <div style="float: left; clear: both;">
                             <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
                         </div>
-                        <br /><br />
                         <form class="form" method="post">
                             <div class="form-navigation form-group">
-                                <div class="msg-no-URN">
+                                <fieldset class="inline">
                                     <div class="form-group ">
-                                        <table>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Address</th>
-                                                <th>Action</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Sarah Smith</td>
-                                                <td>1 Windsor Drive, Birmingham, B36 RTF</td>
-                                                <td><a href="edit_director.html" class="button">Edit</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>John Smith</td>
-                                                <td>1 Windsor Drive, Birmingham, B36 RTF</td>
-                                                <td><a href="edit_director.html" class="button">Edit</a>
-                                            </tr>
-                                            <tr>
-                                                <td>Peter Smith</td>
-                                                <td>3 Windsor Drive, Birmingham, B36 RTF</td>
-                                                <td><a href="edit_director.html" class="button">Edit</a></td>
-                                            </tr>
-                                        </table>
-                                        <a href="add_director.html" class="button">Add Director</a>
-                                        <br /><br />
-                                        <a href="case_details_1.html" class="button">Continue</a>
+                                        <label class="form-label">Firm Name&nbsp;<span title="These are the number of creditors associated with the company">*</span></label>
+                                        <input aria-describedby="" value="IP's R Us Ltd" /><br /><p><br /></p>
                                     </div>
-                                </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">First Name&nbsp;<span title="These are the number of creditors associated with the company">*</span></label>
+                                        <input aria-describedby="" value="Ryan" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Last Name</label>
+                                        <input aria-describedby="" value="Smith" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Responsibility</label>
+                                        <input aria-describedby="" value="Ryan Smith" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Status</label>
+                                        <input aria-describedby="" value="Administrator" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Appointment Date</label>
+                                        <input aria-describedby="" value="24-08-2015" />
+                                    </div>
+                                </fieldset>
+                                <p divclass="clearfix"><br /><br />&nbsp;</p>
                             </div>
-                        </form>
-                        <p divclass="clearfix"><br /></p>
+                            <p><br />&nbsp;</p>
+                            <a href="case_company_details.html" class="button">Continue</a>
+                        </form> 
                     </div>
                 </div>
             </div>

@@ -133,8 +133,8 @@
                         This is a new service - your <a href="#" target="_blank">feedback</a> will help us improve it
                     </p>
                     <br />
-                    <a href="cashboard.html">Dashboard</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="ipadmins.html">IP Admins</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="dashboard.html">Dashboard</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="ipadmins.html">IP Staff</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="changepassword.html">Change Password</a>
                     <div style="float: right; clear: both;"><a href="logout.html">Logout (Mr D Smith)</a> </div>
                 </div>
@@ -144,44 +144,49 @@
             <div class="content">
                 <div class="row" style="margin-left:15px;margin-right:15px;">
                     <div class="col-sm-8">
-                        <h1 class="form-title heading-large">Case - Details 1</h1>
+                        <h1 class="form-title heading-large">Case - Director Details</h1>
                         <div style="float: left; clear: both;">
                             <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
                         </div>
                         <br /><br />
+                        <div style="float: left; clear: both;">
+                            <p>Note - each director's details must be viewed and updated where required.</p>
+                        </div>
                         <form class="form" method="post">
                             <div class="form-navigation form-group">
                                 <div class="msg-no-URN">
-                                    <div class="form-group ">
-                                        <label class="form-label">Number of Company creditors&nbsp;<span title="These are the number of creditors associated with the company">*</span></label>
-                                        <select class="form-control" id="question1">
-                                            <option disabled="disabled" selected="selected">Please select ...</option>
-                                            <option>1 to 10</option>
-                                            <option>11 to 50</option>
-                                            <option>51 to 100</option>
-                                            <option>Over 100</option>
-                                        </select>
+                                    <div class="form-group" style="width:761px">
+                                        <table>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Address</th>
+                                                <th>Appointment Date</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            <tr style="background-color:lightgray">
+                                                <td>Sarah Smith</td>
+                                                <td>1 Windsor Drive, Birmingham, B36 RTF</td>
+                                                <td>23-11-2011</td>
+                                                <td><a href="edit_director.html" class="button">View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>John Smith</td>
+                                                <td>1 Windsor Drive, Birmingham, B36 RTF</td>
+                                                <td>23-11-2011</td>
+                                                <td><a href="edit_director.html" class="button">View</a>
+                                            </tr>
+                                            <tr>
+                                                <td>Peter Smith</td>
+                                                <td>3 Windsor Drive, Birmingham, B36 RTF</td>
+                                                <td>23-09-2012</td>
+                                                <td><a href="edit_director.html" class="button">View</a></td>
+                                            </tr>
+                                        </table>
+                                        <a href="add_director.html" class="button">Add Director</a>
+                                        <br /><br />
+                                        <a href="case_details_1.html" class="button">Continue</a>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="form-group ">
-                                        <label class="form-label">Cause of failure&nbsp;<span title="These are all the resons why a company has failed">*</span></label>
-                                        <select class="form-control" id="question1">
-                                            <option disabled="disabled" selected="selected">Please select ...</option>
-                                            <option>Under capitalisation</option>
-                                            <option>Poor financial control, including lack of records</option>
-                                            <option>Inadequate cash flow</option>
-                                            <option>Poor econimic conditions</option>
-                                            <option>Dispute among directors</option>
-                                            <option>Unknown</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <p divclass="clearfix"><br /><br /></p>
-                                <p divclass="clearfix"><br /><br /></p>
-                                <p divclass="clearfix"><br /><br /></p>
-                                <a href="case_initial.html" class="button">Back</a>
-                                <a href="case_details_2.html" class="button">Continue</a>
                             </div>
                         </form>
                         <p divclass="clearfix"><br /></p>

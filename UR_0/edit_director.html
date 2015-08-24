@@ -134,7 +134,7 @@
                     </p>
                     <br />
                     <a href="dashboard.html">Dashboard</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="ipadmins.html">IP Admins</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="ipadmins.html">IP Staff</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="changepassword.html">Change Password</a>
                     <div style="float: right; clear: both;"><a href="logout.html">Logout (Mr D Smith)</a> </div>
                 </div>
@@ -144,57 +144,182 @@
             <div class="content">
                 <div class="row" style="margin-left:15px;margin-right:15px;">
                     <div class="col-sm-8">
-                        <h1 class="form-title heading-large">Dashboard - Directors</h1>
+                        <h1 class="form-title heading-large">Case - Director Details - View</h1>
                         <div style="float: left; clear: both;">
                             <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
                         </div>
-                        <br /><br />
                         <form class="form" method="post">
                             <div class="form-navigation form-group">
-                                <div class="msg-no-URN">
+                                <fieldset class="inline">
                                     <div class="form-group ">
-                                        <table>
-                                            <tr>
-                                                <th>Forename</th>
-                                                <td><input aria-describedby="" value="Sarah" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Surname</th>
-                                                <td><input aria-describedby="" value="Smith" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Address 1</th>
-                                                <td><input aria-describedby="" value="1 Windsor Drive" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Address 2</th>
-                                                <td><input aria-describedby="" value="Castle Bromwhich" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Address 3</th>
-                                                <td><input aria-describedby="" value="Birmingham" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Address 4</th>
-                                                <td><input aria-describedby="" value="" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Address 5</th>
-                                                <td><input aria-describedby="" value="West Midlands" /></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Postcode</th>
-                                                <td><input aria-describedby="" value="B36 RTF" /></td>
-                                            </tr>
-                                        </table>
+                                        <label class="form-label">Title</label>
+                                        <select class="form-control" id="question1">
+                                            <option disabled="disabled" selected="selected">Please select ...</option>
+                                            <option>Mr.</option>
+                                            <option>Mrs.</option>
+                                            <option>Miss.</option>
+                                            <option>Ms.</option>
+                                            <option>Dr.</option>
+                                            <option>Prof.</option>
+                                        </select>
                                         <br />
-                                        <a href="case_initial.html" class="button">Save</a>
-                                        <a href="case_initial.html" class="button">Delete</a>
                                     </div>
-                                </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Forename</label>
+                                        <input aria-describedby="" value="Ryan" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Surname</label>
+                                        <input aria-describedby="" value="Smith" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Address 1</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Address 2</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Address 3</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Post code</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Email</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Phone number</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Date of birth</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group">
+                                        <label class="form-label">Appointment status</label>
+                                        <div id="title" class="form-group" onchange="showDiv(this)">
+                                            <label id="title_label0" for="dejure" class="block-label">
+                                                <input id="dejure" value="Mr." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De jure
+                                            </label>
+                                            <label id="title_label1" for="check2" class="block-label">
+                                                <input id="check2" value="Mrs." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De facto
+                                            </label>
+                                            <label id="title_label1" for="check3" class="block-label">
+                                                <input id="check3" value="Mrsx." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">Shadow
+                                            </label>
+                                        </div>
+                                        <br /><p><br /><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-evidence">
+                                    <div class="form-group">
+                                        <label class="form-label">What evidence is there to show that the person acted as a director</label>
+                                        <select class="form-control">
+                                            <option disabled="disabled" selected="selected">Please select ...</option>
+                                            <option>Company books</option>
+                                            <option>Employees</option>
+                                            <option>Company accountant</option>
+                                            <option>Bank</option>
+                                            <option>3rd parties</option>
+                                            <option>Hearsay</option>
+                                        </select>
+                                        <br />
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Termination date</label>
+                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Is director connected to 3 or company failures in 5 years?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check6" class="block-label">
+                                                <input id="check6" value="Mr." name="x" type="radio" aria-describedby="title_error title_help">Yes
+                                            </label>
+                                            <label id="title_label1" for="check7" class="block-label">
+                                                <input id="check7" value="Mrs." name="x" type="radio" aria-describedby="title_error title_help">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <p divclass="clearfix"><br /><br />&nbsp;</p>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Has director given a personal gaurantee for any of the company's debt?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check61" class="block-label">
+                                                <input id="check61" value="Mr." name="xx" type="radio" aria-describedby="title_error title_help">Yes
+                                            </label>
+                                            <label id="title_label1" for="check71" class="block-label">
+                                                <input id="check71" value="Mrs." name="xx" type="radio" aria-describedby="title_error title_help">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <p divclass="clearfix"><br /><br />&nbsp;</p>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Whilst the company was trading was the director either bankrupt or disqualified?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check611" class="block-label">
+                                                <input id="check611" value="Mr." name="xx1" type="radio" aria-describedby="title_error title_help" onchange="showEvidence2()">Yes
+                                            </label>
+                                            <label id="title_label1" for="check711" class="block-label">
+                                                <input id="check711" value="Mrs." name="xx1" type="radio" aria-describedby="title_error title_help" onchange="showEvidence2()">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <p divclass="clearfix"><br /><br />&nbsp;</p>
+
+                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-evidence2">
+                                    <div class="form-group">
+                                        <label class="form-label">What evidence is there to show that the person acted as a director whilst bankrupt or disqualified</label>
+                                        <select class="form-control">
+                                            <option disabled="disabled" selected="selected">Please select ...</option>
+                                            <option>Company books</option>
+                                            <option>Employees</option>
+                                            <option>Company accountant</option>
+                                            <option>Bank</option>
+                                            <option>3rd parties</option>
+                                            <option>Hearsay</option>
+                                        </select>
+                                        <br />
+                                    </div>
+                                </fieldset>
                             </div>
+                            <p><br />&nbsp;</p>
+                            <a href="case_director_details.html" class="button">Save</a>
+                            <a href="case_director_details.html" class="button">Delete</a>
                         </form>
-                        <p divclass="clearfix"><br /></p>
                     </div>
                 </div>
             </div>
@@ -225,6 +350,28 @@
 
             <div class="app-error hidden" id="global-app-error"></div>
             <script type="text/javascript" src="../assets/js/bootstrap-switch/jquery.min.js"></script>
+
+            <script type="text/javascript">
+                function showEvidence()
+                {
+                    if (document.getElementById('dejure').checked) {
+                        document.getElementById('div-evidence').style.visibility = 'visible';
+                        document.getElementById('div-evidence').style.height = '85px';
+                    } else {
+                        document.getElementById('div-evidence').style.visibility = 'hidden';
+                        document.getElementById('div-evidence').style.height = '0px';
+                    }
+                }
+                function showEvidence2() {
+                    if (document.getElementById('check611').checked) {
+                        document.getElementById('div-evidence2').style.visibility = 'visible';
+                        document.getElementById('div-evidence2').style.height = '85px';
+                    } else {
+                        document.getElementById('div-evidence2').style.visibility = 'hidden';
+                        document.getElementById('div-evidence2').style.height = '0px';
+                    }
+                }
+            </script>
 
             <div id="window-resizer-tooltip" style="display: none;">
                 <a href="/claims/start#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a>
