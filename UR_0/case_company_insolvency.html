@@ -144,7 +144,7 @@
             <div class="content">
                 <div class="row" style="margin-left:15px;margin-right:15px;">
                     <div class="col-sm-8">
-                        <h1 class="form-title heading-large">Case - Director Details - View</h1>
+                        <h1 class="form-title heading-large">Case - Company Insolvency</h1>
                         <div style="float: left; clear: both;">
                             <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
                         </div>
@@ -152,200 +152,174 @@
                             <div class="form-navigation form-group">
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Title</label>
+                                        <label class="form-label">What is the number of company creditors?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check6" class="block-label">
+                                                <input id="check6" value="Mr." name="x" type="radio" aria-describedby="title_error title_help">1  to 10
+                                            </label>
+                                            <label id="title_label1" for="check7" class="block-label">
+                                                <input id="check7" value="Mrs." name="x" type="radio" aria-describedby="title_error title_help">11 to 50
+                                            </label>
+                                            <label id="title_label1" for="check17" class="block-label">
+                                                <input id="check17" value="Mrs." name="x" type="radio" aria-describedby="title_error title_help">51 to 100
+                                            </label>
+                                            <label id="title_label1" for="check117" class="block-label">
+                                                <input id="check117" value="Mrs." name="x" type="radio" aria-describedby="title_error title_help">Over 100
+                                            </label>
+                                        </div>
+                                        <br /><p><br />&nbsp;</p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Is there a majority creditor?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="majorityyes" class="block-label">
+                                                <input id="majorityyes" value="Mr." name="x2" type="radio" aria-describedby="title_error title_help" onchange="showMajority()">Yes
+                                            </label>
+                                            <label id="title_label1" for="check7x" class="block-label">
+                                                <input id="check7x" value="Mrs." name="x2" type="radio" aria-describedby="title_error title_help" onchange="showMajority()">No
+                                            </label>
+                                        </div>
+                                        <br /><p><br />&nbsp;</p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-majority">
+                                    <div class="form-group ">
+                                        <label class="form-label">What % is this?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="51" class="block-label">
+                                                <input id="51" value="Mr." name="x3" type="radio" aria-describedby="title_error title_help">51 - 75%
+                                            </label>
+                                            <label id="title_label1" for="76" class="block-label">
+                                                <input id="76" value="Mrs." name="x3" type="radio" aria-describedby="title_error title_help">76 - 90%
+                                            </label>
+                                            <label id="title_label1" for="91" class="block-label">
+                                                <input id="91" value="Mrs." name="x3" type="radio" aria-describedby="title_error title_help">91 - 100%
+                                            </label>
+                                        </div>
+                                        <br /><p><br />&nbsp;</p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-majority2">
+                                    <div class="form-group ">
+                                        <label class="form-label">Who is the majority creditor?</label>
                                         <select class="form-control" id="question1">
                                             <option disabled="disabled" selected="selected">Please select ...</option>
-                                            <option>Mr.</option>
-                                            <option>Mrs.</option>
-                                            <option>Miss.</option>
-                                            <option>Ms.</option>
-                                            <option>Dr.</option>
-                                            <option>Prof.</option>
+                                            <option>HMRC</option>
+                                            <option>Trade &amp; Expense</option>
+                                            <option>Banks</option>
+                                            <option>Investors</option>
+                                            <option>Directors and / or connected parties</option>
                                         </select>
                                         <br />
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Forename</label>
-                                        <input aria-describedby="" value="Ryan" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Surname</label>
-                                        <input aria-describedby="" value="Smith" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Address 1</label>
-                                        <input aria-describedby="" value="1 Windsor Drive" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Address 2</label>
-                                        <input aria-describedby="" value="Birmingham" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Address 3</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Post code</label>
-                                        <input aria-describedby="" value="B36 RTF" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Email</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Phone number</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Date of birth</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group">
-                                        <label class="form-label">Appointment status</label>
-                                        <div id="title" class="form-group" onchange="showDiv(this)">
-                                            <label id="title_label0" for="dejure" class="block-label">
-                                                <input id="dejure" value="Mr." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De jure
-                                            </label>
-                                            <label id="title_label1" for="check2" class="block-label">
-                                                <input id="check2" value="Mrs." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De facto
-                                            </label>
-                                            <label id="title_label1" for="check3" class="block-label">
-                                                <input id="check3" value="Mrsx." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">Shadow
-                                            </label>
-                                        </div>
-                                        <br /><p><br /><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-evidence">
-                                    <div class="form-group">
-                                        <label class="form-label">What evidence is there to show that the person acted as a director</label>
+                                        <label class="form-label">What do you consider are the causes of the company's failure?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="check9" class="block-label">
-                                                <input id="check9" value="Mr." name="title123" type="checkbox" aria-describedby="title_error title_help">Company books
+                                                <input id="check9" value="Mr." name="title123" type="checkbox" aria-describedby="title_error title_help">Under capitalisation
                                             </label>
                                             <label id="title_label1" for="check10" class="block-label">
-                                                <input id="check10" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Employees
+                                                <input id="check10" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Poor financial control, including lack of records
                                             </label>
                                             <label id="title_label1" for="check11" class="block-label">
-                                                <input id="check11" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Company accountant
+                                                <input id="check11" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Inadequate cash flow
                                             </label>
                                             <label id="title_label1" for="check12" class="block-label">
-                                                <input id="check12" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Bank
+                                                <input id="check12" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Poor economic conditions
                                             </label>
                                             <label id="title_label1" for="check13" class="block-label">
-                                                <input id="check13" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">3rd parties
+                                                <input id="check13" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Dispute amoung directors
                                             </label>
                                             <label id="title_label1" for="check14" class="block-label">
-                                                <input id="check14" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Hearsay
+                                                <input id="check14" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Unknown
+                                            </label>
+                                            <label id="title_label1" for="check15" class="block-label">
+                                                <input id="check15" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Other
                                             </label>
                                         </div>
+                                        <br /><p><br />&nbsp;</p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">What is the Company's total deficiency?</label>
+                                        <select class="form-control" id="question1">
+                                            <option disabled="disabled" selected="selected">Please select ...</option>
+                                            <option>Less than £20,000</option>
+                                            <option>Between £20,001 and £100,000</option>
+                                            <option>Between £100,001 and £500,000</option>
+                                            <option>Between £500,001 and £1,000,000</option>
+                                            <option>Over £1,000,000</option>
+                                        </select>
                                         <br />
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Appointment date</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                        <label class="form-label">Is there likely to be a dividend to unsecured creditors?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="dividendyes" class="block-label">
+                                                <input id="dividendyes" value="Mr." name="x23" type="radio" aria-describedby="title_error title_help" onchange="showDividend()">Yes
+                                            </label>
+                                            <label id="title_label1" for="check7xx" class="block-label">
+                                                <input id="check7xx" value="Mrs." name="x23" type="radio" aria-describedby="title_error title_help" onchange="showDividend()">No
+                                            </label>
+                                        </div>
+                                        <br /><p><br />&nbsp;</p>
                                     </div>
                                 </fieldset>
-								<fieldset class="inline">
+                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-dividend">
                                     <div class="form-group ">
-                                        <label class="form-label">Termination date</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
+                                        <label class="form-label">What is this value?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check9r" class="block-label">
+                                                <input id="check9r" value="Mr." name="title123" type="radio" aria-describedby="title_error title_help">1 - 10p in £
+                                            </label>
+                                            <label id="title_label1" for="check10r" class="block-label">
+                                                <input id="check10r" value="Mrs." name="title123" type="radio" aria-describedby="title_error title_help">11 - 25p in £
+                                            </label>
+                                            <label id="title_label1" for="check11r" class="block-label">
+                                                <input id="check11r" value="Mrs." name="title123" type="radio" aria-describedby="title_error title_help">26 - 50p in £
+                                            </label>
+                                            <label id="title_label1" for="check12r" class="block-label">
+                                                <input id="check12r" value="Mrs." name="title123" type="radio" aria-describedby="title_error title_help">51 - 100p in £
+                                            </label>
+                                        </div>
+                                        <br /><p><br />&nbsp;</p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Is director connected to 3 or company failures in 5 years?</label>
-                                        <div id="title" class="form-group">
-                                            <label id="title_label0" for="check6" class="block-label">
-                                                <input id="check6" value="Mr." name="x" type="radio" aria-describedby="title_error title_help">Yes
-                                            </label>
-                                            <label id="title_label1" for="check7" class="block-label">
-                                                <input id="check7" value="Mrs." name="x" type="radio" aria-describedby="title_error title_help">No
-                                            </label>
-                                        </div>
+                                        <label class="form-label">Will secured creditors be paid in full?</label>
+                                        <label id="title_label0" for="check9rxx" class="block-label">
+                                            <input id="check9rxx" value="Mr." name="title123xxx" type="radio" aria-describedby="title_error title_help">Yes
+                                        </label>
+                                        <label id="title_label1" for="check10rxx" class="block-label">
+                                            <input id="check10rxx" value="Mrs." name="title123xxx" type="radio" aria-describedby="title_error title_help">No
+                                        </label>
                                     </div>
+                                    <br /><p><br />&nbsp;</p>
                                 </fieldset>
-                                <p divclass="clearfix"><br /><br />&nbsp;</p>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Has director given a personal gaurantee for any of the company's debt?</label>
-                                        <div id="title" class="form-group">
-                                            <label id="title_label0" for="check61" class="block-label">
-                                                <input id="check61" value="Mr." name="xx" type="radio" aria-describedby="title_error title_help">Yes
-                                            </label>
-                                            <label id="title_label1" for="check71" class="block-label">
-                                                <input id="check71" value="Mrs." name="xx" type="radio" aria-describedby="title_error title_help">No
-                                            </label>
-                                        </div>
+                                        <label class="form-label">Are you aware of any investigations or procedings by other regulators (including police)?</label>
+                                        <label id="title_label0" for="check9rx" class="block-label">
+                                            <input id="check9rx" value="Mr." name="title123xx" type="radio" aria-describedby="title_error title_help">Yes
+                                        </label>
+                                        <label id="title_label1" for="check10rx" class="block-label">
+                                            <input id="check10rx" value="Mrs." name="title123xx" type="radio" aria-describedby="title_error title_help">No
+                                        </label>
                                     </div>
-                                </fieldset>
-                                <p divclass="clearfix"><br /><br />&nbsp;</p>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Whilst the company was trading was the director either bankrupt or disqualified?</label>
-                                        <div id="title" class="form-group">
-                                            <label id="title_label0" for="check611" class="block-label">
-                                                <input id="check611" value="Mr." name="xx1" type="radio" aria-describedby="title_error title_help" onchange="showEvidence2()">Yes
-                                            </label>
-                                            <label id="title_label1" for="check711" class="block-label">
-                                                <input id="check711" value="Mrs." name="xx1" type="radio" aria-describedby="title_error title_help" onchange="showEvidence2()">No
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                                <p divclass="clearfix"><br /><br />&nbsp;</p>
-
-                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-evidence2">
-                                    <div class="form-group">
-                                        <label class="form-label">What evidence is there to show that the person acted as a director whilst bankrupt or disqualified</label>
-                                        <div id="title" class="form-group">
-                                            <label id="title_label0" for="check91" class="block-label">
-                                                <input id="check91" value="Mr." name="title1231" type="checkbox" aria-describedby="title_error title_help">Company books
-                                            </label>
-                                            <label id="title_label1" for="check101" class="block-label">
-                                                <input id="check101" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Employees
-                                            </label>
-                                            <label id="title_label1" for="check111" class="block-label">
-                                                <input id="check111" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Company accountant
-                                            </label>
-                                            <label id="title_label1" for="check121" class="block-label">
-                                                <input id="check121" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Bank
-                                            </label>
-                                            <label id="title_label1" for="check131" class="block-label">
-                                                <input id="check131" value="Mrs." name="title123"1 type="checkbox" aria-describedby="title_error title_help">3rd parties
-                                            </label>
-                                            <label id="title_label1" for="check141" class="block-label">
-                                                <input id="check141" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Hearsay
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <br /><p><br />&nbsp;</p>
                                 </fieldset>
                             </div>
                             <p><br />&nbsp;</p>
-                            <a href="case_director_details.html" class="button">Save</a>
-                            <a href="case_director_details.html" class="button">Delete</a>
+                            <a href="case_director_details.html" class="button">Back</a>
+                            <a href="case_books_and_records.html" class="button">Continue</a>
                         </form>
                     </div>
                 </div>
@@ -379,23 +353,27 @@
             <script type="text/javascript" src="../assets/js/bootstrap-switch/jquery.min.js"></script>
 
             <script type="text/javascript">
-                function showEvidence()
+                function showMajority()
                 {
-                    if (document.getElementById('dejure').checked) {
-                        document.getElementById('div-evidence').style.visibility = 'visible';
-                        document.getElementById('div-evidence').style.height = '250px';
+                    if (document.getElementById('majorityyes').checked) {
+                        document.getElementById('div-majority').style.visibility = 'visible';
+                        document.getElementById('div-majority').style.height = '125px';
+                        document.getElementById('div-majority2').style.visibility = 'visible';
+                        document.getElementById('div-majority2').style.height = '100px';
                     } else {
-                        document.getElementById('div-evidence').style.visibility = 'hidden';
-                        document.getElementById('div-evidence').style.height = '0px';
+                        document.getElementById('div-majority').style.visibility = 'hidden';
+                        document.getElementById('div-majority').style.height = '0px';
+                        document.getElementById('div-majority2').style.visibility = 'hidden';
+                        document.getElementById('div-majority2').style.height = '0px';
                     }
                 }
-                function showEvidence2() {
-                    if (document.getElementById('check611').checked) {
-                        document.getElementById('div-evidence2').style.visibility = 'visible';
-                        document.getElementById('div-evidence2').style.height = '280px';
+                function showDividend() {
+                    if (document.getElementById('dividendyes').checked) {
+                        document.getElementById('div-dividend').style.visibility = 'visible';
+                        document.getElementById('div-dividend').style.height = '190px';
                     } else {
-                        document.getElementById('div-evidence2').style.visibility = 'hidden';
-                        document.getElementById('div-evidence2').style.height = '0px';
+                        document.getElementById('div-dividend').style.visibility = 'hidden';
+                        document.getElementById('div-dividend').style.height = '0px';
                     }
                 }
             </script>
