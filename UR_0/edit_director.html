@@ -239,15 +239,26 @@
                                 <fieldset class="inline" style="visibility:hidden; height:0px" id="div-evidence">
                                     <div class="form-group">
                                         <label class="form-label">What evidence is there to show that the person acted as a director</label>
-                                        <select class="form-control">
-                                            <option disabled="disabled" selected="selected">Please select ...</option>
-                                            <option>Company books</option>
-                                            <option>Employees</option>
-                                            <option>Company accountant</option>
-                                            <option>Bank</option>
-                                            <option>3rd parties</option>
-                                            <option>Hearsay</option>
-                                        </select>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check9" class="block-label">
+                                                <input id="check9" value="Mr." name="title123" type="checkbox" aria-describedby="title_error title_help">Company books
+                                            </label>
+                                            <label id="title_label1" for="check10" class="block-label">
+                                                <input id="check10" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Employees
+                                            </label>
+                                            <label id="title_label1" for="check11" class="block-label">
+                                                <input id="check11" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Company accountant
+                                            </label>
+                                            <label id="title_label1" for="check12" class="block-label">
+                                                <input id="check12" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Bank
+                                            </label>
+                                            <label id="title_label1" for="check13" class="block-label">
+                                                <input id="check13" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">3rd parties
+                                            </label>
+                                            <label id="title_label1" for="check14" class="block-label">
+                                                <input id="check14" value="Mrs." name="title123" type="checkbox" aria-describedby="title_error title_help">Hearsay
+                                            </label>
+                                        </div>
                                         <br />
                                     </div>
                                 </fieldset>
@@ -303,16 +314,26 @@
                                 <fieldset class="inline" style="visibility:hidden; height:0px" id="div-evidence2">
                                     <div class="form-group">
                                         <label class="form-label">What evidence is there to show that the person acted as a director whilst bankrupt or disqualified</label>
-                                        <select class="form-control">
-                                            <option disabled="disabled" selected="selected">Please select ...</option>
-                                            <option>Company books</option>
-                                            <option>Employees</option>
-                                            <option>Company accountant</option>
-                                            <option>Bank</option>
-                                            <option>3rd parties</option>
-                                            <option>Hearsay</option>
-                                        </select>
-                                        <br />
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="check91" class="block-label">
+                                                <input id="check91" value="Mr." name="title1231" type="checkbox" aria-describedby="title_error title_help">Company books
+                                            </label>
+                                            <label id="title_label1" for="check101" class="block-label">
+                                                <input id="check101" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Employees
+                                            </label>
+                                            <label id="title_label1" for="check111" class="block-label">
+                                                <input id="check111" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Company accountant
+                                            </label>
+                                            <label id="title_label1" for="check121" class="block-label">
+                                                <input id="check121" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Bank
+                                            </label>
+                                            <label id="title_label1" for="check131" class="block-label">
+                                                <input id="check131" value="Mrs." name="title123"1 type="checkbox" aria-describedby="title_error title_help">3rd parties
+                                            </label>
+                                            <label id="title_label1" for="check141" class="block-label">
+                                                <input id="check141" value="Mrs." name="title1231" type="checkbox" aria-describedby="title_error title_help">Hearsay
+                                            </label>
+                                        </div>
                                     </div>
                                 </fieldset>
                             </div>
@@ -356,7 +377,7 @@
                 {
                     if (document.getElementById('dejure').checked) {
                         document.getElementById('div-evidence').style.visibility = 'visible';
-                        document.getElementById('div-evidence').style.height = '85px';
+                        document.getElementById('div-evidence').style.height = '250px';
                     } else {
                         document.getElementById('div-evidence').style.visibility = 'hidden';
                         document.getElementById('div-evidence').style.height = '0px';
@@ -365,7 +386,7 @@
                 function showEvidence2() {
                     if (document.getElementById('check611').checked) {
                         document.getElementById('div-evidence2').style.visibility = 'visible';
-                        document.getElementById('div-evidence2').style.height = '85px';
+                        document.getElementById('div-evidence2').style.height = '280px';
                     } else {
                         document.getElementById('div-evidence2').style.visibility = 'hidden';
                         document.getElementById('div-evidence2').style.height = '0px';
