@@ -226,11 +226,11 @@
                                             <label id="title_label0" for="dejure" class="block-label">
                                                 <input id="dejure" value="Mr." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De jure
                                             </label>
-                                            <label id="title_label1" for="check2" class="block-label">
-                                                <input id="check2" value="Mrs." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De facto
+                                            <label id="title_label1" for="defacto" class="block-label">
+                                                <input id="defacto" value="Mrs." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">De facto
                                             </label>
-                                            <label id="title_label1" for="check3" class="block-label">
-                                                <input id="check3" value="Mrsx." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">Shadow
+                                            <label id="title_label1" for="shadow" class="block-label">
+                                                <input id="shadow" value="Mrsx." name="evidence" type="radio" aria-describedby="title_error title_help" onchange="showEvidence()">Shadow
                                             </label>
                                         </div>
                                         <br /><p><br /><br /></p>
@@ -276,7 +276,7 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Is director connected to 3 or company failures in 5 years?</label>
+                                        <label class="form-label">Is director connected to 3 or more company failures in the last 5 years?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="check6" class="block-label">
                                                 <input id="check6" value="Mr." name="x" type="radio" aria-describedby="title_error title_help">Yes
@@ -290,7 +290,7 @@
                                 <p divclass="clearfix"><br /><br />&nbsp;</p>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Has director given a personal gaurantee for any of the company's debt?</label>
+                                        <label class="form-label">Has director given a personal guarantee for any of the company's debt?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="check61" class="block-label">
                                                 <input id="check61" value="Mr." name="xx" type="radio" aria-describedby="title_error title_help">Yes
@@ -381,7 +381,7 @@
             <script type="text/javascript">
                 function showEvidence()
                 {
-                    if (document.getElementById('dejure').checked) {
+                    if (document.getElementById('defacto').checked || document.getElementById('shadow').checked) {
                         document.getElementById('div-evidence').style.visibility = 'visible';
                         document.getElementById('div-evidence').style.height = '250px';
                     } else {

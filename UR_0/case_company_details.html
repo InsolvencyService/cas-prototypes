@@ -152,13 +152,7 @@
                             <div class="form-navigation form-group">
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Company regsitration number</label>
-                                        <input aria-describedby="" value="01234567" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Company date of incorperation</label>
+                                        <label class="form-label">Company date of Incorporation</label>
                                         <input aria-describedby="" value="01-Nov-2010" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
@@ -171,49 +165,55 @@
                                 <fieldset class="inline">
                                     <div class="form-group ">
                                         <label class="form-label">Registered office address 1 whilst it was trading</label>
-                                        <input aria-describedby="" value="13 Window Road" /><br /><p><br /></p>
+                                        <input aria-describedby="" value="13 Window Road" id="address1" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
                                         <label class="form-label">Registered office address 2 whilst it was trading</label>
-                                        <input aria-describedby="" value="Solihull" /><br /><p><br /></p>
+                                        <input aria-describedby="" value="Solihull" id="address2" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
                                         <label class="form-label">Registered office address 3 whilst it was trading</label>
-                                        <input aria-describedby="" value="West Midlands" /><br /><p><br /></p>
+                                        <input aria-describedby="" value="West Midlands" id="address3" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
                                         <label class="form-label">Registered office postcode</label>
-                                        <input aria-describedby="" value="B36 0JJ" /><br /><p><br /></p>
+                                        <input aria-describedby="" value="B36 0JJ" id="address4" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Company principle trading office address 1 whilst it was trading</label>
-                                        <input aria-describedby="" value="13 Window Road" /><br /><p><br /></p>
+                                        <label class="form-label">Company principal trading address as above</label>
+                                        <input id="asabove" value="asss" name="asabove" type="checkbox" aria-describedby="title_error title_help" onchange="DoTick()"><br /><p></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Company principle trading office address 2 whilst it was trading</label>
-                                        <input aria-describedby="" value="Solihull" /><br /><p><br /></p>
+                                        <label class="form-label">Company principal trading address 1 whilst it was trading</label>
+                                        <input aria-describedby="" value="" id="address11"/><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Company principle trading office address 3 whilst it was trading</label>
-                                        <input aria-describedby="" value="West Midlands" /><br /><p><br /></p>
+                                        <label class="form-label">Company principal trading address 2 whilst it was trading</label>
+                                        <input aria-describedby="" value="" id="address22" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Company principle trading office postcode</label>
-                                        <input aria-describedby="" value="B36 0JJ" /><br /><p><br /></p>
+                                        <label class="form-label">Company principal trading address 3 whilst it was trading</label>
+                                        <input aria-describedby="" value="" id="address33" /><br /><p><br /></p>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="inline">
+                                    <div class="form-group ">
+                                        <label class="form-label">Company principal trading postcode</label>
+                                        <input aria-describedby="" value="" id="address44" /><br /><p><br /></p>
                                     </div>
                                 </fieldset>
                                 <fieldset class="inline">
@@ -269,6 +269,22 @@
 
             <div class="app-error hidden" id="global-app-error"></div>
             <script type="text/javascript" src="../assets/js/bootstrap-switch/jquery.min.js"></script>
+
+            <script type="text/javascript">
+                function DoTick() {
+                    if (document.getElementById('asabove').checked) {
+                        document.getElementById('address11').value = document.getElementById('address1').value;
+                        document.getElementById('address22').value = document.getElementById('address2').value;
+                        document.getElementById('address33').value = document.getElementById('address3').value;
+                        document.getElementById('address44').value = document.getElementById('address4').value;
+                    } else {
+                        document.getElementById('address11').value = '';
+                        document.getElementById('address22').value = '';
+                        document.getElementById('address33').value = '';
+                        document.getElementById('address44').value = '';
+                    }
+                }
+            </script>
 
             <div id="window-resizer-tooltip" style="display: none;">
                 <a href="/claims/start#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a>
