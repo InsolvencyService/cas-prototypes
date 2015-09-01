@@ -223,7 +223,7 @@
                             </div>
                             <p><br />&nbsp;</p>
                             <a href="case_books_and_records.html" class="button">Back</a>
-                            <a href="case_director_conduct.html" class="button">Continue</a>
+                            <a class="button" onclick="DoContinue()">Continue</a>
                         </form>
                     </div>
                 </div>
@@ -278,6 +278,23 @@
                     } else {
                         document.getElementById('div-dividend').style.visibility = 'hidden';
                         document.getElementById('div-dividend').style.height = '0px';
+                    }
+                }
+                function DoContinue()
+                {
+                    if (
+                        document.getElementById('check7x1').checked && document.getElementById('check7x1').checked
+                        && document.getElementById('xx22').checked && document.getElementById('xx33').checked
+                        && document.getElementById('xx44').checked
+                        )
+                    {
+                        //window.location = "http://insolvencyservice.github.io/cas-prototypes/UR_0/case_confirm.html";
+                        window.location.href = "./case_confirm.html";
+                    }
+                    else
+                    {
+                        //window.location = "http://insolvencyservice.github.io/cas-prototypes/UR_0/case_director_conduct.html";
+                        window.location.href = "./case_director_conduct.html";
                     }
                 }
             </script>
