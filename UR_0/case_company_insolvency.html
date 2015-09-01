@@ -211,6 +211,7 @@
                                             <option>Banks</option>
                                             <option>Investors</option>
                                             <option>Directors and / or connected parties</option>
+                                            <option>Other</option>
                                         </select>
                                         <br />
                                     </div>
@@ -307,14 +308,32 @@
                                 <fieldset class="inline">
                                     <div class="form-group ">
                                         <label class="form-label">Are you aware of any investigations or procedings by other regulators (including police)?</label>
-                                        <label id="title_label0" for="check9rx" class="block-label">
-                                            <input id="check9rx" value="Mr." name="title123xx" type="radio" aria-describedby="title_error title_help">Yes
+                                        <label id="title_label0" for="yesinvestigation" class="block-label">
+                                            <input id="yesinvestigation" value="Mr." name="title123xx" type="radio" aria-describedby="title_error title_help" onchange="showInvestigations()">Yes
                                         </label>
-                                        <label id="title_label1" for="check10rx" class="block-label">
-                                            <input id="check10rx" value="Mrs." name="title123xx" type="radio" aria-describedby="title_error title_help">No
+                                        <label id="title_label1" for="check10rxxx" class="block-label">
+                                            <input id="check10rxxx" value="Mrs." name="title123xx" type="radio" aria-describedby="title_error title_help" onchange="showInvestigations()">No
                                         </label>
                                     </div>
                                     <br /><p><br />&nbsp;</p>
+                                </fieldset>
+                                <fieldset class="inline" style="visibility:hidden; height:0px" id="div-investigations">
+                                    <div class="form-group ">
+                                        <label class="form-label">Who are doing these proceedings?</label>
+                                        <select class="form-control" id="question1">
+                                            <option disabled="disabled" selected="selected">Please select ...</option>
+                                            <option>Police</option>
+                                            <option>Serious fraud office</option>
+                                            <option>HMRC</option>
+                                            <option>Financial conduct authority</option>
+                                            <option>Home office</option>
+                                            <option>Charity commission</option>
+                                            <option>Trading standards</option>
+                                            <option>Other government department</option>
+                                            <option>Other third party regulator</option>
+                                        </select>
+                                        <br />
+                                    </div>
                                 </fieldset>
                             </div>
                             <p><br />&nbsp;</p>
@@ -374,6 +393,15 @@
                     } else {
                         document.getElementById('div-dividend').style.visibility = 'hidden';
                         document.getElementById('div-dividend').style.height = '0px';
+                    }
+                }
+                function showInvestigations() {
+                    if (document.getElementById('yesinvestigation').checked) {
+                        document.getElementById('div-investigations').style.visibility = 'visible';
+                        document.getElementById('div-investigations').style.height = '90px';
+                    } else {
+                        document.getElementById('div-investigations').style.visibility = 'hidden';
+                        document.getElementById('div-investigations').style.height = '0px';
                     }
                 }
             </script>
