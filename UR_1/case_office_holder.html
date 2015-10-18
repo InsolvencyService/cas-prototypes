@@ -89,7 +89,7 @@
     <div id="global-cookie-message" style="display: none; height:0">
         <div class="outer-block" style="display: none;">
             <div class="inner-block">
-                <p>The Redundancy Payments Service uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+                <p>The Conduct Assessment Service uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
             </div>
         </div>
     </div>
@@ -144,40 +144,30 @@
             <div class="content">
                 <div class="row" style="margin-left:15px;margin-right:15px;">
                     <div class="col-sm-8">
-                        <h1 class="form-title heading-large">Case</h1>
+                        <h1 class="form-title heading-large">Case information</h1>
                         <div style="float: left; clear: both;">
                             <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
                         </div>
-                        <form class="form" method="post">
-                            <div class="form-navigation form-group">
+                        <div class="form-group ">
+                            <label  for="name" class="form-label-bold">Officer's name</label>
+                            <span class= "form-hint"> This is the individual who has day to day responsibility for the case</span>
+                            <input id="name" name="firm_name" type="text" value="" />
+
+                        </div>
+                        <div class="form-group ">
+                            <label  for="name" class="form-label-bold">Phone number</label>
+                            <input id="name" name="firm_name" type="text" value="" />
+                        </div>
+                        <div class="form-group ">
+                            <label  for="name" class="form-label-bold">Email address</label>
+                            <input id="name" name="firm_name" type="text" value="" />
+                        </div>
+                        
+                <p class="form-label-bold"></p>
+            
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Firm name</label>
-                                        <input aria-describedby="" value="IP's R Us Ltd" disabled="disabled" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Name of person with day to day responsibility <span title="This is the name of the office holder who has the day to day responsibility for the case"><sup style="width:400px; color:red">?</sup></span></label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Phone number</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Email</label>
-                                        <input aria-describedby="" value="" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Case type</label>
+                                        <label class="form-label-bold">Case type</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="majorityyes" class="block-label">
                                                 <input id="majorityyes" value="Mr." name="x21" type="radio" aria-describedby="title_error title_help">Administration
@@ -187,18 +177,34 @@
                                             </label>
                                             <label id="title_label1" for="check7xxx" class="block-label">
                                                 <input id="check7xxx" value="Mrsx." name="x21" type="radio" aria-describedby="title_error title_help">Administrative Receivership
-                                            </label><br /><p><br />&nbsp;</p><p><br />&nbsp;</p><br />
+                                            </label><br />&nbsp;</p><br />
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Appointment date</label>
-                                        <input aria-describedby="" value="" />
-                                    </div>
-                                </fieldset>
-                                <p divclass="clearfix"><br /><br />&nbsp;</p>
-                            </div>
+    
+    <fieldset id="date_of_birth" class="date-of-birth">
+    <legend id="date_of_birth_label" class="form-label-bold">Appointment date</legend>
+    
+    <span class="form-hint" id="date_of_birth_help">For example, 31 08 1976</span>
+    <div class="form-group form-group-day">
+         <label id="date_of_birth_label.day" for="dob-day">Day</label>
+    <input id="dob-day" name="date_of_birth.day" type="number" min="1" max="31" aria-describedby="date_of_birth_error date_of_birth_help" value="31" />
+    </div>
+    <div class="form-group form-group-month">
+         <label id="date_of_birth_label.month" for="dob-month">Month</label>
+    <input id="dob-month" name="date_of_birth.month" type="number" min="1" max="12" aria-describedby="date_of_birth_error date_of_birth_help" value="05" />
+    </div>
+    <div class="form-group form-group-year">
+    <label id="date_of_birth_label.year" for="dob-year">Year</label>
+    <input id="dob-year" name="date_of_birth.year" type="number" min="1000" max="9999" pattern="[1-9]" value="1980" />
+    </div>
+    </fieldset>
+    </div>
+
+  </form> 
+
+                        
                             <p><br />&nbsp;</p>
                             <a href="case_company_details.html" class="button">Continue</a>
                         </form> 

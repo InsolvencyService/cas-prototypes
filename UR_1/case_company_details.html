@@ -141,103 +141,95 @@
             </div>
 
             <!-- #BeginEditable "content" -->
-            <div class="content">
-                <div class="row" style="margin-left:15px;margin-right:15px;">
-                    <div class="col-sm-8">
-                        <h1 class="form-title heading-large">Case - Company Details</h1>
+            <div class="inner-block">
+    <div class="row">
+        <div class="col-sm-8">  
+                <h1 class="form-title heading-large">Case - Company Details</h1>
                         <div style="float: left; clear: both;">
                             <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
-                        </div>
-                        <form class="form" method="post">
+                        </div><br>
+                <input type="hidden" name="_csrf_token" value="7caa09a921f0ea4cde7bf306c8177304dc3d209d">
+    
+                <div class="form-group ">
+                    <label  for="name" class="form-label-bold">Registered office address</label>
+                    <input id="name" name="applicant_address_town0" type="text" value="" />
+                </div>
+                <p class="form-label-bold"></p>
+            
+                <div class="form-group ">
+                    <label id="applicant_address_line_1_label" for="applicant_address_line_1" class="form-label-bold applicant_address_line_1">Office number, building and street</label>
+                    <input id="applicant_address_line_1" name="applicant_address_line_1" type="text" aria-describedby="applicant_address_line_1_error applicant_address_line_1_help" value="" />
+                    <br/>
+                </div>
+    
+                <div class="form-group ">
+                    <label id="applicant_address_line_2_label" for="applicant_address_line_2" class="visuallyhidden">Address Line 2</label>
+                    <input id="applicant_address_line_2" name="applicant_address_line_2" type="text" aria-describedby="applicant_address_line_2_error applicant_address_line_2_help" value="" />
+                    <br/>
+                </div>
+    
+
+                <div class="form-group ">
+                    <label id="applicant_address_town_label" for="applicant_address_town" class="form-label-bold applicant_address_town">Town/city</label>
+                    <input id="applicant_address_town" name="applicant_address_town" type="text" aria-describedby="applicant_address_town_error applicant_address_town_help" value="" />
+                    <br/>
+                </div>
+                <div class="form-group ">
+                    <label id="applicant_address_county_label" for="applicant_address_county" class="form-label-bold applicant_address_county">County/region</label>
+                    <input id="applicant_address_county" name="applicant_address_county" type="text" aria-describedby="applicant_address_county_error applicant_address_county_help" value="" />
+                    <br/>
+                </div>
+                <div class="form-group ">
+                    <label id="applicant_address_country_label" for="applicant_address_country" class="form-label-bold applicant_address_county">Country</label>
+                    <input id="applicant_address_country" name="applicant_address_country" type="text" aria-describedby="applicant_address_county_error applicant_address_county_help" value="" />
+                    <br/>
+                </div>
+
+                <div class="form-group ">               
+                    <label id="applicant_address_post_code_label" for="applicant_address_post_code" class="form-label-bold applicant_address_post_code">Postal/zip code</label>
+                    <input id="applicant_address_post_code" name="applicant_address_post_code" type="text" aria-describedby="applicant_address_post_code_error applicant_address_post_code_help" value="" />
+                    <br/>
+                </div>
+
+
+                <form class="form" method="post">
                             <div class="form-navigation form-group">
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Company date of incorporation</label>
-                                        <input aria-describedby="" value="01-Nov-2010" /><br /><p><br /></p>
+                                        <label class="form-label">Principal trading address same as above</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="majorityyes" class="block-label">
+                                                <input id="majorityyes" value="Mr." name="x21" type="radio" aria-describedby="title_error title_help" onchange="showMajority()">Yes
+                                            </label>
+                                            <label id="title_label1" for="check7x" class="block-label">
+                                                <input id="check7x" value="Mrs." name="x21" type="radio" aria-describedby="title_error title_help" onchange="showMajority()">No
+                                            </label>
+                                        </div>
                                     </div>
                                 </fieldset>
+                            </div>
+                            <fieldset class="inline" style="visibility:hidden; height:0px;" id="div-majority">
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Name the company traded under</label>
-                                        <input aria-describedby="" value="Cars R Us Ltd" /><br /><p><br /></p>
+                                        <label class="form-label">Are drafts or management accounts available up to the end of trading?</label>
+                                        <div id="title" class="form-group">
+                                            <label id="title_label0" for="majorityyes1" class="block-label">
+                                                <input id="majorityyes1" value="Mr." name="x2" type="radio" aria-describedby="title_error title_help">Yes
+                                            </label>
+                                            <label id="title_label1" for="check7x1" class="block-label">
+                                                <input id="check7x1" value="Mrs." name="x2" type="radio" aria-describedby="title_error title_help">No
+                                            </label>
+                                        </div>
                                     </div>
                                 </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Registered office address 1 whilst it was trading</label>
-                                        <input aria-describedby="" value="13 Window Road" id="address1" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Registered office address 2 whilst it was trading</label>
-                                        <input aria-describedby="" value="Solihull" id="address2" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Registered office address 3 whilst it was trading</label>
-                                        <input aria-describedby="" value="West Midlands" id="address3" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Registered office postcode</label>
-                                        <input aria-describedby="" value="B36 0JJ" id="address4" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Company principal trading address as above</label>
-                                        <input id="asabove" value="asss" name="asabove" type="checkbox" aria-describedby="title_error title_help" onchange="DoTick()"><br /><p></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Company principal trading address 1 whilst it was trading</label>
-                                        <input aria-describedby="" value="" id="address11"/><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Company principal trading address 2 whilst it was trading</label>
-                                        <input aria-describedby="" value="" id="address22" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Company principal trading address 3 whilst it was trading</label>
-                                        <input aria-describedby="" value="" id="address33" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <div class="form-group ">
-                                        <label class="form-label">Company principal trading postcode</label>
-                                        <input aria-describedby="" value="" id="address44" /><br /><p><br /></p>
-                                    </div>
-                                </fieldset>
-                                <fieldset class="inline">
-                                    <label class="form-label">Number of employees</label>
-                                    <div id="title" class="form-group">
-                                        <label id="title_label0" for="check1" class="block-label">
-                                            <input id="check1" value="a" name="title12" type="radio" aria-describedby="title_error title_help">1-9
-                                        </label>
-                                        <label id="title_label1" for="check2" class="block-label">
-                                            <input id="check2" value="b" name="title12" type="radio" aria-describedby="title_error title_help">10-49
-                                        </label>
-                                        <label id="title_label1" for="check3" class="block-label">
-                                            <input id="check3" value="c" name="title12" type="radio" aria-describedby="title_error title_help">50-249
-                                        </label>
-                                        <label id="title_label1" for="check4" class="block-label">
-                                            <input id="check4" value="d" name="title12" type="radio" aria-describedby="title_error title_help">250 and over
-                                        </label>
-                                    </div>
-                                </fieldset>
+                        </div>
+                </form>  
+                <br/>
                                 <p divclass="clearfix"><br /><br />&nbsp;</p>
                             </div>
                             <p divclass="clearfix"><br /><br /></p><p divclass="clearfix"><br /><br /></p>
-                            <a href="case_office_holder.html" class="button">Back</a>
-                            <a href="case_director_details.html" class="button">Continue</a>
+                            <a href="case_director_details.html" class="button">Continue</a><br>
+                            <a style="padding-right: 30px" href="case_office_holder.html" id="back">Back</a>
                         </form>     
                     </div>
                 </div>
