@@ -152,7 +152,7 @@
                             <div class="form-navigation form-group">
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">What is the number of company creditors?</label>
+                                        <label class="form-label-bold">What is the number of company creditors?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="check6" class="block-label">
                                                 <input id="check6" value="Mr." name="x" type="radio" aria-describedby="title_error title_help">1  to 10
@@ -172,7 +172,7 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Is there a majority creditor?</label>
+                                        <label class="form-label-bold">Is there a majority creditor?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="majorityyes" class="block-label">
                                                 <input id="majorityyes" value="Mr." name="x2" type="radio" aria-describedby="title_error title_help" onchange="showMajority()">Yes
@@ -186,7 +186,7 @@
                                 </fieldset>
                                 <fieldset class="inline" style="visibility:hidden; height:0px" id="div-majority">
                                     <div class="form-group ">
-                                        <label class="form-label">What % of the total deficiency is this?</label>
+                                        <label class="form-label-bold">What % of the total deficiency is this?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="51" class="block-label">
                                                 <input id="51" value="Mr." name="x3" type="radio" aria-describedby="title_error title_help">51 - 75%
@@ -203,7 +203,7 @@
                                 </fieldset>
                                 <fieldset class="inline" style="visibility:hidden; height:0px" id="div-majority2">
                                     <div class="form-group ">
-                                        <label class="form-label">Who is the majority creditor?</label>
+                                        <label class="form-label-bold">Who is the majority creditor?</label>
                                         <select class="form-control" id="question1">
                                             <option disabled="disabled" selected="selected">Please select ...</option>
                                             <option>HMRC</option>
@@ -218,7 +218,8 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">What do you consider are the causes of the company's failure (select all which apply)?</label>
+                                        <label class="form-label-bold">What do you consider are the causes of the company's failure?</label>
+                                        <span class= "form-hint"> Tick all that apply</span>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="check9" class="block-label">
                                                 <input id="check9" value="Mr." name="title123" type="checkbox" aria-describedby="title_error title_help">Under capitalisation
@@ -247,7 +248,7 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">What is the Company's total deficiency?</label>
+                                        <label class="form-label-bold">What is the Company's total deficiency?</label>
                                         <select class="form-control" id="question1">
                                             <option disabled="disabled" selected="selected">Please select ...</option>
                                             <option>Less than £20,000</option>
@@ -261,7 +262,7 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Is there likely to be a dividend to unsecured creditors?</label>
+                                        <label class="form-label-bold">Is there likely to be a dividend to unsecured creditors?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="dividendyes" class="block-label">
                                                 <input id="dividendyes" value="Mr." name="x23" type="radio" aria-describedby="title_error title_help" onchange="showDividend()">Yes
@@ -275,7 +276,7 @@
                                 </fieldset>
                                 <fieldset class="inline" style="visibility:hidden; height:0px" id="div-dividend">
                                     <div class="form-group ">
-                                        <label class="form-label">What is this value?</label>
+                                        <label class="form-label-bold">What is this value?</label>
                                         <div id="title" class="form-group">
                                             <label id="title_label0" for="check9r" class="block-label">
                                                 <input id="check9r" value="Mr." name="title123" type="radio" aria-describedby="title_error title_help">1 - 10p in £
@@ -295,7 +296,7 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Will secured creditors be paid in full?</label>
+                                        <label class="form-label-bold">Will secured creditors be paid in full?</label>
                                         <label id="title_label0" for="check9rxx" class="block-label">
                                             <input id="check9rxx" value="Mr." name="title123xxx" type="radio" aria-describedby="title_error title_help">Yes
                                         </label>
@@ -307,7 +308,7 @@
                                 </fieldset>
                                 <fieldset class="inline">
                                     <div class="form-group ">
-                                        <label class="form-label">Are you aware of any investigations or procedings by other regulators (including police)?</label>
+                                        <label class="form-label-bold">Are you aware of any investigations or procedings by other regulators (including police)?</label>
                                         <label id="title_label0" for="yesinvestigation" class="block-label">
                                             <input id="yesinvestigation" value="Mr." name="title123xx" type="radio" aria-describedby="title_error title_help" onchange="showInvestigations()">Yes
                                         </label>
@@ -318,9 +319,10 @@
                                     <br /><p><br />&nbsp;</p>
                                 </fieldset>
                                 <fieldset class="inline" style="visibility:hidden; height:0px" id="div-investigations">
-                                    <div class="form-group ">
-                                        <label class="form-label">Who are doing these proceedings (select all which apply)?</label>
 
+                                    <div class="form-group ">
+                                        <label class="form-label-bold">Who are doing these proceedings?</label>
+                                        <span class= "form-hint"> Tick all that apply</span>
                                         <select class="form-control" id="question1" multiple size="5">
                                             <option disabled="disabled" selected="selected">Please select ...</option>
                                             <option>Police</option>
@@ -338,8 +340,9 @@
                                 </fieldset>
                             </div>
                             <p><br />&nbsp;</p>
-                            <a href="case_director_details.html" class="button">Back</a>
-                            <a href="case_books_and_records.html" class="button">Continue</a>
+                            <a href="case_books_and_records.html" class="button">Continue</a><br>
+                            <a style="padding-right: 30px" href="case_director_details.html" id="back">Back</a>
+                            <p><br />&nbsp;</p>
                         </form>
                     </div>
                 </div>
