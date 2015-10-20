@@ -79,6 +79,13 @@
             min-width: 99%;
             font-size: 16px;
         }
+
+        tr td.actions a.edit {
+       width: auto;
+       display: inline-block;
+       margin-left: 0;
+   }
+
     </style>
     <!-- #EndEditable -->
 </head>
@@ -259,56 +266,6 @@
             <script type="text/javascript" src="../assets/js/bootstrap-switch/jquery.min.js"></script>
 
             <script type="text/javascript">
-                function showIncurred()
-                {
-                    if (document.getElementById('incurred').checked) {
-                        document.getElementById('div-incurred').style.visibility = 'visible';
-                        document.getElementById('div-incurred').style.height = '780px';
-                    } else {
-                        document.getElementById('div-incurred').style.visibility = 'hidden';
-                        document.getElementById('div-incurred').style.height = '0px';
-                    }
-                }
-                function showEqual() {
-                    if (document.getElementById('equally').checked) {
-                        document.getElementById('div-equal').style.visibility = 'visible';
-                        document.getElementById('div-equal').style.height = '390px';
-                    } else {
-                        document.getElementById('div-equal').style.visibility = 'hidden';
-                        document.getElementById('div-equal').style.height = '0px';
-                    }
-                }
-                function showTax() {
-                    if (document.getElementById('tax').checked) {
-                        document.getElementById('div-tax').style.visibility = 'visible';
-                        document.getElementById('div-tax').style.height = '660px';
-                    } else {
-                        document.getElementById('div-tax').style.visibility = 'hidden';
-                        document.getElementById('div-tax').style.height = '0px';
-                    }
-                }
-                function showTTP() {
-                    if (document.getElementById('tt').checked) {
-                        document.getElementById('div-ttp').style.visibility = 'visible';
-                        document.getElementById('div-ttp').style.height = '120px';
-                        document.getElementById('div-tax').style.height = '780px';
-                    } else {
-                        document.getElementById('div-ttp').style.visibility = 'hidden';
-                        document.getElementById('div-ttp').style.height = '0px';
-                        document.getElementById('div-tax').style.height = '660px';
-                    }
-                }
-                function showFair() {
-                    if (document.getElementById('fair').checked) {
-                        document.getElementById('div-fair').style.visibility = 'visible';
-                        document.getElementById('div-fair').style.height = '580px';
-                    } else {
-                        document.getElementById('div-fair').style.visibility = 'hidden';
-                        document.getElementById('div-fair').style.height = '0px';
-                    }
-                }
-                <script type="text/javascript">
-
                 var itemnumber = 0;
                 var stage = "assets";
                 var page = 1;
