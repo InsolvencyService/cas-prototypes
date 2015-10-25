@@ -79,6 +79,13 @@
             min-width: 99%;
             font-size: 16px;
         }
+        widget {
+          float:right;
+          padding-left: 10px;
+          padding-top: 20px;
+          border-left: 1px solid #bfc1c3;
+          font-size: 95%;
+        }
     </style>
     <!-- #EndEditable -->
 </head>
@@ -143,16 +150,13 @@
             <!-- #BeginEditable "content" -->
             <div class="content">
                 <div class="row" style="margin-left:15px;margin-right:15px;">
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
                         <h1 class="form-title heading-large">Case information</h1>
-                        <div style="float: left; clear: both;">
-                            <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd (Reg No 01234567)</p>
-                        </div>
+
                         <div class="form-group ">
                             <label  for="name" class="form-label-bold">Officer's name</label>
                             <span class= "form-hint"> This is the individual who has day to day responsibility for the case</span>
                             <input id="name" name="firm_name" type="text" value="" />
-
                         </div>
                         <div class="form-group ">
                             <label  for="name" class="form-label-bold">Phone number</label>
@@ -164,7 +168,6 @@
                         </div>
 
                 <p class="form-label-bold"></p>
-
                                 <fieldset class="inline">
                                     <div class="form-group ">
                                         <label class="form-label-bold">Case type</label>
@@ -183,14 +186,14 @@
                                 </fieldset>
                                     <div class="form-group ">
 
-    <fieldset id="date_of_birth" class="date-of-birth">
-    <legend id="date_of_birth_label" class="form-label-bold">Appointment date</legend>
+                                      <fieldset id="date_of_birth" class="date-of-birth">
+                                        <legend id="date_of_birth_label" class="form-label-bold">Appointment date</legend>
 
-    <span class="form-hint" id="date_of_birth_help">For example, 31 08 1976</span>
-    <div class="form-group form-group-day">
-         <label id="date_of_birth_label.day" for="dob-day">Day</label>
-    <input id="dob-day" name="date_of_birth.day" type="number" min="1" max="31" aria-describedby="date_of_birth_error date_of_birth_help" value="" />
-    </div>
+                                        <span class="form-hint" id="date_of_birth_help">For example, 31 08 1976</span>
+                                        <div class="form-group form-group-day">
+                                        <label id="date_of_birth_label.day" for="dob-day">Day</label>
+                                        <input id="dob-day" name="date_of_birth.day" type="number" min="1" max="31" aria-describedby="date_of_birth_error date_of_birth_help" value="" />
+                                      </div>
     <div class="form-group form-group-month">
          <label id="date_of_birth_label.month" for="dob-month">Month</label>
     <input id="dob-month" name="date_of_birth.month" type="number" min="1" max="12" aria-describedby="date_of_birth_error date_of_birth_help" value="" />
@@ -208,6 +211,11 @@
                             <p><br />&nbsp;</p>
                             <a href="case_company_details.html" class="button">Continue</a>
                         </form>
+                    </div>
+                    <div class="col-sm-3">
+                      <widget>
+                      <p><b>Case:</b> NCL12345<br /><b>Company:</b> Cars R Us Ltd <br /> <b>Reg:</b> 01234567<br /><br /> <a href="#">View PDF </a></p>
+                    </widget>
                     </div>
                 </div>
             </div>
