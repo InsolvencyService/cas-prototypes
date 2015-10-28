@@ -86,6 +86,11 @@
             border-left: 1px solid #bfc1c3;
             font-size: 95%;
         }
+        tr td.actions a.edit {
+            width: auto;
+            display: inline-block;
+            margin-left: 0;
+          }
 
     </style>
     <!-- #EndEditable -->
@@ -276,3 +281,176 @@
     </main>
 </body><!-- #EndTemplate -->
 </html>
+
+
+<script type="text/javascript">
+                var itemnumber = 0;
+                var stage = "assets";
+                var page = 1;
+
+                $(document).ready(function() {
+                    $("#next").hide();
+
+                    if (getParameterByName("stage") && getParameterByName("stage").length > 0) {
+                        stage = getParameterByName("stage");
+                    }
+                    if (getParameterByName("page") && getParameterByName("page").length > 0) {
+                        page = parseInt(getParameterByName("page"));
+                    }
+
+                    if (stage && stage.length > 0) {
+                        $("a.edit").removeClass("button").hide();
+                    }
+
+                    itemnumber = parseInt(page);
+                    var previous = itemnumber - 1;
+
+                    // $("#" + stage + itemnumber + " a.edit").show().text("Edit");
+                    $("#" + stage + previous + " a.edit").show().removeClass("button");
+
+                    $("#" + stage + previous     + " a.edit").text("Edit");
+
+                    for (i = 1; i < itemnumber; i++) {
+                        $("#" + stage + i + " a.edit").text("Edit").show();
+                    }
+
+                    $(".well").removeClass("well");
+
+                    $(".declare").hide();
+                    $("#" + stage + itemnumber + " a.edit").show().addClass("button");
+                    $("#" + stage + itemnumber +  " .declare").show();
+                    $("#" + stage + itemnumber).addClass("well");
+
+                    if (itemnumber > 4) {
+                    $("#title").text("Asset summary");
+                $("#description").text("Please check you answers before continuing.");
+                        $("#next").show();
+                    }
+
+                    //Populate property amount - should be a negative value
+                    //Property value - mortgage amount + secured loan amounts
+                    var propertyvalue = 0.0;
+                    var mortgageamount = 0.0;
+                    var securedloansamount = 0.0;
+
+                    if (parseFloat($.cookie('propertyvalue'))) {
+                        propertyvalue = parseFloat($.cookie('propertyvalue'));
+                    }
+                    if (parseFloat($.cookie('mortgageamount'))) {
+                        // TODO - check if its shared
+                        mortgageamount = parseFloat($.cookie('mortgageamount'));
+                    }
+                    var numberofsecuredloans = 0;
+                    if (parseInt($.cookie("numberofsecuredloans"))) {
+                        numberofsecuredloans = parseInt($.cookie("numberofsecuredloans"));
+                    }
+                    for (i = 1; i <= numberofsecuredloans; i++) {
+                        if (parseFloat($.cookie('securedloan' + i))) {
+                            // TODO - check if it's joint
+                            if ($.cookie('loanshared' + i)) {
+                                securedloansamount = securedloansamount + parseFloat($.cookie('securedloan' + i)) * (50 / 100);
+                            }
+                            else
+                            {
+                                securedloansamount = securedloansamount + parseFloat($.cookie('securedloan' + i));
+                            }
+                        }
+                    }
+
+                    if (getParameterByName("page").length > 0) {
+                        if (page >= 1) {
+                            var ownerpercentage = 100;
+                            if (propertyvalue > 0) {
+                               /* var personamount = mortgageamount;
+                                if ($.cookie('sharedmortgage') && $.cookie('sharedmortgage') == "Yes") {
+                                    ownerpercentage = 50;
+                                    if ($.cookie('ownerpercentage')) {
+                                        ownerpercentage = parseInt($.cookie('ownerpercentage'));
+                                    }
+                                    mortgageamount = mortgageamount * (ownerpercentage / 100);
+                                }
+                                personamount = (propertyvalue * (ownerpercentage / 100)) - (mortgageamount + securedloansamount);*/
+                                $("#assets1 .value").text(numberWithCommas(propertyvalue));
+                                $("thead").show();
+                            }
+                            else {
+                                $("#assets1 .answerno").show();
+
+                            }
+                        }
+
+                        if (page >= 2) {
+                            if (parseFloat($.cookie('VehicleAssetTotal'))) {
+                                $("#assets2 .value").text(numberWithCommas(parseFloat($.cookie('VehicleAssetTotal'))));
+                            }
+                            else {
+                                $("#assets2 .answerno").show();
+                            }
+                        }
+
+                        if (page === 3) {
+                                $("#assets3 .answerno").show();
+                        }
+
+                        if (page >= 4) {
+                            //Populate item amount
+                            if (parseFloat($.cookie('otherassetsamount'))) {
+                                $("#assets4 .value").text(numberWithCommas(parseFloat($.cookie('otherassetsamount'))));
+                                $("thead").show();
+                            }
+                            $("#assets3 .answerno").show();
+                        }
+                    }
+
+
+                $(".declare").on("click", function () {
+                   $("#" + stage + itemnumber + " .declare").hide();
+                   $("#" + stage + itemnumber + " a.edit").show().removeClass("button");
+
+                       $("#" + stage + itemnumber + " a.edit").text("Edit");
+
+                   switch (itemnumber) {
+                       case 1:
+                           $("#assets1 .answerno").show();
+                           break;
+                       case 2:
+                           $("#assets2 .answerno").show();
+                           break;
+                       case 3:
+                           $("#assets3 .answerno").show();
+                           break;
+                   }
+
+                   itemnumber = itemnumber + 1;
+                   $("#" + stage + itemnumber + " .declare").show();
+                   $("#" + stage + itemnumber + " a.edit").show().addClass("button");
+                   $("#" + stage + itemnumber).addClass("well");
+
+                   if (itemnumber > 4) {
+
+                       $("#next").show();
+
+                   }
+
+
+                });
+
+
+                });
+
+
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                function numberWithCommas(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+
+                function numberWithoutCommas(x) {
+                    return parseFloat(x.toString().replace(/,/g, ""));
+                }
+            </script>
