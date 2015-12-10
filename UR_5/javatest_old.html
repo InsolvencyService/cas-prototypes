@@ -139,8 +139,31 @@ display:block;
                 <div class="col-sm-8">
                     <h1 class="form-title heading-large">Check if JavaScript is enabled</h1>
                       <p>Thank you for your assistance in developing the Conduct Assessment Service application.  To help us deliver an efficient and consistent service, we need to know whether your device has JavaScript enabled. </p></br><br />
-                <a href="http://bbc.co.uk" id="PageLink" class="button">Go to non JS page</a>
 
+                      <p class="text msg-letter" style="padding: 20px; text-align: left; color: white; background-color: #005EA5;">
+                              <script type="text/javascript">
+                              document.write("Welcome, JavaScript is turned on.")
+                              </script>
+                              <noscript>JavaScript is turned off for your device. </noscript></b>
+                            </button>
+                          </b>
+                </p>
+                </br>
+                </br>
+                <fieldset class="inline">
+                    <div class="form-group ">
+                        <label class="form-label-hint">Please have a look at the line of text above and select the option that best matches what you see.</label>
+                        <div id="title" class="form-group">
+                            <label id="title_label0" for="yy1" class="block-label">
+                                <input id="yy1" value="Mr.x" name="yy" type="radio" aria-describedby="title_error title_help">JavaScript is on
+                            </label>
+                            <label id="title_label1" for="yy24" class="block-label">
+                                <input id="yy24" value="Mrs.x" name="yy" type="radio" aria-describedby="title_error title_help">JavaScript is off
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                    <a href="#" class="button">Submit</a><br>
 	                <p divclass="clearfix"><br/></p>
 
 	            </div>
@@ -185,14 +208,11 @@ display:block;
             </div>
         </div>
     </main>
-  <script>
-    $(function() {
-    $('#PageLink').html('GO TO JS PAGE');
-    $('#PageLink').on('click', function(e) {
-      e.preventDefault();
-      window.location.href = "http://c.xkcd.com/random/comic/";
-    });
-  });
+    <script type="text/javascript">
+(function(){$("#wrapper").append($("<img src='../assets/images/with-js.gif' alt='' role='presentation' />").attr("style","position : absolute; left : -9999em; height : 0px; width : 0px;"))})();
 </script>
+<noscript>
+  <%= image_tag "images/without-js.gif", :alt => "", :role => "presentation", :style => "position: absolute; left: -9999em; height: 0px; width: 0px;" %>
+</noscript>
 </body><!-- #EndTemplate -->
 </html>
