@@ -53,33 +53,49 @@
 <link href="../assets/stylesheets/main-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
 <!--[if IE 8]>
 <link href="../assets/stylesheets/main-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-<!-- <link type="text/css" rel="stylesheet" media="screen" href="../assets/stylesheets/overrides.css"> -->
+<link type="text/css" rel="stylesheet" media="screen" href="../assets/stylesheets/overrides.css">
 <link type="text/css" rel="stylesheet" media="screen" href="../assets/stylesheets/complete.css">
 <!-- #BeginEditable "styles" -->
 <link type="text/css" rel="stylesheet" media="screen" href="../assets/js/bootstrap-switch/bootstrap.min.css">
+<style type="text/css">
+.row img{
+  width:60px;
+  text-align:right;
+  float:right
+}
+.row > div{
+  padding-top:15px;
+}
+.row > div:first-child{
+  padding-top:0px;
+}
 
+a.well{
+  padding-top:8px;
+  display:block;
+  height:90px;
+  min-width:99%;
+  font-size:16px;
+}
+</style>
 <!-- #EndEditable -->
 </head>
 
 <body class="js-enabled js-enabled">
   <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-  <div id="global-cookie-message">
-    <div class="outer-block">
+  <div id="global-cookie-message" style="display: none; height:0">
+    <div class="outer-block" style="display: none;">
       <div class="inner-block">
         <p>The Conduct Assessment Service uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
       </div>
     </div>
   </div>
-    
-    
   <div id="skiplink-container">
     <div>
       <a class="skiplink" href="/claims/start#content">Skip to main content</a>
     </div>
   </div>
-    
-    
   <header class="with-proposition" id="global-header" role="banner">
     <div class="header-wrapper">
       <div class="header-global">
@@ -114,7 +130,11 @@
             <strong class="phase-tag">BETA</strong>
             This is a new service - your <a href="#" target="_blank">feedback</a> will help us improve it
           </p>
-
+          <br />
+          <a href="dashboard.html">Dashboard</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="ipadmins.html">Manage Staff</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="changepassword.html">Change Password</a>
+          <div style="float: right; clear: both;"><a href="logout.html">Logout (Mr D Smith)</a> </div>
         </div>
       </div>
 
@@ -122,27 +142,12 @@
     </div>
 
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-offset-1 col-md-8">
-              <a href="dashboard.html">Dashboard</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-              <a href="ipadmins.html">Manage Staff</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-              <a href="changepassword.html">Change Password</a>
-              
-            </div>
-            
-            <div class="col-md-2">
-                <a href="logout.html">Logout (Mr D Smith)</a>
-            </div>
-            
-        </div>
-        
       <div class="col">
 
         <p>&nbsp;</p>
 
-        <div class="row font-small">
-          <div class="col-md-5">
+        <div class="row font-small margin-left:20px">
+          <div class="col-md-5" style="margin-left:90px;margin-right:15px">
 
             <form action="#" method="get">
               <div class="input-group">
@@ -154,26 +159,24 @@
               </div>
             </form>
           </div><br>
-        
-          <!-- 
+
           <div class="col-sm-5 text-right" style="margin-left:15px;margin-right:15px;">
             <p>&nbsp;</p>
             <a href="#">10</a> | <a href="#">20</a> | <a href="#">30</a> | <a href="#">See All</a>
           </div>
-         -->
         </div>
 
         <div class="row">
-          <div class="col-md-10 col-md-offset-1" >
+          <div class="col-md-9" style="margin-left:90px;margin-right:15px;">
             <table  class="table table-list-search">
               <thead>
                 <tr>
-                  <th><a id="ref">IP no &nbsp;&nbsp;<i class="glyphicon glyphicon-sort"></i></a></th>
-                  <th><a id="ref">Case Ref &nbsp;&nbsp;<i ></i></a></th>
-                  <th><a id="name">Company name &nbsp;&nbsp;<i class="glyphicon glyphicon-sort"></i></a></th>
-                  <th><a id="date">Company no &nbsp;&nbsp;<i ></i></a></th>
-                  <th><a id="status">Due date &nbsp;&nbsp;<i class="glyphicon glyphicon-sort"></i></a></th>
-                  <th><a id="status">Case status &nbsp;&nbsp;<i class="glyphicon glyphicon-sort"></i></a></th>
+                  <th><a id="ref">IP no &nbsp;&nbsp;<i style="font-size:0.8em" class="glyphicon glyphicon-sort"></i></a></th>
+                  <th><a id="ref">Case Ref &nbsp;&nbsp;<i style="font-size:0.8em" ></i></a></th>
+                  <th><a id="name">Company name &nbsp;&nbsp;<i style="font-size:0.8em" class="glyphicon glyphicon-sort"></i></a></th>
+                  <th><a id="date">Company no &nbsp;&nbsp;<i style="font-size:0.8em"></i></a></th>
+                  <th><a id="status">Due date &nbsp;&nbsp;<i style="font-size:0.8em" class="glyphicon glyphicon-sort"></i></a></th>
+                  <th><a id="status">Case status &nbsp;&nbsp;<i style="font-size:0.8em" class="glyphicon glyphicon-sort"></i></a></th>
                 </tr>
               </thead>
               <tbody id="table">
@@ -219,7 +222,7 @@
                   <td>5-10-2015</td>
                   <td><span class="label label-danger label-as-badge">Overdue</span> </td>
                 </tr>
-                <tr>
+                tr>
                 <td>1234</td>
                 <td><a href="case_office_holder.html"> NCL12345</a></td>
                 <td>Cars R Us Ltd</td>
@@ -276,13 +279,13 @@
   <footer role="contentinfo" id="footer" class="group js-footer">
     <div class="footer-meta">
       <div class="footer-meta-inner">
-        <ul class="footer__nav">
-          <li class="small-btm-margin"><a class="bold-medium" href="../contact-us.html">Contact us</a></li>
+        <ul class="footer__nav" style="width:100%">
+          <li class="small-btm-margin" style="text-align:left; display:block"><a class="bold-medium" href="../contact-us.html">Contact us</a></li>
         </ul>
-        <ul class="footer__nav">
-          <li class="footer__link" ><a href="../privacy.html">Privacy</a></li>
-          <li class="footer__link"><a href="../cookies.html">Cookies</a></li>
-          <li class="footer__link">Built by <a href="http://www.gov.uk/insolvency-service" target="_blank">The Insolvency Service</a></li>
+        <ul class="footer__nav" style="clear:left; text-align:left; display:block">
+          <li class="footer__link" style=" "><a href="../privacy.html">Privacy</a></li>
+          <li class="footer__link" style=""><a href="../cookies.html">Cookies</a></li>
+          <li class="footer__link" style=" ">Built by <a href="http://www.gov.uk/insolvency-service" target="_blank">The Insolvency Service</a></li>
         </ul>
         <div class="open-government-licence">
           <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence</a></h2>
