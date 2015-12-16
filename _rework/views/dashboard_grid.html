@@ -60,7 +60,7 @@
     
 <style>
     td span { display: block;}    
-    .cas-cases .wrapper { border:1px solid #bfc1c3; padding: 10px; border-left-width: 10px; }
+    .cas-cases .wrapper { border:1px solid #bfc1c3; padding: 10px; border-left-width: 10px; margin-bottom: 30px; }
     .cas-cases li.lb { margin-top: 15px; }
     .cas-cases h4 { font-weight: 700; }
     .cas-cases .r-align { text-align: right; }
@@ -77,6 +77,9 @@
     .cas-status-submitted { border-left-color: #5cb85c !important; }
     
     .cas-load-more-wrapper { padding: 30px 0; text-align: center;}
+    
+    .cas-search-wrapper { text-align: center; }
+    .cas-search-wrapper input[type="search"] { width: 45%; padding: 6px; margin: 30px 0;  }
     
 </style>
     
@@ -163,9 +166,15 @@
           </form>
      </div>
     -->
+        
+      <div class="cas-search-wrapper">
+        <form action="/g-cloud/search" method="get" class="search-box" role="search">
+            <input type="search" class="text-box" name="q" placeholder="Search company name or registration number">
+            <input class="submit" type="submit" value="Search">
+        </form>  
+      </div>
     
-      <div class="grid-row">
-        <div class="column-two-thirds cas-status-keys">
+      <div class="cas-status-keys">
             <ul>
                 <li class="cas-status-not-started"><a href="#">Not started</a></li> 
                 <li class="cas-status-in-progress"><a href="#">In progress</a></li>  
@@ -174,16 +183,102 @@
                 <li class="cas-status-overdue"><a href="#">Overdue</a></li>
             </ul>
             <div class="clearfix"><!-- clear --></div>
-        </div>
-        <div class="column-one-quarter cas-filter-cases">
-            <form action="/g-cloud/search" method="get" class="search-box" role="search">
-                <input type="search" class="text-box" name="q" maxlength="200" placeholder="Company name, Registration number">
-                <input class="submit" type="submit" value="Search">
-            </form>  
-        </div>
       </div>
+    <!--
+      <div class="column-one-quarter cas-filter-cases">
+              
+      </div>
+      -->
       
-      
+        
+      <div class="grid-row cas-cases">
+          <div class="column-one-third">
+              <div class="wrapper cas-status-overdue">
+                  <ul>
+                    <li class="r-align">Case #: NCL12384</li>
+                    <li class="r-align">IP 8383</li>
+                    
+                    <li class="lb"><h4>Cars R Us Ltd.</h4></li>
+                    <li>0188383</li>
+                    
+                    <li class="lb highlight">Due on 10-12-2015</li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="column-one-third">
+              <div class="wrapper cas-status-in-progress">
+                  <ul>
+                    <li class="r-align">Case #: NCL12384</li>
+                    <li class="r-align">IP 1234</li>
+                    
+                    <li class="lb"><h4>Some Random Company Ltd.</h4></li>
+                    <li>0188383</li>
+                    
+                    <li class="lb highlight">Due on 10-12-2015</li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="column-one-third">
+              <div class="wrapper cas-status-for-review">
+                  <ul>
+                    <li class="r-align">Case #: NCL12384</li>
+                    <li class="r-align">IP 1234</li>
+                    
+                    <li class="lb"><h4>Bonker dogs Ltd.</h4></li>
+                    <li>0188383</li>
+                    
+                    <li class="lb highlight">Due on 10-12-2015</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+        
+      <div class="grid-row cas-cases">
+          <div class="column-one-third">
+              <div class="wrapper cas-status-overdue">
+                  <ul>
+                    <li class="r-align">Case #: NCL12384</li>
+                    <li class="r-align">IP 8383</li>
+                    
+                    <li class="lb"><h4>Cars R Us Ltd.</h4></li>
+                    <li>0188383</li>
+                    
+                    <li class="lb highlight">Due on 10-12-2015</li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="column-one-third">
+              <div class="wrapper cas-status-in-progress">
+                  <ul>
+                    <li class="r-align">Case #: NCL12384</li>
+                    <li class="r-align">IP 1234</li>
+                    
+                    <li class="lb"><h4>Some Random Company Ltd.</h4></li>
+                    <li>0188383</li>
+                    
+                    <li class="lb highlight">Due on 10-12-2015</li>
+                  </ul>
+              </div>
+          </div>
+          
+          <div class="column-one-third">
+              <div class="wrapper cas-status-for-review">
+                  <ul>
+                    <li class="r-align">Case #: NCL12384</li>
+                    <li class="r-align">IP 1234</li>
+                    
+                    <li class="lb"><h4>Bonker dogs Ltd.</h4></li>
+                    <li>0188383</li>
+                    
+                    <li class="lb highlight">Due on 10-12-2015</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+        
         
       <div class="grid-row cas-cases">
           <div class="column-one-third">
