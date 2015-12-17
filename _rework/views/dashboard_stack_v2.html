@@ -250,10 +250,10 @@
     
       <div class="cas-status-keys">
             <ul>
-                <li><a href="#cas-status-overdue"><span>All</span> (12)</a></li>
+                <li><a href="#cas-status-overdue"><span>All</span> (10)</a></li>
                 <li><a href="#cas-status-in-progress"><span>In progress</span> (3)</a></li>  
                 <li><a href="#cas-status-for-review"><span>For review</span> (2)</a></li>  
-                <li><a href="#cas-status-not-started"><span>Not started</span> (7)</a></li> 
+                <li><a href="#cas-status-not-started"><span>Not started</span> (5)</a></li> 
                 
                 <!-- <li><i class="cas-status-submitted indicator cas-status-off"></i><a href="#">Submitted (0)</a></li> -->
             </ul>
@@ -433,7 +433,7 @@
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Robinsons real fruit in every drop ltd.</h3></li>
+                            <li><h3 class="heading-2">Ipsum Lorem ltd.</h3></li>
                             <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
                           </ul>
                       </div>
@@ -456,7 +456,7 @@
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Robinsons real fruit in every drop ltd.</h3></li>
+                            <li><h3 class="heading-2">Dolar ipset varius ex quis ltd.</h3></li>
                             <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
                           </ul>
                       </div>
@@ -479,7 +479,7 @@
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Robinsons real fruit in every drop ltd.</h3></li>
+                            <li><h3 class="heading-2">Dog groomers ltd.</h3></li>
                             <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
                           </ul>
                       </div>
@@ -496,51 +496,6 @@
               </a>
           </div>
           
-          <div class="cas-case-wrapper cas-status-for-review">
-              <a href="#company3">
-              <div class="grid-row cas-case" >
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
-                          <ul>
-                            <li><h3 class="heading-2">Robinsons real fruit in every drop ltd.</h3></li>
-                            <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
-                          </ul>
-                      </div>
-                  </div>
-
-
-                  <div class="column-one-third">
-                      <div id="dueDate" class="c-align content">
-                          <span>Not started</span>
-                          <span>Due by 18-02-2016</span>
-                      </div>
-                  </div>
-              </div>
-              </a>
-          </div>
-          
-          <div class="cas-case-wrapper cas-status-for-review">
-              <a href="#company3">
-              <div class="grid-row cas-case" >
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
-                          <ul>
-                            <li><h3 class="heading-2">Robinsons real fruit in every drop ltd.</h3></li>
-                            <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
-                          </ul>
-                      </div>
-                  </div>
-
-
-                  <div class="column-one-third">
-                      <div id="dueDate" class="c-align content">
-                          <span>Not started</span>
-                          <span>Due by 18-02-2016</span>
-                      </div>
-                  </div>
-              </div>
-              </a>
-          </div>
           
       </div>
         
@@ -587,15 +542,14 @@
     <script>
         $(document).ready(function(){
             
-             if($('.cas-case-wrapper').length > 9){
-                 for(i=9; i<$('.cas-case-wrapper').length; i++){
-                     $('.cas-case-wrapper:eq('+i+')').addClass('hidden').hide();
-                 }
+             for(i=8; i<$('.cas-case-wrapper').length; i++){
+                 $('.cas-case-wrapper:eq('+i+')').hide();
              }
+
             
             $('.btn-load-more').on('click', function(e){
                 e.preventDefault();
-                for(i=9; i<$('.cas-case-wrapper').length; i++){
+                for(i=8; i<$('.cas-case-wrapper').length; i++){
                      $('.cas-case-wrapper:eq('+i+')').removeClass('hidden').slideDown();
                  }
                 
@@ -615,9 +569,18 @@
             
              $('.cas-status-keys a').on('click', function(e){
                 e.preventDefault();
-                 var t = $(this).find('span').text();
-                 console.log(t);
-
+                 var searchStr = $(this).find('span').text().toLowerCase(),
+                     _cnt = 0;
+                 if( searchStr == 'all' )
+                      $('.cas-case-wrapper').slideDown();
+                 else
+                     $('.cas-case-wrapper').each(function(){
+                         var t = $(this).find('#dueDate').text().toLowerCase();
+                         if(t.indexOf(searchStr) != -1)
+                            $(this).slideDown();
+                         else
+                            $(this).slideUp();
+                     });
              });
         });
     </script>
