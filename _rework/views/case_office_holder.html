@@ -59,14 +59,15 @@
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
       
       <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; } 
+          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; } 
           .lb  { margin-top: 20px; }
           aside ol { margin-left: 5px; }
           aside h2 { margin-bottom: 10px; }
           
           aside .list-links { list-style: none; }
-          aside .list-links a { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside a.disabled-link { color: #6f777b; text-decoration: none; background-position: top left; }
+          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
+          aside li.disabled-link { background-position: top left; }
+          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
       </style>
     
     
@@ -147,6 +148,9 @@
     <!-- start of form -->
         
         <div class="grid-row">
+            
+
+            
             <div class="column-two-thirds">
                 
                 
@@ -157,7 +161,7 @@
                 
                 
                 <form role="form" method="post" action="/" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Officer's information</h1>
+                    <h1 class="form-title heading-large">Officer's details</h1>
                     <div class="form-group" aria-label="Officer's name" role="group">
                       <label  for="officer_name" class="form-label">Full name</label>
                       <span class="form-hint" id="officer_name_hint"> This is the individual who has day to day responsibility for the case</span>
@@ -216,7 +220,7 @@
                         </div>
                     </fieldset>
                     
-
+                    <div>&nbsp;</div>
                     <div class="form-group">
                         <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
                       </div>
@@ -224,22 +228,35 @@
 
             </div>
             
+
+            
             <div class="column-one-third">
                 <aside class="related">
-                    <h4 class="heading-small">Assessment progress</h4>
+                    <!--
+                    <h4 class="heading-medium">Assessment progress</h4>
                     <nav>
                         <ul class="list list-links">
-                            <li><a href="#">Case details</a></li>
+                            <li><strong class="bold-small">Case details</strong></li>
                             <li><a href="#">Company details</a></li>
                             <li><a href="#">Company director details</a></li>
-                            <li><a class="disabled-link" href="#">Company insolvency</a></li>
-                            <li><a class="disabled-link" href="#">Books &amp; records</a></li>
-                            <li><a class="disabled-link" href="#">Directory conduct</a></li>
+                            <li class="disabled-link"><a href="#">Company insolvency</a></li>
+                            <li class="disabled-link"><a href="#">Books &amp; records</a></li>
+                            <li class="disabled-link"><a href="#">Director conduct</a></li>
                         </ol>
                     </nav>
+                    -->
                     
                     
-                    <p class="lb"><a href="#">View PDF </a></p>
+                     <div class="notice">
+                        <i class="icon icon-file-download">
+                          <span class="visuallyhidden">Warning</span>
+                        </i>
+                        <strong class="bold-small">
+                          <a href="#">View PDF </a>
+                        </strong>
+                      </div>
+
+                    
                 </aside>
             </div>
             
