@@ -1814,7 +1814,7 @@ input[type=number] {
   font-weight: 400;
   text-transform: none;
   float: left;
-  background-image: url("/public/images/separator.png");
+  background-image: url("../images/separator.png");
   background-position: 100% 50%;
   background-repeat: no-repeat;
   list-style: none;
@@ -1833,7 +1833,7 @@ input[type=number] {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #global-breadcrumb ol li {
-    background-image: url("/public/images/separator-2x.png");
+    background-image: url("../images/separator-2x.png");
     background-size: 6px 11px;
   }
 }
@@ -1998,7 +1998,7 @@ input[type=number] {
 }
 
 .elements-index .heading-medium {
-  margin: 1em 0 0 0;
+  /*margin: 1em 0 0 0;*/
 }
 
 .elements-index .divider {

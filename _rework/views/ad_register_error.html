@@ -57,18 +57,6 @@
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-      
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; /*padding-top: 25px;*/ } 
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
-          
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-      </style>
     
     
   </head>
@@ -119,8 +107,6 @@
         </div>
       </div>
     </header>
-      
-
     <!--end header-->
     
 
@@ -131,6 +117,7 @@
       
       
     <main class="elements-index" id="content" role="main">
+        
       <div class="phase-banner-beta">
         <p>
           <strong class="phase-tag">BETA</strong>
@@ -141,131 +128,72 @@
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Conduct Assessment Service</a></li>
-          <li><a href="/">Dashboard</a></li>
-          <li>AdventureWorks Cycles Limited</li>
+          <li>Dashboard</li>
         </ol>
       </div>
+        
+      <div><!-- TO DO:  Place holder -- filtering and search --></div>
+        
+        
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+          Account creation failed
+        </h1>
+
+        <p>
+          Following error occurred while creating your account
+        </p>
+
+        <ul class="error-summary-list">
+          <li><a href="#full-name">Invalid name</a></li>
+          <li><a href="#email-address">Invalid email address</a></li>
+        </ul>
+
+      </div>
+        
     
-    <!-- start of form -->
-        
-        <div class="grid-row">
-            
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <form role="form" method="post" action="/">
 
-            
-            <div class="column-two-thirds">
+                <h1 class="form-title heading-large">Create new account</h1>
+                
+                <p>Enter your name and (@insolvency.gsi.gov.uk) email address in the form below.</p>
                 
                 
-                <h1 class="heading-xlarge">
-                    <span class="heading-secondary">Case ref. NCL18829292</span>
-                    AdventureWorks Cycles Limited
-                </h1>
+                <div class="form-group error" role="group">
+                  <label  for="full-name">
+                    <span class="form-label form-label-bold">Your name</span>
+                    <span class="form-hint" id="full-name-hint">Enter full name eg: Joe Bloggs</span>
+                    <span class="error-message" id="error-message-name">Name must be at least 3 characters long</span>
+                  </label>
+                  
+                  <input id="full-name" class="form-control" name="" type="text" value="" aria-describedby="full-name-hint" /> 
+                </div>
                 
+                <div class="form-group error" role="group">
+                  <label  for="email-address">
+                    <span class="form-label form-label-bold">INSS email address</span>
+                    <span class="form-hint" id="email-address-hint">eg: abc.def@insolvency.gsi.gov.uk</span>
+                    <span class="error-message" id="error-message-email-address">The email address you entered does not appear to be valid</span>
+                  </label>
+                  
+                  <input id="email-address" class="form-control" name="" type="text" value="" aria-describedby="email-address-hint" /> 
+                </div>
+
                 
-                <form role="form" method="post" action="/" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Officer's details</h1>
-                    <div class="form-group" aria-label="Officer's name" role="group">
-                      <label  for="officer_name" class="form-label">Full name</label>
-                      <span class="form-hint" id="officer_name_hint"> This is the individual who has day to day responsibility for the case</span>
-                      <input id="officer_name" class="form-control" name="" type="text" value="" aria-describedby="officer_name_hint" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Officer's phone number" role="group">
-                      <label  for="phone_number" class="form-label">Phone number</label>
-                      <input id="phone_number" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Officer's email address" role="group">
-                      <label for="email_address" class="form-label">Email address</label>
-                      <input id="email_address" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Case type" >
-                        <h1 class="form-title heading-large">Case type</h1>
-                        <legend class="visually-hidden">Case type</legend>
-                          <label for="case_administration" class="block-label">
-                            <input name="case_type" id="case_administration" value="A" type="radio">Administration
-                          </label>
-                          <label for="case_admin_receivership" class="block-label">
-                            <input name="case_type" id="case_admin_receivership" value="AR" type="radio">Administrative Receivership
-                          </label>
-                           <label for="case_liquidation" class="block-label">
-                            <input name="case_type" id="case_liquidation" value="L" type="radio">Liquidation
-                          </label>
-                      </div>
-                    </fieldset>
-                    
-                    
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Appointment date" >
-                          <h1 class="form-title heading-large">Appointment date</h1>
-                          <legend class="visuallyhidden">Appointment date</legend>
-                          <div class="form-date">
+                <div class="form-group" role="group">
+                    <button class="button" role="button">Continue</button>
+                </div>
+            </form>
 
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                            </div>
-
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                            </div>
-
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                            </div>
-                          </div>
-                        </div>
-                    </fieldset>
-                    
-                    <div>&nbsp;</div>
-                    <div class="form-group">
-                        <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
-                      </div>
-                </form> 
-
-            </div>
-            
-
-            
-            <div class="column-one-third">
-                <aside class="related">
-                    <h4 class="heading-medium">Assessment progress</h4>
-                    <nav>
-                        <ul class="list list-links">
-                            <li><strong class="bold-small">Case details</strong></li>
-                            <li><a href="#">Company details</a></li>
-                            <li><a href="#">Company director details</a></li>
-                            <li class="disabled-link"><a href="#">Company insolvency</a></li>
-                            <li class="disabled-link"><a href="#">Books &amp; records</a></li>
-                            <li class="disabled-link"><a href="#">Director conduct</a></li>
-                        </ol>
-                    </nav>
-                    
-  
-                    
-                     <div class="notice">
-                        <i class="icon icon-file-download">
-                          <span class="visuallyhidden">Warning</span>
-                        </i>
-                        <strong class="bold-small">
-                          <a href="#">View PDF </a>
-                        </strong>
-                      </div>
-
-                    
-                </aside>
-            </div>
-            
         </div>
-
-<!-- end of form -->
-        
         
 
+        
+    </div>
+      
     </main>
     
 
@@ -305,18 +233,38 @@
     <script>
         $(document).ready(function(){
             
-
+             if($('.cas-case-wrapper').length > 9){
+                 for(i=9; i<$('.cas-case-wrapper').length; i++){
+                     $('.cas-case-wrapper:eq('+i+')').addClass('hidden').hide();
+                 }
+             }
+            
+            $('.btn-load-more').on('click', function(e){
+                e.preventDefault();
+                for(i=9; i<$('.cas-case-wrapper').length; i++){
+                     $('.cas-case-wrapper:eq('+i+')').removeClass('hidden').slideDown();
+                 }
+                
+                
+                if($('.cas-case-wrapper.hidden').length == 0)
+                    $('.btn-load-more').hide();
+            });
             
             $('input[type="search"]').on('keyup', function(){
                 var searchStr = $(this).val();
-                $('.cas-group a').hide().each(function(){
-                    var t = $(this).find('li').text().toLowerCase();
+                $('.cas-case-wrapper').hide().each(function(){
+                    var t = $(this).find('#companyDetails li').text().toLowerCase();
                     if(t.indexOf(searchStr) != -1)
                         $(this).show();
                 }); 
             });
             
-
+             $('.cas-status-keys a').on('click', function(e){
+                e.preventDefault();
+                var c = $(this).attr('href').replace('#','');
+                $('#cas-cases-container').find('.'+c).slideToggle();
+                $(this).parent().find('i').toggleClass('cas-status-off');
+             });
         });
     </script>
   </body>

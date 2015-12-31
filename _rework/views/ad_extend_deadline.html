@@ -57,19 +57,38 @@
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-      
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; /*padding-top: 25px;*/ } 
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
-          
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-      </style>
     
+      <style>
+          .option h2 { background-color: #f8f8f8; padding: 100px 0; text-align: center; }
+          .muted-copy{ color:#BFC1C3;  }
+          .hint { color: #6F777B; } 
+          .search-input-wrapper { width: 100%; margin: 0 auto;  }
+          .search-input-wrapper h2 { text-indent: -10000px; }
+          .search-input-wrapper input[type="search"] { 
+              width: 60%; 
+              font-size: 160%; 
+              height: 54px; 
+              font-weight: bold; 
+              float: left; 
+              text-align: center;
+          }
+          .search-input-wrapper input[type="submit"] { 
+              float: left; 
+              border: none; 
+              width: 66px; 
+              height: 66px; 
+              text-indent: -10000px;
+              cursor: pointer;
+              background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat -40px 50%;
+          }
+          
+          .status { padding: 0 10px; color: white;  }
+          .status-locked { background-color: #f0ad4e;  }
+          .status-barred { background-color: #d9534f;  }
+          
+          .users-wrapper ul { margin-top: 70px; margin-bottom: 20px; display: block;}
+
+      </style>
     
   </head>
 
@@ -119,8 +138,6 @@
         </div>
       </div>
     </header>
-      
-
     <!--end header-->
     
 
@@ -131,6 +148,7 @@
       
       
     <main class="elements-index" id="content" role="main">
+        
       <div class="phase-banner-beta">
         <p>
           <strong class="phase-tag">BETA</strong>
@@ -141,131 +159,72 @@
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Conduct Assessment Service</a></li>
-          <li><a href="/">Dashboard</a></li>
-          <li>AdventureWorks Cycles Limited</li>
+          <li>Dashboard</li>
         </ol>
       </div>
-    
-    <!-- start of form -->
         
-        <div class="grid-row">
+      <div><!-- TO DO:  Place holder -- filtering and search --></div>
+        
+    <h1 class="heading-large">Extend deadline</h1>
+
+        
+    <div class="grid-row">
+        <div class="column-two-thirds">
             
-
+                    <p><span class="hint font-medium">NCL18829292</span>
+            <br />
+            <strong class="bold-xlarge">AdventureWorks Cycles Limited</strong> </p>
+        
+            <div>&nbsp;<!-- spacer --></div>
+            <p class="font-medium">Due in <strong class="bold-medium">10 days</strong> on 10-01-2016</p>
             
-            <div class="column-two-thirds">
-                
-                
-                <h1 class="heading-xlarge">
-                    <span class="heading-secondary">Case ref. NCL18829292</span>
-                    AdventureWorks Cycles Limited
-                </h1>
-                
-                
-                <form role="form" method="post" action="/" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Officer's details</h1>
-                    <div class="form-group" aria-label="Officer's name" role="group">
-                      <label  for="officer_name" class="form-label">Full name</label>
-                      <span class="form-hint" id="officer_name_hint"> This is the individual who has day to day responsibility for the case</span>
-                      <input id="officer_name" class="form-control" name="" type="text" value="" aria-describedby="officer_name_hint" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Officer's phone number" role="group">
-                      <label  for="phone_number" class="form-label">Phone number</label>
-                      <input id="phone_number" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Officer's email address" role="group">
-                      <label for="email_address" class="form-label">Email address</label>
-                      <input id="email_address" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Case type" >
-                        <h1 class="form-title heading-large">Case type</h1>
-                        <legend class="visually-hidden">Case type</legend>
-                          <label for="case_administration" class="block-label">
-                            <input name="case_type" id="case_administration" value="A" type="radio">Administration
-                          </label>
-                          <label for="case_admin_receivership" class="block-label">
-                            <input name="case_type" id="case_admin_receivership" value="AR" type="radio">Administrative Receivership
-                          </label>
-                           <label for="case_liquidation" class="block-label">
-                            <input name="case_type" id="case_liquidation" value="L" type="radio">Liquidation
-                          </label>
-                      </div>
-                    </fieldset>
-                    
-                    
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Appointment date" >
-                          <h1 class="form-title heading-large">Appointment date</h1>
-                          <legend class="visuallyhidden">Appointment date</legend>
-                          <div class="form-date">
+            <form role="form" method="get" action="/">
 
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                            </div>
+                <fieldset class="inline">
+                  <div class="form-group" role="group" aria-label="Extend deadline" >
+                    <h1 class="form-title heading-small">Extend by / Due by</h1>
+                    <legend class="visually-hidden">Extend by</legend>
+                      <label for="extension_1" class="block-label">
+                        <input name="extention" id="extension_1" value="B" type="radio">7 days / Mon, 17-01-2016
+                      </label>
 
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                            </div>
+                      <label for="extension_2" class="block-label">
+                        <input name="extention" id="extension_2" value="A" type="radio">14 days / Wed, 24-01-2016
+                      </label>
 
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                            </div>
-                          </div>
-                        </div>
-                    </fieldset>
-                    
-                    <div>&nbsp;</div>
-                    <div class="form-group">
-                        <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
-                      </div>
-                </form> 
+                       <label for="extension_3" class="block-label">
+                        <input name="extention" id="extension_3" value="C" type="radio">30 days / Tue, 09-02-2016
+                      </label>
 
-            </div>
-            
+                      <label for="extension_3" class="block-label">
+                        <input name="extention" id="extension_3" value="C" type="radio">45 days / Thu, 20-02-2016
+                      </label>
 
-            
-            <div class="column-one-third">
-                <aside class="related">
-                    <h4 class="heading-medium">Assessment progress</h4>
-                    <nav>
-                        <ul class="list list-links">
-                            <li><strong class="bold-small">Case details</strong></li>
-                            <li><a href="#">Company details</a></li>
-                            <li><a href="#">Company director details</a></li>
-                            <li class="disabled-link"><a href="#">Company insolvency</a></li>
-                            <li class="disabled-link"><a href="#">Books &amp; records</a></li>
-                            <li class="disabled-link"><a href="#">Director conduct</a></li>
-                        </ol>
-                    </nav>
-                    
-  
-                    
-                     <div class="notice">
-                        <i class="icon icon-file-download">
-                          <span class="visuallyhidden">Warning</span>
-                        </i>
-                        <strong class="bold-small">
-                          <a href="#">View PDF </a>
-                        </strong>
-                      </div>
+                      <label for="extension_3" class="block-label">
+                        <input name="extention" id="extension_3" value="C" type="radio">60 days / Fri, 12-03-2016
+                      </label>
+                  </div>
+                </fieldset>
 
-                    
-                </aside>
-            </div>
-            
+
+                <div class="form-group" aria-label="Additional notes" role="group">
+                  <h1 class="form-title heading-small">Notes</h1>
+                  <p class="visually-hidden">Enter additional notes, if any</p>
+                  <textarea id="additional_notes" class="form-control" name="" placeholder="Type here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button class="button" role="button" aria-label="Submit">Submit</button>
+                </div>
+
+                <a href="javascript:window.history.back();" class="link-back">Cancel</a>
+
+            </form>
         </div>
-
-<!-- end of form -->
-        
+      </div>
         
 
+      
     </main>
     
 
@@ -300,24 +259,6 @@
     <div id="global-app-error" class="app-error hidden"></div>
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
-    <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
 
-    <script>
-        $(document).ready(function(){
-            
-
-            
-            $('input[type="search"]').on('keyup', function(){
-                var searchStr = $(this).val();
-                $('.cas-group a').hide().each(function(){
-                    var t = $(this).find('li').text().toLowerCase();
-                    if(t.indexOf(searchStr) != -1)
-                        $(this).show();
-                }); 
-            });
-            
-
-        });
-    </script>
   </body>
 </html>

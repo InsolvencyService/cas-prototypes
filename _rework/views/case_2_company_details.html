@@ -59,7 +59,7 @@
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
       
       <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; /*padding-top: 25px;*/ } 
+          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; } 
           .lb  { margin-top: 20px; }
           aside ol { margin-left: 5px; }
           aside h2 { margin-bottom: 10px; }
@@ -156,51 +156,20 @@
                 
                 
                 <h1 class="heading-xlarge">
-                    <span class="heading-secondary">Case ref. NCL18829292</span>
+                    <span class="heading-secondary">NCL18829292</span>
                     AdventureWorks Cycles Limited
                 </h1>
                 
                 
-                <form role="form" method="post" action="/" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Officer's details</h1>
-                    <div class="form-group" aria-label="Officer's name" role="group">
-                      <label  for="officer_name" class="form-label">Full name</label>
-                      <span class="form-hint" id="officer_name_hint"> This is the individual who has day to day responsibility for the case</span>
-                      <input id="officer_name" class="form-control" name="" type="text" value="" aria-describedby="officer_name_hint" />
-                    </div>
+                <form role="form" method="post" action="case_3_company_directors.html" aria-label="Case information form">
+                    <h1 class="form-title heading-large">Company details</h1>
                     
-                    <div class="form-group" aria-label="Officer's phone number" role="group">
-                      <label  for="phone_number" class="form-label">Phone number</label>
-                      <input id="phone_number" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Officer's email address" role="group">
-                      <label for="email_address" class="form-label">Email address</label>
-                      <input id="email_address" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
+                    <p class="bold-small">Date of incorporation</p>
+
                     <fieldset>
-                      <div class="form-group" role="group" aria-label="Case type" >
-                        <h1 class="form-title heading-large">Case type</h1>
-                        <legend class="visually-hidden">Case type</legend>
-                          <label for="case_administration" class="block-label">
-                            <input name="case_type" id="case_administration" value="A" type="radio">Administration
-                          </label>
-                          <label for="case_admin_receivership" class="block-label">
-                            <input name="case_type" id="case_admin_receivership" value="AR" type="radio">Administrative Receivership
-                          </label>
-                           <label for="case_liquidation" class="block-label">
-                            <input name="case_type" id="case_liquidation" value="L" type="radio">Liquidation
-                          </label>
-                      </div>
-                    </fieldset>
-                    
-                    
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Appointment date" >
-                          <h1 class="form-title heading-large">Appointment date</h1>
-                          <legend class="visuallyhidden">Appointment date</legend>
+                      <div class="form-group" role="group" aria-label="Date of incorporation" >
+                          
+                          <legend class="visuallyhidden">Date of incorporation</legend>
                           <div class="form-date">
 
                             <div class="form-group form-group-day" role="group" aria-label="Day">
@@ -221,11 +190,60 @@
                         </div>
                     </fieldset>
                     
+                    
+                    <div class="form-group" aria-label="Company address" role="group">
+                      <label  for="company_address" class="form-label-bold">Address</label>
+                      <span class="form-hint" id="company_address_hint">Registered office address prior to your appointment</span>
+                      <textarea id="company_address" class="form-control" name="company_address" aria_describedby="company_address_hint"></textarea>
+                    </div>
+                    
+                    <div class="form-group" aria-label="Company town/City" role="group">
+                      <label  for="company_town" class="form-label-bold">Town/city</label>
+                      <input id="company_town" class="form-control" name="" type="text" value="" />
+                    </div>
+                    
+                    <div class="form-group" aria-label="Company county" role="group">
+                      <label for="company_county" class="form-label-bold">County/region</label>
+                      <input id="company_county" class="form-control" name="" type="text" value="" />
+                    </div>
+                    
+                    
+                    <div class="form-group" aria-label="Company country" role="group">
+                      <label for="company_country" class="form-label-bold">Country</label>
+                      <input id="company_country" class="form-control" name="" type="text" value="" />
+                    </div>
+                    
+                    
+                    <div class="form-group" aria-label="Company postcode" role="group">
+                      <label for="company_postcode" class="form-label-bold">Postcode</label>
+                      <input id="company_postcode" class="form-control" name="" type="text" value="" />
+                    </div>
+                    
+                    <p class="bold-small">Is the principal trading address same as above?</p>
+                    <fieldset class="inline">
+
+                      <legend class="visuallyhidden">Is the principal trading address same as above?</legend>
+
+                      <label class="block-label" for="principal_address_yes">
+                        <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
+                        Yes
+                      </label>
+                      <label class="block-label" for="principal_address_no">
+                        <input id="principal_address_no" type="radio" name="principal_address" value="No">
+                        No
+                      </label>
+
+                    </fieldset>
+                    
+
+                    
                     <div>&nbsp;</div>
                     <div class="form-group">
                         <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
                       </div>
                 </form> 
+                
+                <a href="javascript:window.history.back();" class="link-back">Back</a>
 
             </div>
             
@@ -233,6 +251,7 @@
             
             <div class="column-one-third">
                 <aside class="related">
+                    <!--
                     <h4 class="heading-medium">Assessment progress</h4>
                     <nav>
                         <ul class="list list-links">
@@ -244,7 +263,7 @@
                             <li class="disabled-link"><a href="#">Director conduct</a></li>
                         </ol>
                     </nav>
-                    
+                    -->
   
                     
                      <div class="notice">
