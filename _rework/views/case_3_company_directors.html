@@ -166,32 +166,32 @@
                 </h1>
                 
                 
-                <form role="form" method="post" action="/" aria-label="Case information form">
+                <form role="form" method="post" action="case_4_company_insolvency.html" aria-label="Case information form">
                     <h1 class="form-title heading-large">Company directors</h1>
                     <span class="form-hint" id="company_address_hint">Note - each director's details must be viewed and updated where required.</span>
                     
                     
                     <ul class="company-director list font-small">
-                        <li><strong class="bold-medium">Sarah Smith</strong></li>
+                        <li><a href="case_3a_director_details.html"><strong class="bold-medium">Sarah Smith</strong></a></li>
                         <li>1 Windsor Drive, Birmingham, B36 RTF</li>
                         <li>From 23-11-2011 &bull; to 21-08-2014</li>
                     </ul>
 
                     <ul class="company-director list font-small">
-                        <li><span class="status status-pending">To confirm</span> <strong class="bold-medium">Joe Blogg</strong></li>
+                        <li><span class="status status-pending">To confirm</span> <a href="case_3a_director_details.html"><strong class="bold-medium">Joe Blogg</strong></a></li>
                         <li>1 Windsor Drive, Birmingham, B36 RTF</li>
                         <li>From 23-11-2011 &bull; to 21-08-2014</li>
                     </ul>
 
                     <ul class="company-director list font-small">
-                        <li><span class="status status-pending">To confirm</span> <strong class="bold-medium">Peter Smith</strong></li>
+                        <li><span class="status status-pending">To confirm</span> <a href="case_3a_director_details.html"><strong class="bold-medium">Peter Smith</strong></a></li>
                         <li>1 Windsor Drive, Birmingham, B36 RTF</li>
                         <li>From 23-11-2011 &bull; to 21-08-2014</li>
                     </ul>
 
                     
                     <p>
-                        <a class="bold-small" href="#">Add another director </a>
+                        <a class="bold-small" href="case_3a_director_details.html">Add another director </a>
                     </p>
 
                     
@@ -265,23 +265,11 @@
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
     <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
-
-    <script>
-        $(document).ready(function(){
-            
-
-            
-            $('input[type="search"]').on('keyup', function(){
-                var searchStr = $(this).val();
-                $('.cas-group a').hide().each(function(){
-                    var t = $(this).find('li').text().toLowerCase();
-                    if(t.indexOf(searchStr) != -1)
-                        $(this).show();
-                }); 
-            });
-            
-
-        });
-    </script>
+    
+    <script src="../assets/javascripts/vendor/bind.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/selection-buttons.js" type="text/javascript"></script>
+      
+    <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
   </body>
 </html>

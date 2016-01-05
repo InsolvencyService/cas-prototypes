@@ -63,7 +63,6 @@
           .muted-copy{ color:#BFC1C3;  }
           .hint { color: #6F777B; } 
           .search-input-wrapper { width: 100%; margin: 0 auto;  }
-          .search-input-wrapper h2 { text-indent: -10000px; }
           .search-input-wrapper input[type="search"] { 
               width: 60%; 
               font-size: 160%; 
@@ -86,7 +85,7 @@
           .status-locked { background-color: #f0ad4e;  }
           .status-barred { background-color: #d9534f;  }
           
-          .users-wrapper ul { margin-top: 70px; margin-bottom: 20px; display: block;}
+          .users-wrapper ul { margin-top: 70px; display: block;}
 
       </style>
     
@@ -127,9 +126,7 @@
             <nav id="proposition-menu">
               <a href="/" id="proposition-name">Conduct Assessment Service</a>
               <ul id="proposition-links">
-                <li><a href="url-to-page-1" class="active">Dashboard</a></li>
-                <li><a href="url-to-page-2">Submitted Cases</a></li>
-                <li><a href="url-to-page-3">Manage Staff</a></li>
+                <li><a href="ad_dashboard.html" class="active">Home</a></li>
                 <li><a href="url-to-page-4">Change Password</a></li>
                 <li><a href="url-to-page-5">Logout</a></li>
               </ul>
@@ -146,7 +143,7 @@
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
       
-      
+    
     <main class="elements-index" id="content" role="main">
         
       <div class="phase-banner-beta">
@@ -159,7 +156,8 @@
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Conduct Assessment Service</a></li>
-          <li>Dashboard</li>
+          <li><a href="/">Home</a></li>
+          <li>Manage user access</li>
         </ol>
       </div>
         
@@ -173,27 +171,14 @@
             <input type="submit" role="button" aria-label="Search" value="Search" />
         </form>
       </div>
-        
+    
+    
     <div class="grid-row">
         <div class="column-two-thirds users-wrapper">
-        
-            <ul class="list font-medium">
-                <li><strong class="bold-large">Peter James Anderson</strong>, Practioner</li>
-                <li class="hint">peter.anderson@someinsolvencyfirm.co.uk</li>
-                <li><a href="#" class="bold-medium">Suspend</a></li>
-            </ul>
-            
-            <ul class="list font-medium">
-                <li><span class="status status-locked">Locked</span> <strong class="bold-large">Joe Blogg</strong>, Staff</li>
-                <li class="hint">joe.blogg@insolvencyfirm.co.uk</li>
-                <li><a href="#" class="bold-medium">Unlock</a></li>
-            </ul>
-            
-            <ul class="list font-medium">
-                <li><span class="status status-barred">Barred</span> <strong class="bold-large">Andrew Blogg</strong>, Practioner</li>
-                <li class="hint">andy.blogg@rsmsinsolvencyservices.co.uk</li>
-                <li><a href="#" class="bold-medium">Reinstate</a></li>
-            </ul>
+            <p>&nbsp;</p>
+            <!-- <h2 class="heading-xlarge">Sorry, your search did not return any results</h2> -->
+            <p class="hint font-medium">Tip: You can search using user's first or last name, email and IP number</p>
+
         </div>
     </div>
       

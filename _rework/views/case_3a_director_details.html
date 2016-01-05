@@ -161,14 +161,50 @@
                 </h1>
                 
                 
-                <form role="form" method="post" action="case_3_company_directors.html" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Company details</h1>
+                <form role="form" method="post" action="case_3b_director_details.html" aria-label="Case information form">
+                    <h1 class="form-title heading-large">Director details</h1>
+                    
+                    
+                    <fieldset class="inline">
+                      <div class="form-group" role="group" aria-label="Title" >
+                        <legend class="visually-hidden">Title</legend>
+                          <label for="title_mr" class="block-label">
+                            <input name="title" id="title_mr" value="Mr" type="radio">Mr.
+                          </label>
+                          <label for="title_mrs" class="block-label">
+                            <input name="title" id="title_mrs" value="Mrs" type="radio">Mrs.
+                          </label>
+                          <label for="title_miss" class="block-label">
+                            <input name="title" id="title_miss" value="Miss" type="radio">Miss
+                          </label>
+                          <label for="title_ms" class="block-label">
+                            <input name="title" id="title_ms" value="Ms." type="radio">Ms.
+                          </label>
+                          <label for="title_dr" class="block-label">
+                            <input name="title" id="title_dr" value="Dr." type="radio">Dr.
+                          </label>
+                          <label for="title_prof" class="block-label">
+                            <input name="title" id="title_prof" value="Prof." type="radio">Prof.
+                          </label>
+                      </div>
+                    </fieldset>
+                    
+                    <div class="form-group" aria-label="First name" role="group">
+                      <label  for="first_name" class="form-label-bold">First name</label>
+                      <input id="first_name" class="form-control" name="first_name" type="text" value="" />
+                    </div>
+                    
+                    <div class="form-group" aria-label="Last name" role="group">
+                      <label for="last_name" class="form-label-bold">Last name</label>
+                      <input id="last_name" class="form-control" name="" type="text" value="" />
+                    </div>
+                    
                     
 
                     <fieldset>
                       <div class="form-group" role="group" aria-label="Date of incorporation" >
                           
-                          <legend class="bold-small">Date of incorporation</legend>
+                          <legend class="bold-small">Date of birth</legend>
                           <div class="form-date">
 
                             <div class="form-group form-group-day" role="group" aria-label="Day">
@@ -190,51 +226,41 @@
                     </fieldset>
                     
                     
-                    <div class="form-group" aria-label="Company address" role="group">
-                      <label  for="company_address" class="form-label-bold">Address</label>
-                      <span class="form-hint" id="company_address_hint">Registered office address prior to your appointment</span>
-                      <textarea id="company_address" class="form-control" name="company_address" aria_describedby="company_address_hint"></textarea>
+                    <div class="form-group" aria-label="Director's address" role="group">
+                      <label  for="director_address" class="form-label-bold">Address</label>
+                      <textarea id="director_address" class="form-control" name="director_address"></textarea>
                     </div>
                     
-                    <div class="form-group" aria-label="Company town/city" role="group">
-                      <label  for="company_town" class="form-label-bold">Town/city</label>
-                      <input id="company_town" class="form-control" name="" type="text" value="" />
+                    <div class="form-group" aria-label="Directory's town/city" role="group">
+                      <label  for="director_town" class="form-label-bold">Town/city</label>
+                      <input id="director_town" class="form-control" name="" type="text" value="" />
                     </div>
                     
-                    <div class="form-group" aria-label="Company county" role="group">
-                      <label for="company_county" class="form-label-bold">County/region</label>
-                      <input id="company_county" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
-                    <div class="form-group" aria-label="Company postcode" role="group">
-                      <label for="company_postcode" class="form-label-bold">Postcode</label>
-                      <input id="company_postcode" class="form-control" name="" type="text" value="" />
+                    <div class="form-group" aria-label="Director's county/region" role="group">
+                      <label for="director_county" class="form-label-bold">County/region</label>
+                      <input id="director_county" class="form-control" name="" type="text" value="" />
                     </div>
 
                     
-                    <div class="form-group" aria-label="Company country" role="group">
-                      <label for="company_country" class="form-label-bold">Country</label>
-                      <input id="company_country" class="form-control" name="" type="text" value="" />
+                    <div class="form-group" aria-label="Director's postcode" role="group">
+                      <label for="director_postcode" class="form-label-bold">Postcode</label>
+                      <input id="director_postcode" class="form-control" name="" type="text" value="" />
                     </div>
                     
+                    <div class="form-group" aria-label="Director's country" role="group">
+                      <label for="director_country" class="form-label-bold">Country</label>
+                      <input id="director_country" class="form-control" name="" type="text" value="" />
+                    </div>
                     
-                    <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Is the principal trading address same as above?" >
-                          <legend class="bold-small">Is the principal trading address same as above?</legend>
-
-                          <label class="block-label" for="principal_address_yes">
-                            <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
-                            Yes
-                          </label>
-                          <label class="block-label" for="principal_address_no">
-                            <input id="principal_address_no" type="radio" name="principal_address" value="No">
-                            No
-                          </label>
-                        </div>
-                    </fieldset>
+                    <div class="form-group" aria-label="Director's email" role="group">
+                      <label for="director_email" class="form-label-bold">Email address</label>
+                      <input id="director_email" class="form-control" name="" type="text" value="" />
+                    </div>
                     
-
+                    <div class="form-group" aria-label="Director's phone number" role="group">
+                      <label for="director_phone_number" class="form-label-bold">Phone number</label>
+                      <input id="director_phone_number" class="form-control" name="" type="text" value="" />
+                    </div>
                     
                     <div>&nbsp;</div>
                     <div class="form-group">

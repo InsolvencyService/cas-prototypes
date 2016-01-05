@@ -302,23 +302,11 @@
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
     <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
-
-    <script>
-        $(document).ready(function(){
-            
-
-            
-            $('input[type="search"]').on('keyup', function(){
-                var searchStr = $(this).val();
-                $('.cas-group a').hide().each(function(){
-                    var t = $(this).find('li').text().toLowerCase();
-                    if(t.indexOf(searchStr) != -1)
-                        $(this).show();
-                }); 
-            });
-            
-
-        });
-    </script>
+    
+    <script src="../assets/javascripts/vendor/bind.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/selection-buttons.js" type="text/javascript"></script>
+      
+    <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
   </body>
 </html>

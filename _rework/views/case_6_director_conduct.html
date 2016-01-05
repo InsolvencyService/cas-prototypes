@@ -161,80 +161,107 @@
                 </h1>
                 
                 
-                <form role="form" method="post" action="case_3_company_directors.html" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Company details</h1>
-                    
-
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Date of incorporation" >
-                          
-                          <legend class="bold-small">Date of incorporation</legend>
-                          <div class="form-date">
-
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                            </div>
-
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                            </div>
-
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                            </div>
-                          </div>
-                        </div>
-                    </fieldset>
-                    
-                    
-                    <div class="form-group" aria-label="Company address" role="group">
-                      <label  for="company_address" class="form-label-bold">Address</label>
-                      <span class="form-hint" id="company_address_hint">Registered office address prior to your appointment</span>
-                      <textarea id="company_address" class="form-control" name="company_address" aria_describedby="company_address_hint"></textarea>
-                    </div>
-                    
-                    <div class="form-group" aria-label="Company town/city" role="group">
-                      <label  for="company_town" class="form-label-bold">Town/city</label>
-                      <input id="company_town" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Company county" role="group">
-                      <label for="company_county" class="form-label-bold">County/region</label>
-                      <input id="company_county" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
-                    <div class="form-group" aria-label="Company postcode" role="group">
-                      <label for="company_postcode" class="form-label-bold">Postcode</label>
-                      <input id="company_postcode" class="form-control" name="" type="text" value="" />
-                    </div>
-
-                    
-                    <div class="form-group" aria-label="Company country" role="group">
-                      <label for="company_country" class="form-label-bold">Country</label>
-                      <input id="company_country" class="form-control" name="" type="text" value="" />
-                    </div>
+                <form role="form" method="post" action="case_6a_director_conduct.html" aria-label="Case information form">
+                    <h1 class="form-title heading-large">Director conduct (1 of 4)</h1>
                     
                     
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Is the principal trading address same as above?" >
-                          <legend class="bold-small">Is the principal trading address same as above?</legend>
+                        <div class="form-group" role="group" aria-label="
+Did the company incur any additional debt(s) at a time when the director(s) ought reasonably to have known that the company was insolvent?" >
+                          <legend class="bold-small">
+Did the company incur any additional debt(s) at a time when the director(s) ought reasonably to have known that the company was insolvent?</legend>
 
-                          <label class="block-label" for="principal_address_yes">
-                            <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
+                          <label class="block-label" for="insolvency_knowledge_q1_yes" data-target="q1-sub">
+                            <input id="insolvency_knowledge_q1_yes" type="radio" name="insolvency_knowledge_q1" value="Yes" aria-controls="q2-sub">
                             Yes
                           </label>
-                          <label class="block-label" for="principal_address_no">
-                            <input id="principal_address_no" type="radio" name="principal_address" value="No">
+                          <label class="block-label" for="insolvency_knowledge_q1_no">
+                            <input id="insolvency_knowledge_q1_no" type="radio" name="insolvency_knowledge_q1" value="No">
                             No
                           </label>
                         </div>
                     </fieldset>
                     
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q1-sub">
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="What evidence is there that the director(s) should have known that the company was insolvent?" >
+                            <legend class="bold-small">What evidence is there that the director(s) should have known that the company was insolvent?</legend>
+                            <span class="form-hint" id="failure_causes_hint">Tick all that apply</span>
+                              
+                              <label for="q1_evidence_balance_sheet" class="block-label">
+                                <input name="q1_evidence" id="q1_evidence_balance_sheet" value="Company accounts e.g. balance sheet / P&amp;L" type="checkbox">Company accounts e.g. balance sheet / P&amp;L
+                              </label>
 
+                              <label for="q1_evidence_analysis" class="block-label">
+                                <input name="q1_evidence" id="q1_evidence_analysis" value="Cash flow analysis / aged creditors list" type="checkbox">Cash flow analysis / aged creditors list
+                              </label>
+                              
+                              <label for="q1_evidence_bank_transactions" class="block-label">
+                                <input name="q1_evidence" id="q1_evidence_bank_transactions" value="Bank transactions" type="checkbox">Bank transactions
+                              </label>
+                              
+                              <label for="q1_evidence_creditor_pressure" class="block-label">
+                                <input name="q1_evidence" id="q1_evidence_creditor_pressure" value="Creditor pressure" type="checkbox">Creditor pressure
+                              </label>
+                              
+                              <label for="q1_evidence_other" class="block-label">
+                                <input name="q1_evidence" id="q1_evidence_other" value="Other" type="checkbox">Other
+                              </label>
+                              
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="How long before the company ceased to trade was the company insolvent?" >
+                            <legend class="bold-small">How long before the company ceased to trade was the company insolvent?</legend>
+                              <label for="q1_since_1_6" class="block-label">
+                                <input name="q1_since" id="q1_since_1_6" value="1 - 6 months" type="radio">1 - 6 months
+                              </label>
+
+                              <label for="q1_since_7_12" class="block-label">
+                                <input name="q1_since" id="q1_since_7_12" value="7 - 12 months" type="radio">7 - 12 months
+                              </label>
+
+                               <label for="q1_since_13_24" class="block-label">
+                                <input name="q1_since" id="q1_since_13_24" value="13 - 24 months" type="radio">13 - 24 months
+                              </label>
+                              
+                              <label for="q1_since_over_24" class="block-label">
+                                <input name="q1_since" id="q1_since_over_24" value="Over 24 months" type="radio">Over 24 months
+                              </label>
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="What is the amount of additional debt(s) that were incurred post insolvency?" >
+                            <legend class="bold-small">What is the amount of additional debt(s) that were incurred post insolvency?</legend>
+                              <label for="q1_debt_under_50k" class="block-label">
+                                <input name="q1_debt" id="q1_debt_under_50k" value="Less than &pound;50,000" type="radio">Less than &pound;50,000
+                              </label>
+
+                              <label for="q1_debt_50k_150k" class="block-label">
+                                <input name="q1_debt" id="q1_debt_50k_150k" value="Between &pound;50,001 to &pound;150,000" type="radio">Between &pound;50,001 and &pound;150,000
+                              </label>
+                              
+                              <label for="q1_debt_150k_250k" class="block-label">
+                                <input name="q1_debt" id="q1_debt_150k_250k" value="Between &pound;150,001 to &pound;250,000" type="radio">Between &pound;150,001 and &pound;250,000
+                              </label>
+                              
+                              <label for="q1_debt_250k_500k" class="block-label">
+                                <input name="q1_debt" id="q1_debt_250k_500k" value="Between &pound;250,001 to &pound;500,000" type="radio">Between &pound;250,001 and &pound;500,000
+                              </label>
+                              
+                              <label for="q1_debt_over_500k" class="block-label">
+                                <input name="q1_debt" id="q1_debt_over_500k" value="Over &pound;500,000" type="radio">Over &pound;500,000
+                              </label>
+                          </div>
+                        </fieldset>
+                    </div>
                     
                     <div>&nbsp;</div>
                     <div class="form-group">

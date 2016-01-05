@@ -161,80 +161,78 @@
                 </h1>
                 
                 
-                <form role="form" method="post" action="case_3_company_directors.html" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Company details</h1>
-                    
-
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Date of incorporation" >
-                          
-                          <legend class="bold-small">Date of incorporation</legend>
-                          <div class="form-date">
-
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                            </div>
-
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                            </div>
-
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                            </div>
-                          </div>
-                        </div>
-                    </fieldset>
-                    
-                    
-                    <div class="form-group" aria-label="Company address" role="group">
-                      <label  for="company_address" class="form-label-bold">Address</label>
-                      <span class="form-hint" id="company_address_hint">Registered office address prior to your appointment</span>
-                      <textarea id="company_address" class="form-control" name="company_address" aria_describedby="company_address_hint"></textarea>
-                    </div>
-                    
-                    <div class="form-group" aria-label="Company town/city" role="group">
-                      <label  for="company_town" class="form-label-bold">Town/city</label>
-                      <input id="company_town" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Company county" role="group">
-                      <label for="company_county" class="form-label-bold">County/region</label>
-                      <input id="company_county" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
-                    <div class="form-group" aria-label="Company postcode" role="group">
-                      <label for="company_postcode" class="form-label-bold">Postcode</label>
-                      <input id="company_postcode" class="form-control" name="" type="text" value="" />
-                    </div>
-
-                    
-                    <div class="form-group" aria-label="Company country" role="group">
-                      <label for="company_country" class="form-label-bold">Country</label>
-                      <input id="company_country" class="form-control" name="" type="text" value="" />
-                    </div>
+                <form role="form" method="post" action="case_6_director_conduct.html" aria-label="Case information form">
+                    <h1 class="form-title heading-large">Books &amp; Records</h1>
                     
                     
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Is the principal trading address same as above?" >
-                          <legend class="bold-small">Is the principal trading address same as above?</legend>
+                        <div class="form-group" role="group" aria-label="Are the available books and records adequate to explain the company's trading?" >
+                          <legend class="bold-small">Are the available books and records adequate to explain the company's trading?</legend>
 
-                          <label class="block-label" for="principal_address_yes">
-                            <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
+                          <label class="block-label" for="books_q1_yes">
+                            <input id="books_q1_yes" type="radio" name="books_q1" value="Yes" aria-controls="q2-sub">
                             Yes
                           </label>
-                          <label class="block-label" for="principal_address_no">
-                            <input id="principal_address_no" type="radio" name="principal_address" value="No">
+                          <label class="block-label" for="books_q1_no" data-target="q1-sub">
+                            <input id="books_q1_no" type="radio" name="books_q1" value="No">
                             No
                           </label>
                         </div>
                     </fieldset>
                     
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q1-sub">
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="Are drafts or management accounts available up to the end of trading?" >
+                            <legend class="bold-small">Are drafts or management accounts available up to the end of trading?</legend>
+                              <label for="q1_accounts_available_yes" class="block-label">
+                                <input name="q1_accounts_available" id="q1_accounts_available_yes" value="Yes" type="radio">Yes
+                              </label>
 
+                              <label for="q1_accounts_available_no" class="block-label">
+                                <input name="q1_accounts_available" id="q1_accounts_available_no" value="No" type="radio">No
+                              </label>
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="How long is the gap between the last available accounts and the end of trading?" >
+                            <legend class="bold-small">How long is the gap between the last available accounts and the end of trading?</legend>
+                              <label for="q1_gap_1_3" class="block-label">
+                                <input name="q1_gap" id="q1_gap_1_3" value="1 to 3 months" type="radio">1 to 3 months
+                              </label>
+
+                              <label for="q1_gap_4_6" class="block-label">
+                                <input name="q1_gap" id="q1_gap_4_6" value="4 to 6 months" type="radio">4 to 6 months
+                              </label>
+
+                               <label for="q1_gap_7_12" class="block-label">
+                                <input name="q1_gap" id="q1_gap_7_12" value="7 to 12 months" type="radio">7 to 12 months
+                              </label>
+                              
+                              <label for="q1_gap_over_12" class="block-label">
+                                <input name="q1_gap" id="q1_gap_over_12" value="Over 12 months" type="radio">Over 12 months
+                              </label>
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="Are there material things that cannot be explained by the available records?" >
+                            <legend class="bold-small">Are there material things that cannot be explained by the available records?</legend>
+                              <label for="q1_material_available_yes" class="block-label">
+                                <input name="q1_material_available" id="q1_material_available_yes" value="Yes" type="radio">Yes
+                              </label>
+
+                              <label for="q1_material_available_no" class="block-label">
+                                <input name="q1_material_available" id="q1_material_available_no" value="No" type="radio">No
+                              </label>
+                          </div>
+                        </fieldset>
+                    </div>
                     
                     <div>&nbsp;</div>
                     <div class="form-group">

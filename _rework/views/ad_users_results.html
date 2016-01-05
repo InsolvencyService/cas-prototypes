@@ -58,6 +58,37 @@
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     
+      <style>
+          .option h2 { background-color: #f8f8f8; padding: 100px 0; text-align: center; }
+          .muted-copy{ color:#BFC1C3;  }
+          .hint { color: #6F777B; } 
+          .search-input-wrapper { width: 100%; margin: 0 auto;  }
+          .search-input-wrapper h2 { text-indent: -10000px; }
+          .search-input-wrapper input[type="search"] { 
+              width: 60%; 
+              font-size: 160%; 
+              height: 54px; 
+              font-weight: bold; 
+              float: left; 
+              text-align: center;
+          }
+          .search-input-wrapper input[type="submit"] { 
+              float: left; 
+              border: none; 
+              width: 66px; 
+              height: 66px; 
+              text-indent: -10000px;
+              cursor: pointer;
+              background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat -40px 50%;
+          }
+          
+          .status { padding: 0 10px; color: white;  }
+          .status-locked { background-color: #f0ad4e;  }
+          .status-barred { background-color: #d9534f;  }
+          
+          .users-wrapper ul { margin-top: 70px; margin-bottom: 20px; display: block;}
+
+      </style>
     
   </head>
 
@@ -89,24 +120,20 @@
             </a>
           </div>
         </div>
-          <!--
+
         <div class="header-proposition">
           <div class="content">
             <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-              
             <nav id="proposition-menu">
               <a href="/" id="proposition-name">Conduct Assessment Service</a>
               <ul id="proposition-links">
-                <li><a href="url-to-page-1" class="active">Dashboard</a></li>
-                <li><a href="url-to-page-2">Submitted Cases</a></li>
-                <li><a href="url-to-page-3">Manage Staff</a></li>
+                <li><a href="ad_dashboard.html" class="active">Home</a></li>
                 <li><a href="url-to-page-4">Change Password</a></li>
                 <li><a href="url-to-page-5">Logout</a></li>
               </ul>
             </nav>
           </div>
         </div>
-          -->
       </div>
     </header>
     <!--end header-->
@@ -130,69 +157,43 @@
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Conduct Assessment Service</a></li>
-          <li>Dashboard</li>
+          <li><a href="/">Home</a></li>
+          <li>Manage user access</li>
         </ol>
       </div>
         
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
         
-      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
-
-        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
-          Unable to log in
-        </h1>
-
-        <p>
-          Following error occurred while logging into CAS
-        </p>
-
-        <ul class="error-summary-list">
-          <li><a href="#email_address">Invalid email address</a></li>
-          <li><a href="#password">Invalid password</a></li>
-        </ul>
-
+    <h1 class="heading-large">Manage user access</h1>
+    <div class="search-input-wrapper">
+        <form role="form" method="get" action="ad_users_no_results.html">
+            <p class="visually-hidden" id="search-hint">Search user using first or last name, email...</p>
+            <input type="search" role="search" placeholder="Search user..."  class="form-control" aria-describedby="search-hint"  />
+            <input type="submit" role="button" aria-label="Search" value="Search" />
+        </form>
       </div>
-    
+        
     <div class="grid-row">
-        <div class="column-two-thirds">
-            <form role="form" method="post" action="ad_dashboard.html">
-                
-
-
-                <h1 class="form-title heading-large">Enter login details</h1>
-                
-                <div class="form-group error" role="group">
-                  <label  for="email_address">
-                      <span class="form-label form-label-bold">INSS email address</span>
-                      <span class="form-hint" id="email-address-hint">eg: abc.def@insolvency.gsi.gov.uk</span>
-                      <span class="error-message" id="error-message-email-address">The email address you have entered was not found on our database</span>
-                    </label>
-                  
-                  <input id="email_address" class="form-control" name="" type="text" value="" aria-describedby="email-address-hint error-message-email-address" /> 
-                </div>
-                
-                <div class="form-group error" role="group">
-                  <label for="password">
-                      <span class="form-label form-label-bold">Password</span>
-                      <span class="error-message" id="error-message-password">The password you entered is not correct</span>
-                  </label>
-                  <input id="password" class="form-control" name="" type="password" value="" aria-describedby="error-message-password" />
-                </div>
-                
-                <div class="form-group" role="group">
-                    <button class="button" role="button">Log in</button>
-                </div>
-            </form>
+        <div class="column-two-thirds users-wrapper">
+        
+            <ul class="list font-medium">
+                <li><strong class="bold-large">Peter Blogg Anderson</strong>, Practioner</li>
+                <li class="hint">peter.anderson@someinsolvencyfirm.co.uk</li>
+                <li><a href="#" class="bold-medium">Suspend</a></li>
+            </ul>
             
-            <div><!-- spacer -->&nbsp;</div>
-            <ul class="list bold-small">
-                <li><a href="#">Forgot your password?</a></li>
-                <li><a href="#">Create new account</a></li>
+            <ul class="list font-medium">
+                <li><span class="status status-locked">Locked</span> <strong class="bold-large">Joe Blogg</strong>, Staff</li>
+                <li class="hint">joe.blogg@insolvencyfirm.co.uk</li>
+                <li><a href="#" class="bold-medium">Unlock</a></li>
+            </ul>
+            
+            <ul class="list font-medium">
+                <li><span class="status status-barred">Barred</span> <strong class="bold-large">Andrew Blogg</strong>, Practioner</li>
+                <li class="hint">andy.blogg@rsmsinsolvencyservices.co.uk</li>
+                <li><a href="#" class="bold-medium">Reinstate</a></li>
             </ul>
         </div>
-        
-
-        
     </div>
       
     </main>
@@ -229,44 +230,6 @@
     <div id="global-app-error" class="app-error hidden"></div>
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
-    <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
 
-    <script>
-        $(document).ready(function(){
-            
-             if($('.cas-case-wrapper').length > 9){
-                 for(i=9; i<$('.cas-case-wrapper').length; i++){
-                     $('.cas-case-wrapper:eq('+i+')').addClass('hidden').hide();
-                 }
-             }
-            
-            $('.btn-load-more').on('click', function(e){
-                e.preventDefault();
-                for(i=9; i<$('.cas-case-wrapper').length; i++){
-                     $('.cas-case-wrapper:eq('+i+')').removeClass('hidden').slideDown();
-                 }
-                
-                
-                if($('.cas-case-wrapper.hidden').length == 0)
-                    $('.btn-load-more').hide();
-            });
-            
-            $('input[type="search"]').on('keyup', function(){
-                var searchStr = $(this).val();
-                $('.cas-case-wrapper').hide().each(function(){
-                    var t = $(this).find('#companyDetails li').text().toLowerCase();
-                    if(t.indexOf(searchStr) != -1)
-                        $(this).show();
-                }); 
-            });
-            
-             $('.cas-status-keys a').on('click', function(e){
-                e.preventDefault();
-                var c = $(this).attr('href').replace('#','');
-                $('#cas-cases-container').find('.'+c).slideToggle();
-                $(this).parent().find('i').toggleClass('cas-status-off');
-             });
-        });
-    </script>
   </body>
 </html>

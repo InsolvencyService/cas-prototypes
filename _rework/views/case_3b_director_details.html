@@ -162,77 +162,183 @@
                 
                 
                 <form role="form" method="post" action="case_3_company_directors.html" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Company details</h1>
+                    <h1 class="form-title heading-large">Director details</h1>
+                    
+                    <fieldset class="inline">
+                      <div class="form-group" role="group" aria-label="Appointment Status" >
+                        <legend class="bold-small">Appointment status</legend>
+                          <label for="appointment_status_dejure" class="block-label">
+                            <input name="appointment_status" id="appointment_status_dejure" value="De jure" type="radio">De jure
+                          </label>
+                          <label for="appointment_status_defacto" class="block-label" data-target="appointment-status-sub">
+                            <input name="appointment_status" id="appointment_status_defacto" value="De facto" type="radio" aria-controls="appointment-status-sub">De facto
+                          </label>
+                          <label for="appointment_status_shadow" class="block-label" data-target="appointment-status-sub">
+                            <input name="appointment_status" id="appointment_status_shadow" value="Shadow" type="radio" aria-controls="appointment-status-sub">Shadow
+                          </label>
+                      </div>
+                    </fieldset>
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="appointment-status-sub">
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="What evidence is there to show that the person acted as a director?" >
+                            <legend class="bold-small">What evidence is there to show that the person acted as a director?</legend>
+                              <label for="as_evidence_one" class="block-label">
+                                <input name="as_evidence" id="as_evidence_one" value="Company Books" type="radio">Company books
+                              </label>
+
+                              <label for="as_evidence_two" class="block-label">
+                                <input name="as_evidence" id="as_evidence_two" value="Employees" type="radio">Employees
+                              </label>
+
+                               <label for="as_evidence_three" class="block-label">
+                                <input name="as_evidence" id="as_evidence_three" value="Company accountant" type="radio">Company accountant
+                              </label>
+                              
+                              <label for="as_evidence_four" class="block-label">
+                                <input name="as_evidence" id="as_evidence_four" value="Bank" type="radio">Bank
+                              </label>
+                              
+                              <label for="as_evidence_five" class="block-label">
+                                <input name="as_evidence" id="as_evidence_five" value="3rd parties" type="radio">3rd parties
+                              </label>
+                              
+                              <label for="as_evidence_six" class="block-label">
+                                <input name="as_evidence" id="as_evidence_six" value="Hearsay" type="radio">Hearsay
+                              </label>
+                          </div>
+                        </fieldset>
+                    </div>
                     
 
                     <fieldset>
-                      <div class="form-group" role="group" aria-label="Date of incorporation" >
+                      <div class="form-group" role="group" aria-label="Appointment date" >
                           
-                          <legend class="bold-small">Date of incorporation</legend>
+                          <legend class="bold-small">Appointment date</legend>
                           <div class="form-date">
 
                             <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                              <label for="ad-day">Day</label>
+                              <input class="form-control" id="ad-day" name="ad-day" type="number" pattern="[0-9]*" min="0" max="31">
                             </div>
 
                             <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                              <label for="ad-month">Month</label>
+                              <input class="form-control" id="ad-month" name="ad-month" type="number" pattern="[0-9]*" min="0" max="12">
                             </div>
 
                             <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                              <label for="ad-year">Year</label>
+                              <input class="form-control" id="ad-year" name="ad-year" type="number" pattern="[0-9]*" min="0" max="2014">
                             </div>
                           </div>
                         </div>
                     </fieldset>
                     
                     
-                    <div class="form-group" aria-label="Company address" role="group">
-                      <label  for="company_address" class="form-label-bold">Address</label>
-                      <span class="form-hint" id="company_address_hint">Registered office address prior to your appointment</span>
-                      <textarea id="company_address" class="form-control" name="company_address" aria_describedby="company_address_hint"></textarea>
-                    </div>
-                    
-                    <div class="form-group" aria-label="Company town/city" role="group">
-                      <label  for="company_town" class="form-label-bold">Town/city</label>
-                      <input id="company_town" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    <div class="form-group" aria-label="Company county" role="group">
-                      <label for="company_county" class="form-label-bold">County/region</label>
-                      <input id="company_county" class="form-control" name="" type="text" value="" />
-                    </div>
-                    
-                    
-                    <div class="form-group" aria-label="Company postcode" role="group">
-                      <label for="company_postcode" class="form-label-bold">Postcode</label>
-                      <input id="company_postcode" class="form-control" name="" type="text" value="" />
-                    </div>
+                    <fieldset>
+                      <div class="form-group" role="group" aria-label="Termination date" >
+                          <legend class="bold-small">Termination date</legend>
+                          <div class="form-date">
 
-                    
-                    <div class="form-group" aria-label="Company country" role="group">
-                      <label for="company_country" class="form-label-bold">Country</label>
-                      <input id="company_country" class="form-control" name="" type="text" value="" />
-                    </div>
+                            <div class="form-group form-group-day" role="group" aria-label="Day">
+                              <label for="td-day">Day</label>
+                              <input class="form-control" id="td-day" name="td-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            </div>
+
+                            <div class="form-group form-group-month" role="group" aria-label="Month">
+                              <label for="td-month">Month</label>
+                              <input class="form-control" id="td-month" name="td-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            </div>
+
+                            <div class="form-group form-group-year" role="group" aria-label="Year">
+                              <label for="td-year">Year</label>
+                              <input class="form-control" id="td-year" name="td-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                            </div>
+                          </div>
+                        </div>
+                    </fieldset>
+
                     
                     
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Is the principal trading address same as above?" >
-                          <legend class="bold-small">Is the principal trading address same as above?</legend>
+                        <div class="form-group" role="group" aria-label="Is director connected to 3 or more company failures in the last 5 years?" >
+                          <legend class="bold-small">Is director connected to 3 or more company failures in the last 5 years?</legend>
 
-                          <label class="block-label" for="principal_address_yes">
-                            <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
+                          <label class="block-label" for="director_question_1_yes">
+                            <input id="director_question_1_yes" type="radio" name="director_question_1" value="Yes">
                             Yes
                           </label>
-                          <label class="block-label" for="principal_address_no">
-                            <input id="principal_address_no" type="radio" name="principal_address" value="No">
+                          <label class="block-label" for="director_question_1_no">
+                            <input id="director_question_1_no" type="radio" name="director_question_1" value="No">
                             No
                           </label>
                         </div>
                     </fieldset>
+                    
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Has director given a personal guarantee for any of the company's debt?" >
+                          <legend class="bold-small">Has director given a personal guarantee for any of the company's debt?</legend>
+
+                          <label class="block-label" for="director_question_2_yes">
+                            <input id="director_question_2_yes" type="radio" name="director_question_2" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_2_no">
+                            <input id="director_question_2_no" type="radio" name="director_question_2" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Whilst the company was trading was the director either bankrupt, disqualified or otherwise restricted from acting?" >
+                          <legend class="bold-small">Whilst the company was trading was the director either bankrupt, disqualified or otherwise restricted from acting?</legend>
+
+                          <label class="block-label" for="director_question_3_yes" data-target="q3-sub">
+                            <input id="director_question_3_yes" type="radio" name="director_question_3" value="Yes" aria-controls="q3-sub">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_3_no">
+                            <input id="director_question_3_no" type="radio" name="director_question_3" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q3-sub">
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="What evidence is there that the person acted as a director whilst bankrupt, disqualified or otherwise restricted from acting?" >
+                            <legend class="bold-small">What evidence is there that the person acted as a director whilst bankrupt, disqualified or otherwise restricted from acting?</legend>
+                              <label for="q3_evidence_one" class="block-label">
+                                <input name="q3_evidence" id="q3_evidence_one" value="Company Books" type="radio">Company books
+                              </label>
+
+                              <label for="q3_evidence_two" class="block-label">
+                                <input name="q3_evidence" id="q3_evidence_two" value="Employees" type="radio">Employees
+                              </label>
+
+                               <label for="q3_evidence_three" class="block-label">
+                                <input name="q3_evidence" id="q3_evidence_three" value="Company accountant" type="radio">Company accountant
+                              </label>
+                              
+                              <label for="q3_evidence_four" class="block-label">
+                                <input name="q3_evidence" id="q3_evidence_four" value="Bank" type="radio">Bank
+                              </label>
+                              
+                              <label for="q3_evidence_five" class="block-label">
+                                <input name="q3_evidence" id="q3_evidence_five" value="3rd parties" type="radio">3rd parties
+                              </label>
+                              
+                              <label for="q3_evidence_six" class="block-label">
+                                <input name="q3_evidence" id="q3_evidence_six" value="Hearsay" type="radio">Hearsay
+                              </label>
+                          </div>
+                        </fieldset>
+                    </div>
                     
 
                     
