@@ -136,38 +136,63 @@
         
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
         
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+          There was a problem submitting this form
+        </h1>
+
+        <p>
+          Please try the following
+        </p>
+
+        <ul class="error-summary-list">
+          <li><a href="#tempPassword">Invalid temporary password</a></li>
+          <li><a href="#password">Enter a different password</a></li>
+          <li><a href="#confirmPassword">Re-enter confirm password</a></li>
+        </ul>
+
+      </div>
+        
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <form role="form" method="get" action="client_login_error.html">
+            <form role="form" method="get" action="dashboard_stack_v2.html">
 
-                <h1 class="form-title heading-large">Enter login details</h1>
+                <h1 class="form-title heading-large">One last thing before we take you to the dashboard, Joe...</h1>
+                <p>Please change your password to something that you can remember.</p>
                 
-                <div class="form-group" role="group">
-                  <label  for="emailAddress">
-                    <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
+                <div class="form-group error" role="group">
+                  <label  for="tempPassword">
+                      <span class="form-label form-label-bold" id="tempPasswordLabel">Temporary password</span>
+                      <span class="form-hint" id="tempPasswordHint">Password you used for logging in, which was emailed to you</span>
+                      <span class="error-message" id="errorMessageTempPassword">Password you entered is not valid</span>
                   </label>
-                  
-                  <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
+                  <input role="textbox" id="tempPassword" class="form-control" name="tempPassword" type="password" maxlength="20" value="" aria-labelledby="tempPasswordLabel tempPasswordHint errorMessageTempPassword" />
                 </div>
                 
-                <div class="form-group" role="group">
+                <div class="form-group error" role="group">
                   <label  for="password">
-                      <span class="form-label form-label-bold" id="passwordLabel">Password</span>
+                      <span class="form-label form-label-bold" id="passwordLabel">New password</span>
+                      <span class="form-hint" id="passwordHint">Your password must be at least 8 characters long and must contain at least 1 lower-case letter, 1 capital letter and 1 number</span>
+                      <span class="error-message" id="errorMessagePassword">Password does not meet the requirements</span>
                   </label>
-                  <input role="textbox" id="password" class="form-control" name="password" type="password" maxlength="20" value="" aria-labelledby="passwordLabel" />
+                  <input role="textbox" id="password" class="form-control" name="password" type="password" maxlength="20" value="" aria-labelledby="passwordLabel passwordHint errorMessagePassword" />
                 </div>
                 
+                <div class="form-group error" role="group">
+                  <label  for="confirmPassword">
+                      <span class="form-label form-label-bold" id="confirmPasswordLabel">Re-enter password</span>
+                      <span class="error-message" id="errorMessageConfirmPassword">Does not match password</span>
+                  </label>
+                  <input role="textbox" id="confirmPassword" class="form-control" name="confirmPassword" type="password" maxlength="20" value="" aria-labelledby="confirmPasswordLabel errorMessageConfirmPassword" />
+                </div>
+                
+                
                 <div class="form-group" role="group">
-                    <button class="button" role="button">Log in</button>
+                    <button class="button" role="button">Continue</button>
                 </div>
             </form>
-            
-            <div><!-- spacer -->&nbsp;</div>
-            <ul class="list bold-small">
-                <li><a role="link" href="client_recover_password.html">Forgot your password?</a></li>
-                <li><a role="link" href="client_register.html">IP registration</a></li>
-            </ul>
         </div>
         
 

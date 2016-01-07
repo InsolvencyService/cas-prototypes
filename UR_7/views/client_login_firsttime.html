@@ -139,35 +139,24 @@
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <form role="form" method="get" action="client_login_error.html">
+            <form role="form" method="get" action="client_login_firsttime_error.html">
 
-                <h1 class="form-title heading-large">Enter login details</h1>
+                <h1 class="form-title heading-large">Welcome aboard.</h1>
+                <p>Looks like this is the first time we're meeting.</p>
                 
                 <div class="form-group" role="group">
-                  <label  for="emailAddress">
-                    <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
+                  <label  for="userName">
+                    <span class="form-label form-label-bold" id="userNameLabel">May I know your good name?</span>
+                    <span class="form-hint" id="userNameHint">eg: Joe B. or Joe Bloggs</span>
                   </label>
                   
-                  <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
+                  <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="userNameLabel userNameHint" /> 
                 </div>
                 
                 <div class="form-group" role="group">
-                  <label  for="password">
-                      <span class="form-label form-label-bold" id="passwordLabel">Password</span>
-                  </label>
-                  <input role="textbox" id="password" class="form-control" name="password" type="password" maxlength="20" value="" aria-labelledby="passwordLabel" />
-                </div>
-                
-                <div class="form-group" role="group">
-                    <button class="button" role="button">Log in</button>
+                    <button class="button" role="button">Continue</button>
                 </div>
             </form>
-            
-            <div><!-- spacer -->&nbsp;</div>
-            <ul class="list bold-small">
-                <li><a role="link" href="client_recover_password.html">Forgot your password?</a></li>
-                <li><a role="link" href="client_register.html">IP registration</a></li>
-            </ul>
         </div>
         
 

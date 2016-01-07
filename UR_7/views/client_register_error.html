@@ -130,44 +130,62 @@
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Conduct Assessment Service</a></li>
-          <li>Log in</li>
+          <li>IP Registration</li>
         </ol>
       </div>
         
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
         
+        
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+          Registration failed
+        </h1>
+
+        <p>
+          Invalid IP number or email address
+        </p>
+
+        <ul class="error-summary-list">
+          <li><a href="#ipNumber">Enter IP number</a></li>
+          <li><a href="#emailAddress">Enter email address</a></li>
+        </ul>
+
+      </div>
+        
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <form role="form" method="get" action="client_login_error.html">
+            <form role="form" method="get" action="client_register_complete.html">
 
-                <h1 class="form-title heading-large">Enter login details</h1>
+                <h1 class="form-title heading-large">IP Registration</h1>
+                                
+                <div class="form-group error" role="group">
+                  <label  for="ipNumber">
+                    <span class="form-label form-label-bold" id="ipNumberLabel">IP Number</span>
+                    <span class="form-hint" id="ipNumberHint">6-10 digit unique identifier</span>
+                    <span class="error-message" id="errorMessageIpNumber">Enter the IP number</span>
+                  </label>
+                  
+                  <input id="ipNumber" class="form-control" name="" type="text" value="" aria-labelledby="ipNumberLabel ipNumberHint" aria-describedby="errorMessageIpNumber" /> 
+                </div>
                 
-                <div class="form-group" role="group">
+                <div class="form-group error" role="group">
                   <label  for="emailAddress">
                     <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
+                    <span class="error-message" id="errorMessageEmail">Enter the corresponding email address</span>
                   </label>
                   
                   <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
                 </div>
                 
-                <div class="form-group" role="group">
-                  <label  for="password">
-                      <span class="form-label form-label-bold" id="passwordLabel">Password</span>
-                  </label>
-                  <input role="textbox" id="password" class="form-control" name="password" type="password" maxlength="20" value="" aria-labelledby="passwordLabel" />
-                </div>
                 
                 <div class="form-group" role="group">
-                    <button class="button" role="button">Log in</button>
+                    <button class="button" role="button">Continue</button>
                 </div>
             </form>
-            
-            <div><!-- spacer -->&nbsp;</div>
-            <ul class="list bold-small">
-                <li><a role="link" href="client_recover_password.html">Forgot your password?</a></li>
-                <li><a role="link" href="client_register.html">IP registration</a></li>
-            </ul>
+
         </div>
         
 
