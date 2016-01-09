@@ -130,8 +130,8 @@
         
       <div id="global-breadcrumb">
         <ol>
-          <li><a href="/">Conduct Assessment Service</a></li>
-          <li>Log in</li>
+          <li><a href="/">Home</a></li>
+          <li>Conduct Assessment Service</li>
         </ol>
       </div>
         
@@ -140,52 +140,16 @@
     
     <div class="grid-row">
         <div class="column-two-thirds">
-            <form role="form" method="get" action="client_login_error.html">
-
-                <h1 class="form-title heading-large">Enter login details</h1>
-                
-                <fieldset class="inline">
-                    <div class="form-group" role="group" aria-label="Select login type" >
-
-                      <label class="block-label" for="loginIP" data-target="targetPractioner">
-                        <input role="radio" id="loginIP" type="radio" name="userType" value="IP" checked="checked" aria-controls="targetPractioner">
-                        Practioner
-                      </label>
-                      <label class="block-label" for="loginStaff" data-target="targetStaff">
-                        <input role="radio" id="loginStaff" type="radio" name="userType" value="Staff" aria-controls="targetStaff">
-                        Staff
-                      </label>
-                    </div>
-                </fieldset>
-
-                <div class="panel panel-no-border" id="targetPractioner">
-                    <div class="form-group" role="group">
-                      <label  for="ipNumber">
-                        <span class="form-label form-label-bold" id="ipNumberLabel">IP Number</span>
-                        <span class="form-hint" id="ipNumberHint">4-6 digit unique identifier</span>
-                      </label>
-
-                      <input id="ipNumber" class="form-control" name="ipNumber" type="text" value="" aria-labelledby="ipNumberLabel ipNumberHint" /> 
-                    </div>
-                </div>
-
-
-                <div class="panel panel-no-border js-hidden" id="targetStaff">
-                    <div class="form-group" role="group">
-
-                      <label  for="emailAddress">
-                        <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
-                      </label>
-
-                      <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
-                    </div>
-                </div>
-                
+            <h1 class="form-title heading-xlarge">For JS development</h1>
+            
+            <form role="form" method="post" action="/">
                 <div class="form-group" role="group">
-                  <label  for="password">
-                      <span class="form-label form-label-bold" id="passwordLabel">Password</span>
+
+                  <label  for="emailAddress">
+                    <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
                   </label>
-                  <input role="textbox" id="password" class="form-control" name="password" type="password" maxlength="20" value="" aria-labelledby="passwordLabel" />
+
+                  <input role="textbox" id="emailAddress" class="form-control validate" data-validation="required email" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
                 </div>
                 
                 <div class="form-group" role="group">
@@ -193,11 +157,8 @@
                 </div>
             </form>
             
-            <div><!-- spacer -->&nbsp;</div>
-            <ul class="list bold-small">
-                <li><a role="link" href="client_recover_password.html">Forgot your password?</a></li>
-                <li><a role="link" href="client_register.html">IP registration</a></li>
-            </ul>
+            
+
         </div>
         
 
@@ -208,8 +169,7 @@
     
 
     <!-- Page content goes here -->
-
-    <footer class="group js-footer" id="footer" role="contentinfo">
+   <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
         
