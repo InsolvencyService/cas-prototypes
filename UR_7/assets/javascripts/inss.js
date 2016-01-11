@@ -1,5 +1,5 @@
 // JS for CAS
-$('form').on('submit', function(e){
+$('form.validate').on('submit', function(e){
     e.preventDefault();
     $('.validate').each(function(){
         
