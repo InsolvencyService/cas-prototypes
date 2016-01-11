@@ -251,37 +251,15 @@
                     
                     
                     <fieldset class="inline">
-                      <div class="form-group" role="group" aria-label="What do you consider are the causes of the company's failure?" >
-                        <legend class="bold-small">What do you consider are the causes of the company's failure?</legend>
-                        <span class="form-hint">Tick all that apply</span>  
+                      <div class="form-group" role="group" aria-label="Is there evidence to contradict the directors' explanation for the cause of the company's failure or size of the company's deficiency?" >
+                        <legend class="bold-small">Is there evidence to contradict the directors' explanation for the cause of the company's failure or size of the company's deficiency?</legend>
 
-                          <label for="q3_failure_causes_under_capitalisation" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_under_capitalisation" value="Under capitalisation" type="checkbox">Under capitalisation
+                          <label for="q3_contradiction_yes" class="block-label">
+                            <input name="q3_contradiction" id="q3_contradiction_yes" value="Yes" type="radio">Yes
                           </label>
 
-                          <label for="q3_failure_causes_poor_control" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_poor_control" value="Poor financial control, including lack of records" type="checkbox">Poor financial control, including lack of records
-                          </label>
-
-                           <label for="q3_failure_causes_inadequate_cash_flow" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_inadequate_cash_flow" value="Inadequate cash flow" type="checkbox">Inadequate cash flow
-                          </label>
-
-                          <label for="q3_failure_causes_poor_eco_conditions" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_poor_eco_conditions" value="Poor economic conditions" type="checkbox">Poor economic conditions
-                          </label>
-
-                          <label for="q3_failure_causes_dispute" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_dispute" value="Dispute among directors" type="checkbox">Dispute among directors
-                          </label>
-
-
-                           <label for="q3_failure_causes_unknown" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_unknown" value="Unknown" type="checkbox">Unknown
-                          </label>
-
-                          <label for="q3_failure_causes_other" class="block-label">
-                            <input name="q3_failure_causes" id="q3_failure_causes_other" value="Other" type="checkbox">Other
+                           <label for="q3_contradiction_no" class="block-label">
+                            <input name="q3_contradiction" id="q3_contradiction_no" value="No" type="radio">No
                           </label>
                       </div>
                     </fieldset>
@@ -433,6 +411,36 @@
                         
                     </div>
 
+                    
+                    <fieldset class="inline">
+                      <div class="form-group" role="group" aria-label="Is there a successor company that is the same or substantially the same as this one?" >
+                        <legend class="bold-small">Is there a successor company that is the same or substantially the same as this one?</legend>
+
+                          <label for="q8_similar_yes" class="block-label" data-target="q8-sub">
+                            <input name="q8_similar" id="q8_similar_yes" value="Yes" type="radio" aria-controls="q8-sub">Yes
+                          </label>
+
+                           <label for="q8_similar_no" class="block-label">
+                            <input name="q8_similar" id="q8_similar_no" value="No" type="radio">No
+                          </label>
+                      </div>
+                    </fieldset>
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q8-sub">
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="Do any of the Section 216 exemptions apply?" >
+                            <legend class="bold-small">Do any of the Section 216 exemptions apply?</legend>
+
+                              <label for="q8_section216_yes" class="block-label">
+                                <input name="q8_section216" id="q8_section216_yes" value="Yes" type="radio">Yes
+                              </label>
+
+                               <label for="q8_section216_no" class="block-label">
+                                <input name="q8_section216" id="q8_section216_no" value="No" type="radio">No
+                              </label>
+                          </div>
+                        </fieldset>
+                    </div>
                     
                     <div>&nbsp;</div>
                     <div class="form-group">

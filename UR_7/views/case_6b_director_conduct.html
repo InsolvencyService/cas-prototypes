@@ -166,11 +166,11 @@
                     
                     
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Has the company appeared to have failed to deal correctly with its tax affairs?" >
-                          <legend class="bold-small">Has the company appeared to have failed to deal correctly with its tax affairs?</legend>
+                        <div class="form-group" role="group" aria-label="Does HMRC appear to have been treated unfairly when compared to others?" >
+                          <legend class="bold-small">Does HMRC appear to have been treated unfairly when compared to others?</legend>
 
                           <label class="block-label" for="hmrc_treatment_q1_yes" data-target="q1-sub">
-                            <input id="hmrc_treatment_q1_yes" type="radio" name="hmrc_treatment_q1" value="Yes" aria-controls="q2-sub">
+                            <input id="hmrc_treatment_q1_yes" type="radio" name="hmrc_treatment_q1" value="Yes" aria-controls="q1-sub">
                             Yes
                           </label>
                           <label class="block-label" for="hmrc_treatment_q1_no">
@@ -214,20 +214,22 @@
                         <fieldset class="inline">
                           <div class="form-group" role="group" aria-label="How long before the end of trading was the last payment made to HMRC?" >
                             <legend class="bold-small">How long before the end of trading was the last payment made to HMRC?</legend>
-                              <label for="q2_hmrc_duration_0_3" class="block-label">
-                                <input name="q2_hmrc_duration" id="q2_hmrc_duration_0_3" value="0 - 3 months" type="radio">0 - 3 months
-                              </label>
-
-                              <label for="q2_hmrc_duration_4_6" class="block-label">
-                                <input name="q2_hmrc_duration" id="q2_hmrc_duration_4_6" value="4 - 6 months" type="radio">4 - 6 months
+                              <label for="q2_hmrc_duration_0_6" class="block-label">
+                                <input name="q2_hmrc_duration" id="q2_hmrc_duration_0_6" value="0 - 6 months" type="radio">0 - 6 months
                               </label>
 
                                <label for="q2_hmrc_duration_7_12" class="block-label">
                                 <input name="q2_hmrc_duration" id="q2_hmrc_duration_7_12" value="7 - 12 months" type="radio">7 - 12 months
                               </label>
                               
-                              <label for="q2_hmrc_duration_over_12" class="block-label">
-                                <input name="q2_hmrc_duration" id="q2_hmrc_duration_over_12" value="Over 12 months" type="radio">Over 12 months
+                              
+<label for="q2_hmrc_duration_13_24" class="block-label">
+                                <input name="q2_hmrc_duration" id="q2_hmrc_duration_13_24" value="13 - 24 months" type="radio">13 - 24 months
+                              </label>
+                              
+                              
+                              <label for="q2_hmrc_duration_over_24" class="block-label">
+                                <input name="q2_hmrc_duration" id="q2_hmrc_duration_over_24" value="Over 24 months" type="radio">Over 24 months
                               </label>
 
                           </div>
@@ -237,26 +239,32 @@
                         <div>&nbsp;<!-- spacer --></div>
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="How long before the end of trading was the last return made to HMRC?" >
-                            <legend class="bold-small">How long before the end of trading was the last return made to HMRC?</legend>
-                              <label for="q3_hmrc_return_0_3" class="block-label">
-                                <input name="q3_hmrc_return" id="q3_hmrc_return_0_3" value="0 - 3 months" type="radio">0 - 3 months
+                          <div class="form-group" role="group" aria-label="Is there evidence that the company persistently failed to file it's tax returns when due?" >
+                            <legend class="bold-small">Is there evidence that the company persistently failed to file it's tax returns when due?</legend>
+                              <label for="q3_hmrc_return_yes" class="block-label" data-target="q3-sub">
+                                <input name="q3_hmrc_return" id="q3_hmrc_return_yes" value="Yes" type="radio" aria-controls="q3-sub">Yes
                               </label>
 
-                              <label for="q3_hmrc_return_7_12" class="block-label">
-                                <input name="q3_hmrc_return" id="q3_hmrc_return_7_12" value="7 - 12 months" type="radio">7 - 12 months
+                              <label for="q3_hmrc_return_no" class="block-label">
+                                <input name="q3_hmrc_return" id="q3_hmrc_return_no" value="No" type="radio">No
                               </label>
-
-                               <label for="q3_hmrc_return_13_24" class="block-label">
-                                <input name="q3_hmrc_return" id="q3_hmrc_return_13_24" value="13 - 24 months" type="radio">13 - 24 months
-                              </label>
-                              
-                              <label for="q3_hmrc_return_over_24" class="block-label">
-                                <input name="q3_hmrc_return" id="q3_hmrc_return_over_24" value="Over 24 months" type="radio">Over 24 months
-                              </label>
-
                           </div>
                         </fieldset>
+                        
+                        <div class="panel panel-border-narrow js-hidden" id="q3-sub">
+                            <fieldset class="inline">
+                              <div class="form-group" role="group" aria-label="Did the company incur fees and/or penalties for failing to file it's tax returns on time?" >
+                                <legend class="bold-small">Did the company incur fees and/or penalties for failing to file it's tax returns on time?</legend>
+                                  <label for="q3_hmrc_penalties_yes" class="block-label">
+                                    <input name="q3_hmrc_penalties" id="q3_hmrc_penalties_yes" value="Yes" type="radio">Yes
+                                  </label>
+
+                                  <label for="q3_hmrc_penalties_no" class="block-label">
+                                    <input name="q3_hmrc_penalties" id="q3_hmrc_penalties_no" value="No" type="radio">No
+                                  </label>
+                              </div>
+                            </fieldset>
+                        </div>
                         
                         <div>&nbsp;<!-- spacer --></div>
                         
@@ -290,6 +298,79 @@
 
                           </div>
                         </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="Can the unfair treatment of HRMC when compared to others be identified in the company's books &amp; records?" >
+                            <legend class="bold-small">Can the unfair treatment of HRMC when compared to others be identified in the company's books &amp; records?</legend>
+                              <label for="q5_hmrc_identifiable_yes" class="block-label">
+                                <input name="q5_hmrc_identifiable" id="q5_hmrc_identifiable_yes" value="Yes" type="radio">Yes
+                              </label>
+
+                              <label for="q5_hmrc_identifiable_no" class="block-label">
+                                <input name="q5_hmrc_identifiable" id="q5_hmrc_identifiable_no" value="No" type="radio">No
+                              </label>
+
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="In comparison with HMRC who was treated better?" >
+                            <legend class="bold-small">In comparison with HMRC who was treated better?</legend>
+                              <label for="q6_hmrc_compare_everyone" class="block-label">
+                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_everyone" value="Everyone" type="checkbox">Everyone
+                              </label>
+
+                              <label for="q6_hmrc_compare_connected" class="block-label">
+                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_connected" value="Connected parties" type="checkbox">Director/Connected parties
+                              </label>
+                              
+                              <label for="q6_hmrc_compare_unconnected" class="block-label">
+                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_unconnected" value="Unonnected parties" type="checkbox">Unconnected parties
+                              </label>
+                              
+                              <label for="q6_hmrc_compare_uncertain" class="block-label">
+                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_uncertain" value="Uncertain" type="checkbox">Uncertain
+                              </label>
+
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="What percentage of the company's unsecured liabilities is comprised of HMRC debt?" >
+                            <legend class="bold-small">What percentage of the company's unsecured liabilities is comprised of HMRC debt?</legend>
+                              <label for="q7_percentage_40_60" class="block-label">
+                                <input name="q7_percentage" id="q7_percentage_40_60" value="40-60%" type="checkbox">40-60%
+                              </label>
+
+                              <label for="q7_percentage_61_80" class="block-label">
+                                <input name="q7_percentage" id="q7_percentage_61_80" value="61-80%" type="checkbox">61-80%
+                              </label>
+                              
+                              <label for="q7_percentage_over_80" class="block-label">
+                                <input name="q7_percentage" id="q7_percentage_over_80" value="Over 80%" type="checkbox">Over 80%
+                              </label>
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <div class="form-group" aria-label="VAT number" role="group">
+                          <label for="vat_number" class="form-label-bold">What is company's VAT number?</label>
+                          <input id="vat_number" class="form-control" name="vat_number" type="text" value="" />
+                        </div>
+                        
+                        
+                        <div class="form-group" aria-label="PAYE/NIC reference number" role="group">
+                          <label for="paye_reference" class="form-label-bold">What is the company's PAYE/NIC reference number?</label>
+                          <input id="paye_reference" class="form-control" name="paye_reference" type="text" value="" />
+                        </div>
                         
                         
                     </div>

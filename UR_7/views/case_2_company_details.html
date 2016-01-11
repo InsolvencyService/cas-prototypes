@@ -198,27 +198,27 @@
 
                     <div class="form-group" aria-label="Company town/city" role="group">
                       <label  for="company_town" class="form-label-bold">Town/city</label>
-                      <input id="company_town" class="form-control" name="" type="text" value="" />
+                      <input id="company_town" class="form-control" name="town" type="text" value="" />
                     </div>
 
                     <div class="form-group" aria-label="Company county" role="group">
                       <label for="company_county" class="form-label-bold">County/region</label>
-                      <input id="company_county" class="form-control" name="" type="text" value="" />
+                      <input id="company_county" class="form-control" name="county" type="text" value="" />
                     </div>
 
 
                     <div class="form-group" aria-label="Company postcode" role="group">
                       <label for="company_postcode" class="form-label-bold">Postcode</label>
-                      <input id="company_postcode" class="form-control" name="" type="text" value="" />
+                      <input id="company_postcode" class="form-control" name="postcode" type="text" value="" />
                     </div>
 
 
                     <div class="form-group" aria-label="Company country" role="group">
                       <label for="company_country" class="form-label-bold">Country</label>
-                      <input id="company_country" class="form-control" name="" type="text" value="" />
+                      <input id="company_country" class="form-control" name="country" type="text" value="" />
                     </div>
-
-
+                    
+                
                     <fieldset class="inline">
                         <div class="form-group" role="group" aria-label="Was the principal trading address same as above?" >
                           <legend class="bold-small">Is the principal trading address same as above?</legend>
@@ -227,12 +227,44 @@
                             <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
                             Yes
                           </label>
-                          <label class="block-label" for="principal_address_no">
-                            <input id="principal_address_no" type="radio" name="principal_address" value="No">
+                          <label class="block-label" for="principal_address_no" data-target="q1-sub">
+                            <input id="principal_address_no" type="radio" name="principal_address" value="No" aria-controls="q1-sub">
                             No
                           </label>
                         </div>
                     </fieldset>
+                    
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q1-sub">
+                    
+                        <div class="form-group" aria-label="Company address" role="group">
+                          <label  for="company_address_different" class="form-label-bold">Address</label>
+                          <textarea id="company_address_different" class="form-control" name="company_address_different"></textarea>
+                        </div>
+
+                        <div class="form-group" aria-label="Company town/city" role="group">
+                          <label  for="company_town_different" class="form-label-bold">Town/city</label>
+                          <input id="company_town_different" class="form-control" name="town_different" type="text" value="" />
+                        </div>
+
+                        <div class="form-group" aria-label="Company county" role="group">
+                          <label for="company_county_different" class="form-label-bold">County/region</label>
+                          <input id="company_county_different" class="form-control" name="county_different" type="text" value="" />
+                        </div>
+
+
+                        <div class="form-group" aria-label="Company postcode" role="group">
+                          <label for="company_postcode_different" class="form-label-bold">Postcode</label>
+                          <input id="company_postcode_different" class="form-control" name="postcode_different" type="text" value="" />
+                        </div>
+
+
+                        <div class="form-group" aria-label="Company country" role="group">
+                          <label for="company_country_different" class="form-label-bold">Country</label>
+                          <input id="company_country_different" class="form-control" name="country_different" type="text" value="" />
+                        </div>
+                    
+                    </div>
 
 
 

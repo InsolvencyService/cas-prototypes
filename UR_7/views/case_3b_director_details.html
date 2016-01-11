@@ -263,7 +263,7 @@
 
                     <fieldset class="inline">
                         <div class="form-group" role="group" aria-label="Is director connected to 3 or more company failures in the last 5 years?" >
-                          <legend class="bold-small">Has the director been connected to 3 or more company failures in the last 5 years?</legend>
+                          <legend class="bold-small">Is this the director's 3rd or more company failure in the last 5 years?</legend>
 
                           <label class="block-label" for="director_question_1_yes">
                             <input id="director_question_1_yes" type="radio" name="director_question_1" value="Yes">
@@ -292,7 +292,8 @@
                         </div>
                     </fieldset>
 
-
+                    
+                
                     <fieldset class="inline">
                         <div class="form-group" role="group" aria-label="Whilst the company was trading was the director either bankrupt, disqualified or otherwise restricted from acting?" >
                           <legend class="bold-small">Whilst the company was trading was the director either bankrupt, disqualified or otherwise restricted from acting?</legend>
@@ -339,8 +340,35 @@
                           </div>
                         </fieldset>
                     </div>
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Is there evidence that the director benefited directly or indirectly in an unreasonable or excessive manner from the company's trading?" >
+                          <legend class="bold-small">Is there evidence that the director benefited directly or indirectly in an unreasonable or excessive manner from the company's trading?</legend>
+                          <label class="block-label" for="director_question_4_yes" data-target="q4-sub">
+                            <input id="director_question_4_yes" type="radio" name="director_question_4" value="Yes" aria-controls="q4-sub">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_4_no">
+                            <input id="director_question_4_no" type="radio" name="director_question_4" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q4-sub">
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="Can the transactions involved be identified in the company's books &amp; records?" >
+                            <legend class="bold-small">Can the transactions involved be identified in the company's books &amp; records?</legend>
+                              <label for="q4_evidence_one" class="block-label">
+                                <input name="q4_evidence" id="q4_evidence_one" value="Yes" type="radio">Yes
+                              </label>
 
-
+                              <label for="q4_evidence_two" class="block-label">
+                                <input name="q4_evidence" id="q4_evidence_two" value="No" type="radio">No
+                              </label>
+                          </div>
+                        </fieldset>
+                    </div>
 
                     <div>&nbsp;</div>
                     <div class="form-group">
