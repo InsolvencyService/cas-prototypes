@@ -59,6 +59,29 @@
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     
     <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
+      
+      <style>
+          .list-submitted-cases ul { margin-top: 40px; }
+          .search-input-wrapper { width: 100%; margin: 0 auto;  }
+          .search-input-wrapper input[type="search"] { 
+              width: 60%; 
+              font-size: 160%; 
+              height: 54px; 
+              font-weight: bold; 
+              float: left; 
+              text-align: center;
+          }
+          .search-input-wrapper input[type="submit"] { 
+              float: left; 
+              border: none; 
+              width: 66px; 
+              height: 66px; 
+              text-indent: -10000px;
+              cursor: pointer;
+              background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat -40px 50%;
+          }
+          .clearfix { clear: both }
+      </style>
     
   </head>
 
@@ -97,8 +120,8 @@
             <nav id="proposition-menu">
               <a href="/" id="proposition-name">Conduct Assessment Service</a>
               <ul id="proposition-links">
-                <li><a href="dashboard_stack_v2.html" class="active">Dashboard</a></li>
-                <li><a href="url-to-page-2">Submitted Cases</a></li>
+                <li><a href="dashboard_stack_v2.html">Dashboard</a></li>
+                <li><a href="client_submitted_cases.html" class="active">Submitted Cases</a></li>
                 <li><a href="client_users.html">Manage Team</a></li>
                 <li><a href="url-to-page-4">Change Password</a></li>
                 <li><a href="url-to-page-5">Logout</a></li>
@@ -135,23 +158,38 @@
         
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
         
-        <h1 class="heading-large">Submitted cases</h1>
+      <h1 class="heading-large">Submitted cases</h1>
         
+      <div class="search-input-wrapper">
+        <form role="form" method="get" action="ad_users_no_results.html">
+            <p class="visually-hidden" id="search-hint">Search company by name or number...</p>
+            <input type="search" role="search" placeholder="Search company..."  class="form-control" aria-describedby="search-hint"  />
+            <input type="submit" role="button" aria-label="Search" value="Search" />
+        </form>
+      </div>
         
+    <div class="clearfix"><!-- clear -->&nbsp;</div>
     
     <div class="grid-row">
-        <div class="column-two-thirds">
-            <table>
-                <tr>
-                    <td>
-                        <ul class="list">
-                            <li><a href="#" class="font-medium">Company 1</a></li>
-                            <li><span class="form-hint">Submitted on 10/12/2015</span></li>
-                        </ul>
-                        
-                    </td>
-                </tr>
-            </table>
+        <div class="column-two-thirds list-submitted-cases">
+            
+            <ul class="list">
+                <li><a href="#" class="font-large">AdventureWorks Cycles Limited</a></li>
+                <li><span class="form-hint">Submitted on 01-12-2015</span></li>
+            </ul>
+            
+            <ul class="list">
+                <li><a href="#" class="font-large">The baguette house ltd.</a></li>
+                <li><span class="form-hint">Submitted on 10-12-2015</span></li>
+            </ul>
+            
+            <ul class="list">
+                <li><a href="#" class="font-large">Coho Vineyard &amp; Winery</a></li>
+                <li><span class="form-hint">Submitted on 22-12-2015</span></li>
+            </ul>
+
+            <div>&nbsp;</div>
+            <p><a href="#"><strong class="font-bold font-medium">Load more</strong></a></p>
         </div>
     </div>
       
