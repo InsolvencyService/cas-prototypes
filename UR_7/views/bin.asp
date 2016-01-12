@@ -1,3 +1,3 @@
 <%
-   response.write('hello world')
+   Response.Write('hello world')
 %>
