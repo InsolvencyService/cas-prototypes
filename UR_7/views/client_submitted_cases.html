@@ -51,32 +51,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="../assets/images/opengraph-image.png">
-
-
+      
+      
     <!--[if gt IE 8]><!--><link href="../assets/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; }
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
-
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-      </style>
-
-
+    
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
+    
   </head>
 
   <body>
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-
+    
 
     <div id="skiplink-container">
       <div>
@@ -85,13 +74,13 @@
     </div>
 
     <div id="global-cookie-message">
-
+      
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-
+      
     </div>
     <!--end global-cookie-message-->
 
-
+    
     <header role="banner" id="global-header" class="with-proposition">
       <div class="header-wrapper">
         <div class="header-global">
@@ -119,188 +108,79 @@
         </div>
       </div>
     </header>
-
-
     <!--end header-->
+    
 
-
-
+    
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
-
-
+      
+      
     <main class="elements-index" id="content" role="main">
+        
       <div class="phase-banner-beta">
         <p>
           <strong class="phase-tag">BETA</strong>
           <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-
+        
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Conduct Assessment Service</a></li>
-          <li><a href="/">Dashboard</a></li>
-          <li>AdventureWorks Cycles Limited</li>
+          <li>Log in</li>
         </ol>
       </div>
-
-    <!-- start of form -->
-
-        <div class="grid-row">
-
-
-
-            <div class="column-two-thirds">
-
-
-                <h1 class="heading-xlarge">
-                    <span class="heading-secondary">NCL18829292</span>
-                    AdventureWorks Cycles Limited
-                </h1>
-                
-                
-                <form role="form" method="get" action="case_6b_director_conduct.html" aria-label="Case information form">
-
-
-
-                <form role="form" method="get" action="case_3_company_directors.html" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Director conduct (2 of 4)</h1>
-
-
-                    <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Is there evidence that not all creditors have been treated equally?" >
-                          <legend class="bold-small">Is there evidence that not all creditors have been treated equally?</legend>
-
-                          <label class="block-label" for="treatment_q1_yes" data-target="q1-sub">
-                            <input id="treatment_q1_yes" type="radio" name="treatment_q1" value="Yes" aria-controls="q2-sub">
-                            Yes
-                          </label>
-                          <label class="block-label" for="treatment_q1_no">
-                            <input id="treatment_q1_no" type="radio" name="treatment_q1" value="No">
-                            No
-                          </label>
-                        </div>
-                    </fieldset>
-
-
-                    <div class="panel panel-border-narrow js-hidden" id="q1-sub">
-
-                        <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Who was treated better?" >
-                            <legend class="bold-small">Who was treated better?</legend>
-                              <label for="q1_better_connected_parties" class="block-label">
-                                <input name="q1_better" id="q1_better_connected_parties" value="Connected parties" type="radio">Connected parties
-                              </label>
-
-                              <label for="q1_better_unconnected_parties" class="block-label">
-                                <input name="q1_better" id="q1_better_unconnected_parties" value="Unconnected parties" type="radio">Unconnected parties
-                              </label>
-
-                               <label for="q1_better_uncertain" class="block-label">
-                                <input name="q1_better" id="q1_better_uncertain" value="Uncertain" type="radio">Uncertain
-                              </label>
-
-                          </div>
-                        </fieldset>
-
-                        <div>&nbsp;<!-- spacer --></div>
-
-                        <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Who was treated worse?" >
-                            <legend class="bold-small">Who was treated worse?</legend>
-                            <span class="form-hint">Tick all that apply</span>
-                              <label for="q1_worse_hmrc" class="block-label">
-                                <input name="q1_worse" id="q1_worse_hmrc" value="HMRC" type="checkbox">HMRC
-                            <span class="form-hint">Select all that apply</span>
-                              <label for="q1_worse_hmrc" class="block-label">
-                                <input name="q1_worse" id="q1_worse_hmrc" value="HMRC (select all which apply)" type="radio">HMRC 
-                              </label>
-
-                              <label for="q1_worse_trade" class="block-label">
-                                <input name="q1_worse" id="q1_worse_trade" value="Trade &amp; Expense" type="checkbox">Trade &amp; Expense
-                              </label>
-
-                              <label for="q1_worse_bank" class="block-label">
-                                <input name="q1_worse" id="q1_worse_bank" value="Bank" type="checkbox">Bank
-                              </label>
-
-                              <label for="q1_worse_uncertain" class="block-label">
-                                <input name="q1_worse" id="q1_worse_uncertain" value="Uncertain" type="checkbox">Uncertain
-                              </label>
-
-                          </div>
-                        </fieldset>
-                    </div>
-
-                    <div>&nbsp;</div>
-                    <div class="form-group">
-                        <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
-                      </div>
-                </form>
-
-                <a href="javascript:window.history.back();" class="link-back">Back</a>
-
-            </div>
-
-
-
-            <div class="column-one-third">
-                <aside class="related">
-                    <!--
-                    <h4 class="heading-medium">Assessment progress</h4>
-                    <nav>
-                        <ul class="list list-links">
-                            <li><strong class="bold-small">Case details</strong></li>
-                            <li><a href="#">Company details</a></li>
-                            <li><a href="#">Company director details</a></li>
-                            <li class="disabled-link"><a href="#">Company insolvency</a></li>
-                            <li class="disabled-link"><a href="#">Books &amp; records</a></li>
-                            <li class="disabled-link"><a href="#">Director conduct</a></li>
-                        </ol>
-                    </nav>
-                    -->
-
-
-                     <div class="notice">
-                        <i class="icon icon-file-download">
-                          <span class="visuallyhidden">Warning</span>
-                        </i>
-                        <strong class="bold-small">
-                          <a href="#">View PDF </a>
-                        </strong>
-                      </div>
-
-
-                </aside>
-            </div>
-
+        
+      <div><!-- TO DO:  Place holder -- filtering and search --></div>
+        
+        <h1 class="heading-large">Submitted cases</h1>
+        
+        
+    
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <table>
+                <tr>
+                    <td>
+                        <ul class="list">
+                            <li><a href="#" class="font-medium">Company 1</a></li>
+                            <li><span class="form-hint">Submitted on 10/12/2015</span></li>
+                        </ul>
+                        
+                    </td>
+                </tr>
+            </table>
         </div>
-
-<!-- end of form -->
-
-
-
+    </div>
+      
     </main>
-
+    
 
     <!-- Page content goes here -->
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-
+        
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
+              
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Contact</a></li>
+              <li>Built by <a href="https://www.gov.uk/government/organisations/insolvency-service">The Insolvency Service</a></li>
+            </ul>
 
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-
+              
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-
+              
             </div>
           </div>
 
@@ -317,11 +197,12 @@
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
     <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
-
+    
     <script src="../assets/javascripts/vendor/bind.js" type="text/javascript"></script>
     <script src="../assets/javascripts/selection-buttons.js" type="text/javascript"></script>
-
+      
     <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
     <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
   </body>
 </html>
