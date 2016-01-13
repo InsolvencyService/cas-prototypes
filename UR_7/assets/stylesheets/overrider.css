@@ -3,3 +3,8 @@
     padding-left: 0; 
     padding-top: 0; 
 }
+
+.success-message {  
+    background-color: #dff0d8;
+    border-color: #3c763d;
+}

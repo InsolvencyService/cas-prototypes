@@ -58,6 +58,7 @@
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
     
   </head>
 
@@ -144,30 +145,30 @@
                 <h1 class="form-title heading-large">Enter login details</h1>
                 
                 <div class="form-group" role="group">
-                  <label  for="email_address">
-                    <span class="form-label form-label-bold">INSS email address</span>
-                    <span class="form-hint" id="email_address_hint">eg: abc.def@insolvency.gsi.gov.uk</span>
+                  <label  for="emailAddress">
+                    <span class="form-label-bold" id="emailAddressLabel">INSS email address</span>
+                    <span class="form-hint" id="emailAddressHint">eg: abc.def@insolvency.gsi.gov.uk</span>
                   </label>
                   
-                  <input id="email_address" class="form-control" name="" type="text" value="" aria-describedby="email_address_hint" /> 
+                  <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel emailAddressHint" /> 
                 </div>
                 
                 <div class="form-group" role="group">
                   <label  for="password">
-                      <span class="form-label form-label-bold">Password</span>
+                      <span class="form-label form-label-bold" id="passwordLabel">Password</span>
                   </label>
-                  <input id="password" class="form-control" name="" type="password" value="" />
+                  <input id="password" class="form-control" name="" type="password" value="" aria-labelledby="passwordLabel" />
                 </div>
                 
                 <div class="form-group" role="group">
-                    <button class="button" role="button">Log in</button>
+                    <button class="button" role="button" id="btnLogin">Log in</button>
                 </div>
             </form>
             
             <div><!-- spacer -->&nbsp;</div>
             <ul class="list bold-small">
-                <li><a href="ad_recover_password.html">Forgot your password?</a></li>
-                <li><a href="ad_register.html">Create new account</a></li>
+                <li><a role="link" href="ad_recover_password.html">Forgot your password?</a></li>
+                <li><a role="link" href="ad_register.html">Create new account</a></li>
             </ul>
         </div>
         
@@ -180,14 +181,22 @@
 
     <!-- Page content goes here -->
 
-    <footer class="group js-footer" id="footer" role="contentinfo">
+     <!-- Page content goes here -->
+   <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
         
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            
+              
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Contact</a></li>
+              <li>Built by <a href="https://www.gov.uk/government/organisations/insolvency-service">The Insolvency Service</a></li>
+            </ul>
+
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
@@ -210,43 +219,12 @@
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
     <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
-
-    <script>
-        $(document).ready(function(){
-            
-             if($('.cas-case-wrapper').length > 9){
-                 for(i=9; i<$('.cas-case-wrapper').length; i++){
-                     $('.cas-case-wrapper:eq('+i+')').addClass('hidden').hide();
-                 }
-             }
-            
-            $('.btn-load-more').on('click', function(e){
-                e.preventDefault();
-                for(i=9; i<$('.cas-case-wrapper').length; i++){
-                     $('.cas-case-wrapper:eq('+i+')').removeClass('hidden').slideDown();
-                 }
-                
-                
-                if($('.cas-case-wrapper.hidden').length == 0)
-                    $('.btn-load-more').hide();
-            });
-            
-            $('input[type="search"]').on('keyup', function(){
-                var searchStr = $(this).val();
-                $('.cas-case-wrapper').hide().each(function(){
-                    var t = $(this).find('#companyDetails li').text().toLowerCase();
-                    if(t.indexOf(searchStr) != -1)
-                        $(this).show();
-                }); 
-            });
-            
-             $('.cas-status-keys a').on('click', function(e){
-                e.preventDefault();
-                var c = $(this).attr('href').replace('#','');
-                $('#cas-cases-container').find('.'+c).slideToggle();
-                $(this).parent().find('i').toggleClass('cas-status-off');
-             });
-        });
-    </script>
+    
+    <script src="../assets/javascripts/vendor/bind.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/selection-buttons.js" type="text/javascript"></script>
+      
+    <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
   </body>
 </html>

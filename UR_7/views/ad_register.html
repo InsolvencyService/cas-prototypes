@@ -145,28 +145,27 @@
                 
                 <p>Enter your name and (@insolvency.gsi.gov.uk) email address in the form below.</p>
                 
-                
                 <div class="form-group" role="group">
-                  <label  for="full_name">
-                    <span class="form-label form-label-bold">Your name</span>
-                    <span class="form-hint" id="full_name_hint">Enter full name eg: Joe Bloggs</span>
+                  <label  for="fullName">
+                    <span class="form-label-bold" id="fullNameLabel">Your name</span>
+                    <span class="form-hint" id="fullNameHint">Enter full name eg: Joe Bloggs</span>
                   </label>
                   
-                  <input id="full_name" class="form-control" name="" type="text" value="" aria-describedby="full_name_hint" /> 
+                  <input role="textbox" id="fullName" class="form-control" name="fullName" type="text" value="" aria-labelledby="fullNameLabel fullNameHint" /> 
                 </div>
                 
                 <div class="form-group" role="group">
-                  <label  for="email_address">
-                    <span class="form-label form-label-bold">INSS email address</span>
-                    <span class="form-hint" id="email_address_hint">eg: abc.def@insolvency.gsi.gov.uk</span>
+                  <label  for="emailAddress">
+                    <span class="form-label-bold" id="emailAddressLabel">INSS email address</span>
+                    <span class="form-hint" id="emailAddressHint">eg: abc.def@insolvency.gsi.gov.uk</span>
                   </label>
                   
-                  <input id="email_address" class="form-control" name="" type="text" value="" aria-describedby="email_address_hint" /> 
+                  <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel emailAddressHint" /> 
                 </div>
 
                 
                 <div class="form-group" role="group">
-                    <button class="button" role="button">Continue</button>
+                    <button id="btnContinue" class="button" role="button">Continue</button>
                 </div>
             </form>
 
