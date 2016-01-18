@@ -159,15 +159,44 @@
                 
                 <h1 class="form-title heading-large">Enter login details</h1>
                 
+                <fieldset class="inline">
+                    <div class="form-group" role="group" aria-label="Select login type" >
+
+                      <label class="block-label" for="loginIP" data-target="targetPractioner">
+                        <input role="radio" id="loginIP" type="radio" name="userType" value="IP" checked="checked" aria-controls="targetPractioner">
+                        Practioner
+                      </label>
+                      <label class="block-label" for="loginStaff" data-target="targetStaff">
+                        <input role="radio" id="loginStaff" type="radio" name="userType" value="Staff" aria-controls="targetStaff">
+                        Staff
+                      </label>
+                    </div>
+                </fieldset>
                 
-                <div class="form-group" role="group">
+                <div class="panel panel-no-border" id="targetPractioner">
+                    <div class="form-group" role="group">
+                      <label  for="ipNumber">
+                        <span class="form-label form-label-bold" id="ipNumberLabel">IP Number</span>
+                        <span class="form-hint" id="ipNumberHint">4-6 digit unique identifier</span>
+                      </label>
 
-                  <label  for="emailAddress">
-                    <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
-                  </label>
-
-                  <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
+                      <input id="ipNumber" class="form-control" name="" type="text" value="" aria-labelledby="ipNumberLabel ipNumberHint" /> 
+                    </div>
                 </div>
+                
+                <div class="panel panel-no-border js-hidden" id="targetStaff">
+                    <div class="form-group" role="group">
+
+                      <label  for="emailAddress">
+                        <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
+                      </label>
+
+                      <input role="textbox" id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" /> 
+                    </div>
+                </div>
+                
+                
+
                 
                 <div class="form-group error" role="group">
                   <label  for="password">
