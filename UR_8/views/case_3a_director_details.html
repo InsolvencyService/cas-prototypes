@@ -197,7 +197,7 @@
                     
                     <div class="form-group" aria-label="Last name" role="group">
                       <label for="lastName">
-                            
+                            <span class="form-label form-label-bold" id="lastNameLabel">Last name</span>  
                       </label>
                       <input id="lastName" class="form-control" name="lastName" type="text" value="" aria-labelledby="lastNameLabel" />
                     </div>
@@ -235,11 +235,18 @@
                     </fieldset>
                     
                     
-                    <div class="form-group" aria-label="Director's address" role="group">
-                      <label  for="directorAddress">
-                        <span class="form-label form-label-bold" id="directorAddressLabel">Address</span>
+                    <div class="form-group" aria-label="Director's address line 1" role="group">
+                      <label  for="directorAddressLine1">
+                        <span class="form-label form-label-bold" id="directorAddressLine1Label">Address line 1</span>
                       </label>
-                      <textarea id="directorAddress" class="form-control" name="directorAddress" aria-labelledby="directorAddressLabel"></textarea>
+                      <input type="text" role="textbox" id="directorAddressLine1" class="form-control" name="directorAddressLine1" aria-labelledby="directorAddressLine1Label" />
+                    </div>
+                    
+                    <div class="form-group" aria-label="Director's address line 2" role="group">
+                      <label  for="directorAddressLine2">
+                        <span class="form-label form-label-bold" id="directorAddressLine2Label">Address line 2</span>
+                      </label>
+                      <input type="text" role="textbox" id="directorAddressLine2" class="form-control" name="directorAddressLine2" aria-labelledby="directorAddressLine2Label" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's town/city" role="group">
@@ -249,12 +256,6 @@
                       <input id="directorTown" class="form-control" name="directorTown" type="text" value="" aria-labelledby="directorTownLabel" />
                     </div>
                     
-                    <div class="form-group" aria-label="Director's county/region" role="group">
-                      <label for="directorCounty">
-                        <span class="form-label form-label-bold" id="directorCountyLabel">County/region</span>  
-                      </label>
-                      <input id="directorCounty" class="form-control" name="directorCounty" type="text" value="" aria-labelledby="directorCountyLabel" />
-                    </div>
 
                     
                     <div class="form-group" aria-label="Director's postcode" role="group">

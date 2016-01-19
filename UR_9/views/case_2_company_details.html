@@ -194,12 +194,19 @@
                     </fieldset>
 
 
-                    <div class="form-group" aria-label="Company address" role="group">
-                      <label  for="companyAddress">
-                        <span class="form-label form-label-bold" id="companyAddressLabel">Address</span> 
-                        <span class="form-hint" id="companyAddressHint">Registered office address prior to your appointment</span>
+                    <div class="form-group" aria-label="Company address line 1" role="group">
+                      <label  for="companyAddressLine1">
+                        <span class="form-label form-label-bold" id="companyAddressLine1Label">Address line 1</span> 
+                        <span class="form-hint" id="companyAddressLine1Hint">Registered office address prior to your appointment</span>
                       </label>
-                      <textarea id="companyAddress" class="form-control" name="companyAddress" aria-labelledby="companyAddressLabel companyAddressHint"></textarea>
+                      <input type="text" id="companyAddressLine1" class="form-control" name="companyAddressLine1" aria-labelledby="companyAddressLine1Label companyAddressLine1Hint" />
+                    </div>
+                    
+                    <div class="form-group" aria-label="Company address line 2" role="group">
+                      <label for="companyAddressLine2">
+                        <span class="form-label form-label-bold" id="companyAddressLine2Label">Address line 2</span>   
+                      </label>
+                      <input id="companyAddressLine2" class="form-control" name="companyAddressLine2" type="text" value="" aria-labelledby="companyAddressLine2Label" />
                     </div>
 
                     <div class="form-group" aria-label="Company town/city" role="group">
@@ -207,13 +214,6 @@
                         <span class="form-label form-label-bold" id="companyTownCityLabel">Town/city</span> 
                       </label>
                       <input id="companyTownCity" class="form-control" name="companyTownCity" type="text" value="" aria-labelledby="companyTownCityLabel" />
-                    </div>
-
-                    <div class="form-group" aria-label="Company county/region" role="group">
-                      <label for="companyCountyRegion">
-                        <span class="form-label form-label-bold" id="companyCountyRegionLabel">County/region</span>   
-                      </label>
-                      <input id="companyCountyRegion" class="form-control" name="companyCountyRegion" type="text" value="" aria-labelledby="companyCountyRegionLabel" />
                     </div>
 
 
@@ -251,11 +251,18 @@
                     
                     <div class="panel panel-border-narrow js-hidden" id="q1-sub">
                     
-                        <div class="form-group" aria-label="Company's principal address" role="group">
-                          <label  for="principalCompanyAddress">
-                            <span class="form-label form-label-bold" id="principalCompanyAddressLabel">Address</span> 
+                        <div class="form-group" aria-label="Company's principal address line 1" role="group">
+                          <label  for="principalCompanyAddressLine1">
+                            <span class="form-label form-label-bold" id="principalCompanyAddressLine1Label">Address line 1</span> 
                           </label>
-                          <textarea id="principalCompanyAddress" class="form-control" name="principalCompanyAddress" aria-labelledby="principalCompanyAddressLabel"></textarea>
+                          <input type="text" id="principalCompanyAddressLine1" class="form-control" name="principalCompanyAddressLine1" aria-labelledby="principalCompanyAddressLine1Label" />
+                        </div>
+                        
+                        <div class="form-group" aria-label="Company's principal address line 2" role="group">
+                          <label for="principalCompanyAddressLine2">
+                            <span class="form-label form-label-bold" id="principalCompanyAddressLine2Label">Address line 2</span>   
+                          </label>
+                          <input id="principalCompanyAddressLine2" class="form-control" name="principalCompanyAddressLine2" type="text" value="" aria-labelledby="principalCompanyAddressLine2Label" />
                         </div>
 
                         <div class="form-group" aria-label="Company's principal town/city" role="group">
@@ -264,14 +271,6 @@
                           </label>
                           <input id="principalCompanyTownCity" class="form-control" name="principalCompanyTownCity" type="text" value="" aria-labelledby="principalCompanyTownCityLabel" />
                         </div>
-
-                        <div class="form-group" aria-label="Company's principal county/region" role="group">
-                          <label for="principalCompanyCountyRegion">
-                            <span class="form-label form-label-bold" id="principalCompanyCountyRegionLabel">County/region</span>   
-                          </label>
-                          <input id="principalCompanyCountyRegion" class="form-control" name="principalCompanyCountyRegion" type="text" value="" aria-labelledby="principalCompanyCountyRegionLabel" />
-                        </div>
-
 
                         <div class="form-group" aria-label="Company's principal postcode" role="group">
                           <label for="principalCompanyPostcode" class="form-label-bold">
