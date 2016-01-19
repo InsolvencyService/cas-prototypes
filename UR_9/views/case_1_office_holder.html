@@ -166,35 +166,42 @@
 
                 <form role="form" method="get" action="case_2_company_details.html" aria-label="Case information form">
                     <h1 class="form-title heading-large">Contact details</h1>
-                    <p> This is the individual who has day to day responsibility for the case</p>
+                    <p>This is the individual who has day to day responsibility for the case</p>
                     <div class="form-group" aria-label="Contact details" role="group">
-                      <label  for="officer_name" class="form-label-bold">Full name</label>
-                      <input id="officer_name" class="form-control" name="" type="text" value="" />
+                      <label  for="officerName" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="officerNameLabel">Email address</span> 
+                      </label>
+                      <input id="officerName" class="form-control" name="officerName" type="text" value="" aria-labelledby="officerNameLabel" />
                     </div>
 
                     <div class="form-group" aria-label="Officer's phone number" role="group">
-                      <label  for="phone_number" class="form-label-bold">Phone number</label>
-                      <input id="phone_number" class="form-control" name="" type="text" value="" />
+                      <label  for="phoneNumber" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="phoneNumberLabel">Phone number</span>   
+                      </label>
+                      <input id="phoneNumber" class="form-control" name="phoneNumber" type="text" value="" aria-labelledby="phoneNumberLabel" />
                     </div>
 
                     <div class="form-group" aria-label="Officer's email address" role="group">
-                      <label for="email_address" class="form-label-bold">Email address</label>
-                      <input id="email_address" class="form-control" name="" type="text" value="" />
+                      <label for="emailAddress" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>  
+                      </label>
+                      <input id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" />
                     </div>
 
-<!--
+
+
                     <fieldset>
                       <div class="form-group" role="group" aria-label="Case type" >
                         <h1 class="form-title heading-large">Case type</h1>
                         <legend class="visually-hidden">Case type</legend>
-                          <label for="case_administration" class="block-label">
-                            <input name="case_type" id="case_administration" value="A" type="radio">Administration
+                          <label for="caseTypeAdministration" class="block-label">
+                            <input name="caseType" id="caseTypeAdministration" value="Administration" type="radio">Administration
                           </label>
-                          <label for="case_admin_receivership" class="block-label">
-                            <input name="case_type" id="case_admin_receivership" value="AR" type="radio">Administrative Receivership
+                          <label for="caseTypeAdministrationReceivership" class="block-label">
+                            <input name="caseType" id="caseTypeAdministrationReceivership" value="Administrative Receivership" type="radio">Administrative Receivership
                           </label>
-                           <label for="case_liquidation" class="block-label">
-                            <input name="case_type" id="case_liquidation" value="L" type="radio">Liquidation
+                           <label for="caseTypeLiquidation" class="block-label">
+                            <input name="caseType" id="caseTypeLiquidation" value="Liquidation" type="radio">Liquidation
                           </label>
                       </div>
                     </fieldset>
@@ -205,28 +212,33 @@
                           <h1 class="form-title heading-large">Appointment date</h1>
                           <legend class="visuallyhidden">Appointment date</legend>
                           <div class="form-date">
-
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            <div class="form-group form-group-day" role="group">
+                              <label for="appointmentDateDay">
+                                <span class="form-label form-label-bold" id="appointmentDateDayLabel">Day</span>   
+                              </label>
+                              <input class="form-control" id="appointmentDateDay" name="appointmentDateDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="appointmentDateDayLabel">
                             </div>
 
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            <div class="form-group form-group-month" role="group">
+                              <label for="appointmentDateMonth">
+                                  <span class="form-label form-label-bold" id="appointmentDateMonthLabel">Month</span> 
+                              </label>
+                              <input class="form-control" id="appointmentDateMonth" name="appointmentDateMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="appointmentDateMonthLabel">
                             </div>
 
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                            <div class="form-group form-group-year" role="group">
+                              <label for="appointmentDateYear">
+                                  <span class="form-label form-label-bold" id="appointmentDateYearLabel">Year</span> 
+                              </label>
+                              <input class="form-control" id="appointmentDateYear" name="appointmentDateYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="appointmentDateYearLabel">
                             </div>
                           </div>
                         </div>
                     </fieldset>
--->
+<!-- -->
                     <div>&nbsp;</div>
                     <div class="form-group">
-                        <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
+                        <button id="btnSaveAndContinue" class="button" role="button" aria-label="Save and continue">Save and continue</button>
                       </div>
                 </form>
 

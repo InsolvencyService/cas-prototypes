@@ -161,29 +161,33 @@
                 </h1>
 
 
-                <form role="form" method="get" action="case_3_company_directors.html" aria-label="Case information form">
+                <form role="form" method="get" action="case_3_company_directors.html" aria-label="Company details form">
                     <h1 class="form-title heading-large">Company details</h1>
 
 
                     <fieldset>
-                      <div class="form-group" role="group" aria-label="Date of incorporation" >
-
+                      <div class="form-group" role="group" aria-label="Date of incorporation">
                           <legend class="bold-small">Date of incorporation</legend>
                           <div class="form-date">
-
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            <div class="form-group form-group-day" role="group">
+                              <label for="dateOfIncorporationDay">
+                                  <span class="form-label form-label-bold" id="dateOfIncorporationDayLabel">Day</span> 
+                              </label>
+                              <input class="form-control" id="dateOfIncorporationDay" name="dateOfIncorporationDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="dateOfIncorporationDayLabel">
                             </div>
 
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            <div class="form-group form-group-month" role="group">
+                              <label for="dateOfIncorporationMonth">
+                                  <span class="form-label form-label-bold" id="dateOfIncorporationMonthLabel">Month</span> 
+                              </label>
+                              <input class="form-control" id="dateOfIncorporationMonth" name="dateOfIncorporationMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="dateOfIncorporationMonthLabel">
                             </div>
 
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                            <div class="form-group form-group-year" role="group">
+                              <label for="dateOfIncorporationYear">
+                                <span class="form-label form-label-bold" id="dateOfIncorporationYearLabel">Year</span> 
+                              </label>
+                              <input class="form-control" id="dateOfIncorporationYear" name="dateOfIncorporationYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="dateOfIncorporationYearLabel">
                             </div>
                           </div>
                         </div>
@@ -191,44 +195,54 @@
 
 
                     <div class="form-group" aria-label="Company address" role="group">
-                      <label  for="company_address" class="form-label-bold">Address</label>
-                      <span class="form-hint" id="company_address_hint">Registered office address prior to your appointment</span>
-                      <textarea id="company_address" class="form-control" name="company_address" aria_describedby="company_address_hint"></textarea>
+                      <label  for="companyAddress">
+                        <span class="form-label form-label-bold" id="companyAddressLabel">Address</span> 
+                        <span class="form-hint" id="companyAddressHint">Registered office address prior to your appointment</span>
+                      </label>
+                      <textarea id="companyAddress" class="form-control" name="companyAddress" aria-labelledby="companyAddressLabel companyAddressHint"></textarea>
                     </div>
 
                     <div class="form-group" aria-label="Company town/city" role="group">
-                      <label  for="company_town" class="form-label-bold">Town/city</label>
-                      <input id="company_town" class="form-control" name="town" type="text" value="" />
+                      <label  for="companyTownCity">
+                        <span class="form-label form-label-bold" id="companyTownCityLabel">Town/city</span> 
+                      </label>
+                      <input id="companyTownCity" class="form-control" name="companyTownCity" type="text" value="" aria-labelledby="companyTownCityLabel" />
                     </div>
 
-                    <div class="form-group" aria-label="Company county" role="group">
-                      <label for="company_county" class="form-label-bold">County/region</label>
-                      <input id="company_county" class="form-control" name="county" type="text" value="" />
+                    <div class="form-group" aria-label="Company county/region" role="group">
+                      <label for="companyCountyRegion">
+                        <span class="form-label form-label-bold" id="companyCountyRegionLabel">County/region</span>   
+                      </label>
+                      <input id="companyCountyRegion" class="form-control" name="companyCountyRegion" type="text" value="" aria-labelledby="companyCountyRegionLabel" />
                     </div>
 
 
                     <div class="form-group" aria-label="Company postcode" role="group">
-                      <label for="company_postcode" class="form-label-bold">Postcode</label>
-                      <input id="company_postcode" class="form-control" name="postcode" type="text" value="" />
+                      <label for="companyPostcode" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="companyPostcodeLabel">Postcode</span>   
+                      </label>
+                      <input id="companyPostcode" class="form-control" name="companyPostcode" type="text" value="" aria-labelledby="companyPostcodeLabel" />
                     </div>
 
 
                     <div class="form-group" aria-label="Company country" role="group">
-                      <label for="company_country" class="form-label-bold">Country</label>
-                      <input id="company_country" class="form-control" name="country" type="text" value="" />
+                      <label for="companyCountry" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="companyCountryLabel">Country</span>     
+                      </label>
+                      <input id="companyCountry" class="form-control" name="companyCountry" type="text" value="" aria-labelledby="companyCountryLabel" />
                     </div>
                     
                 
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Was the principal trading address same as above?" >
-                          <legend class="bold-small">Is the principal trading address same as above?</legend>
+                        <div class="form-group" role="group" aria-label="Is the principal trading address same as above?" >
+                          <legend class="bold-small" id="qPrincipalAddressSameLabel">Is the principal trading address same as above?</legend>
 
-                          <label class="block-label" for="principal_address_yes">
-                            <input id="principal_address_yes" type="radio" name="principal_address" value="Yes">
+                          <label class="block-label" for="qPrincipalAddressSameYes">
+                            <input id="qPrincipalAddressYes" type="radio" name="qPrincipalAddressSame" value="Yes" aria-labelledby="qPrincipalAddressSameLabel">
                             Yes
                           </label>
-                          <label class="block-label" for="principal_address_no" data-target="q1-sub">
-                            <input id="principal_address_no" type="radio" name="principal_address" value="No" aria-controls="q1-sub">
+                          <label class="block-label" for="qPrincipalAddressSameNo" data-target="q1-sub">
+                            <input id="qPrincipalAddressSameNo" type="radio" name="qPrincipalAddressSame" value="No" aria-labelledby="qPrincipalAddressSameLabel" aria-controls="q1-sub">
                             No
                           </label>
                         </div>
@@ -237,40 +251,48 @@
                     
                     <div class="panel panel-border-narrow js-hidden" id="q1-sub">
                     
-                        <div class="form-group" aria-label="Company address" role="group">
-                          <label  for="company_address_different" class="form-label-bold">Address</label>
-                          <textarea id="company_address_different" class="form-control" name="company_address_different"></textarea>
+                        <div class="form-group" aria-label="Company's principal address" role="group">
+                          <label  for="principalCompanyAddress">
+                            <span class="form-label form-label-bold" id="principalCompanyAddressLabel">Address</span> 
+                          </label>
+                          <textarea id="principalCompanyAddress" class="form-control" name="principalCompanyAddress" aria-labelledby="principalCompanyAddressLabel"></textarea>
                         </div>
 
-                        <div class="form-group" aria-label="Company town/city" role="group">
-                          <label  for="company_town_different" class="form-label-bold">Town/city</label>
-                          <input id="company_town_different" class="form-control" name="town_different" type="text" value="" />
+                        <div class="form-group" aria-label="Company's principal town/city" role="group">
+                          <label  for="principalCompanyTownCity">
+                            <span class="form-label form-label-bold" id="principalCompanyTownCityLabel">Town/city</span> 
+                          </label>
+                          <input id="principalCompanyTownCity" class="form-control" name="principalCompanyTownCity" type="text" value="" aria-labelledby="principalCompanyTownCityLabel" />
                         </div>
 
-                        <div class="form-group" aria-label="Company county" role="group">
-                          <label for="company_county_different" class="form-label-bold">County/region</label>
-                          <input id="company_county_different" class="form-control" name="county_different" type="text" value="" />
+                        <div class="form-group" aria-label="Company's principal county/region" role="group">
+                          <label for="principalCompanyCountyRegion">
+                            <span class="form-label form-label-bold" id="principalCompanyCountyRegionLabel">County/region</span>   
+                          </label>
+                          <input id="principalCompanyCountyRegion" class="form-control" name="principalCompanyCountyRegion" type="text" value="" aria-labelledby="principalCompanyCountyRegionLabel" />
                         </div>
 
 
-                        <div class="form-group" aria-label="Company postcode" role="group">
-                          <label for="company_postcode_different" class="form-label-bold">Postcode</label>
-                          <input id="company_postcode_different" class="form-control" name="postcode_different" type="text" value="" />
+                        <div class="form-group" aria-label="Company's principal postcode" role="group">
+                          <label for="principalCompanyPostcode" class="form-label-bold">
+                            <span class="form-label form-label-bold" id="principalCompanyPostcodeLabel">Postcode</span>   
+                          </label>
+                          <input id="principalCompanyPostcode" class="form-control" name="principalCompanyPostcode" type="text" value="" aria-labelledby="principalCompanyPostcodeLabel" />
                         </div>
 
 
-                        <div class="form-group" aria-label="Company country" role="group">
-                          <label for="company_country_different" class="form-label-bold">Country</label>
-                          <input id="company_country_different" class="form-control" name="country_different" type="text" value="" />
+                        <div class="form-group" aria-label="Company's principal country" role="group">
+                          <label for="principalCompanyCountry" class="form-label-bold">
+                            <span class="form-label form-label-bold" id="principalCompanyCountryLabel">Country</span>     
+                          </label>
+                          <input id="principalCompanyCountry" class="form-control" name="principalCompanyCountry" type="text" value="" aria-labelledby="principalCompanyCountryLabel" />
                         </div>
                     
                     </div>
 
-
-
                     <div>&nbsp;</div>
                     <div class="form-group">
-                        <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
+                        <button id="btnSaveAndContinue" class="button" role="button" aria-label="Save and continue">Save and continue</button>
                       </div>
                 </form>
 

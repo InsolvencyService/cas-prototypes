@@ -161,65 +161,74 @@
                 </h1>
                 
                 
-                <form role="form" method="get" action="case_3b_director_details.html" aria-label="Case information form">
+                <form role="form" method="get" action="case_3b_director_details.html" aria-label="Director details">
                     <h1 class="form-title heading-large">Director details</h1>
                     
-                    
                     <fieldset class="inline">
-                      <div class="form-group" role="group" aria-label="Title" >
+                      <div class="form-group" role="group" aria-label="Title/salutation" >
                         <legend class="visually-hidden">Title</legend>
-                          <label for="title_mr" class="block-label">
-                            <input name="title" id="title_mr" value="Mr" type="radio">Mr.
+                          <label for="titleMr" class="block-label">
+                            <input name="title" id="titleMr" value="Mr" type="radio">Mr.
                           </label>
-                          <label for="title_mrs" class="block-label">
-                            <input name="title" id="title_mrs" value="Mrs" type="radio">Mrs.
+                          <label for="titleMrs" class="block-label">
+                            <input name="title" id="titleMrs" value="Mrs" type="radio">Mrs.
                           </label>
-                          <label for="title_miss" class="block-label">
-                            <input name="title" id="title_miss" value="Miss" type="radio">Miss
+                          <label for="titleMiss" class="block-label">
+                            <input name="title" id="titleMiss" value="Miss" type="radio">Miss
                           </label>
-                          <label for="title_ms" class="block-label">
-                            <input name="title" id="title_ms" value="Ms." type="radio">Ms.
+                          <label for="titleMs" class="block-label">
+                            <input name="title" id="titleMs" value="Ms" type="radio">Ms.
                           </label>
-                          <label for="title_dr" class="block-label">
-                            <input name="title" id="title_dr" value="Dr." type="radio">Dr.
+                          <label for="titleDr" class="block-label">
+                            <input name="title" id="titleDr" value="Dr" type="radio">Dr.
                           </label>
-                          <label for="title_prof" class="block-label">
-                            <input name="title" id="title_prof" value="Prof." type="radio">Prof.
+                          <label for="titleProf" class="block-label">
+                            <input name="title" id="titleProf" value="Prof" type="radio">Prof.
                           </label>
                       </div>
                     </fieldset>
                     
                     <div class="form-group" aria-label="First name" role="group">
-                      <label  for="first_name" class="form-label-bold">First name</label>
-                      <input id="first_name" class="form-control" name="first_name" type="text" value="" />
+                      <label for="firstName">
+                        <span class="form-label form-label-bold" id="firstNameLabel">First name</span>   
+                      </label>
+                      <input id="firstName" class="form-control" name="firstName" type="text" value="" aria-labelledby="firstNameLabel" />
                     </div>
                     
                     <div class="form-group" aria-label="Last name" role="group">
-                      <label for="last_name" class="form-label-bold">Last name</label>
-                      <input id="last_name" class="form-control" name="" type="text" value="" />
+                      <label for="lastName">
+                            
+                      </label>
+                      <input id="lastName" class="form-control" name="lastName" type="text" value="" aria-labelledby="lastNameLabel" />
                     </div>
                     
                     
 
                     <fieldset>
-                      <div class="form-group" role="group" aria-label="Date of incorporation" >
+                      <div class="form-group" role="group" aria-label="Date of birth" >
                           
-                          <legend class="bold-small">Date of birth</legend>
+                          <legend class="bold-small" id="dateOfBirthLabel">Date of birth</legend>
                           <div class="form-date">
 
-                            <div class="form-group form-group-day" role="group" aria-label="Day">
-                              <label for="dob-day">Day</label>
-                              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            <div class="form-group form-group-day" role="group">
+                              <label for="dateOfBirthDay">
+                                <span class="form-label form-label-bold" id="dateOfBirthDayLabel">Day</span>
+                              </label>
+                              <input class="form-control" id="dateOfBirthDay" name="dateOfBirthDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="dateOfBirthLabel dateOfBirthDayLabel">
                             </div>
 
-                            <div class="form-group form-group-month" role="group" aria-label="Month">
-                              <label for="dob-month">Month</label>
-                              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            <div class="form-group form-group-month" role="group">
+                              <label for="dateOfBirthMonth">
+                                <span class="form-label form-label-bold" id="dateOfBirthMonthLabel">Month</span>  
+                              </label>
+                              <input class="form-control" id="dateOfBirthMonth" name="dateOfBirthMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="dateOfBirthLabel dateOfBirthMonthLabel">
                             </div>
 
-                            <div class="form-group form-group-year" role="group" aria-label="Year">
-                              <label for="dob-year">Year</label>
-                              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                            <div class="form-group form-group-year" role="group">
+                              <label for="dateOfBirthYear">
+                                <span class="form-label form-label-bold" id="dateOfBirthYearLabel">Year</span>
+                              </label>
+                              <input class="form-control" id="dateOfBirthYear" name="dateOfBirthYear" type="number" pattern="[0-9]*" min="0" max="2014" aria-labelledby="dateOfBirthLabel dateOfBirthYearLabel">
                             </div>
                           </div>
                         </div>
@@ -227,48 +236,62 @@
                     
                     
                     <div class="form-group" aria-label="Director's address" role="group">
-                      <label  for="director_address" class="form-label-bold">Address</label>
-                      <textarea id="director_address" class="form-control" name="director_address"></textarea>
+                      <label  for="directorAddress">
+                        <span class="form-label form-label-bold" id="directorAddressLabel">Address</span>
+                      </label>
+                      <textarea id="directorAddress" class="form-control" name="directorAddress" aria-labelledby="directorAddressLabel"></textarea>
                     </div>
                     
-                    <div class="form-group" aria-label="Directory's town/city" role="group">
-                      <label  for="director_town" class="form-label-bold">Town/city</label>
-                      <input id="director_town" class="form-control" name="" type="text" value="" />
+                    <div class="form-group" aria-label="Director's town/city" role="group">
+                      <label  for="directorTown">
+                        <span class="form-label form-label-bold" id="directorTownLabel">Town/city</span>  
+                      </label>
+                      <input id="directorTown" class="form-control" name="directorTown" type="text" value="" aria-labelledby="directorTownLabel" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's county/region" role="group">
-                      <label for="director_county" class="form-label-bold">County/region</label>
-                      <input id="director_county" class="form-control" name="" type="text" value="" />
+                      <label for="directorCounty">
+                        <span class="form-label form-label-bold" id="directorCountyLabel">County/region</span>  
+                      </label>
+                      <input id="directorCounty" class="form-control" name="directorCounty" type="text" value="" aria-labelledby="directorCountyLabel" />
                     </div>
 
                     
                     <div class="form-group" aria-label="Director's postcode" role="group">
-                      <label for="director_postcode" class="form-label-bold">Postcode</label>
-                      <input id="director_postcode" class="form-control" name="" type="text" value="" />
+                      <label for="directorPostcode">
+                        <span class="form-label form-label-bold" id="directorPostcodeLabel">Postcode</span>    
+                      </label>
+                      <input id="directorPostcode" class="form-control" name="directorPostcode" type="text" value="" aria-labelledby="directorPostcodeLabel" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's country" role="group">
-                      <label for="director_country" class="form-label-bold">Country</label>
-                      <input id="director_country" class="form-control" name="" type="text" value="" />
+                      <label for="directorCountry" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="directorCountryLabel">Country</span>   
+                      </label>
+                      <input id="directorCountry" class="form-control" name="directorCountry" type="text" value="" aria-labelledby="directorCountryLabel" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's email" role="group">
-                      <label for="director_email" class="form-label-bold">Email address</label>
-                      <input id="director_email" class="form-control" name="" type="text" value="" />
+                      <label for="directorEmailAddress" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="directorEmailAddressLabel">Email address</span>   
+                      </label>
+                      <input id="directorEmailAddress" class="form-control" name="directorEmailAddress" type="text" value="" aria-labelledby="directorEmailAddress" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's phone number" role="group">
-                      <label for="director_phone_number" class="form-label-bold">Phone number</label>
-                      <input id="director_phone_number" class="form-control" name="" type="text" value="" />
+                      <label for="directorPhoneNumber" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="directorPhoneNumberLabel">Phone number</span>    
+                      </label>
+                      <input id="directorPhoneNumber" class="form-control" name="directorPhoneNumber" type="text" value="" aria-labelledby="directorPhoneNumber" />
                     </div>
                     
                     <div>&nbsp;</div>
                     <div class="form-group">
-                        <button class="button" role="button" aria-label="Save and continue">Save and continue</button>
+                        <button id="btnSaveAndContinue" class="button" role="button" aria-label="Save and continue">Save and continue</button>
                       </div>
                 </form> 
                 
-                <a href="javascript:window.history.back();" class="link-back">Back</a>
+                <a href="javascript:window.history.back();" class="link-back" role="link">Back</a>
 
             </div>
             
