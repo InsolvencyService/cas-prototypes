@@ -58,19 +58,8 @@
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; }
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
 
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-      </style>
-
-
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -110,7 +99,6 @@
               <ul id="proposition-links">
                 <li><a href="dashboard_stack_v2.html" class="active">Dashboard</a></li>
                 <li><a href="client_submitted_cases.html">Submitted Cases</a></li>
-                
                 <li><a href="change_password.html">Change Password</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -173,21 +161,21 @@
                               <label for="dateOfIncorporationDay">
                                   <span class="form-label form-label-bold" id="dateOfIncorporationDayLabel">Day</span> 
                               </label>
-                              <input class="form-control" id="dateOfIncorporationDay" name="dateOfIncorporationDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="dateOfIncorporationDayLabel">
+                              <input class="form-control" id="dateOfIncorporationDay" name="dateOfIncorporationDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="dateOfIncorporationDayLabel" role="textbox">
                             </div>
 
                             <div class="form-group form-group-month" role="group">
                               <label for="dateOfIncorporationMonth">
                                   <span class="form-label form-label-bold" id="dateOfIncorporationMonthLabel">Month</span> 
                               </label>
-                              <input class="form-control" id="dateOfIncorporationMonth" name="dateOfIncorporationMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="dateOfIncorporationMonthLabel">
+                              <input class="form-control" id="dateOfIncorporationMonth" name="dateOfIncorporationMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="dateOfIncorporationMonthLabel" role="textbox">
                             </div>
 
                             <div class="form-group form-group-year" role="group">
                               <label for="dateOfIncorporationYear">
                                 <span class="form-label form-label-bold" id="dateOfIncorporationYearLabel">Year</span> 
                               </label>
-                              <input class="form-control" id="dateOfIncorporationYear" name="dateOfIncorporationYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="dateOfIncorporationYearLabel">
+                              <input class="form-control" id="dateOfIncorporationYear" name="dateOfIncorporationYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="dateOfIncorporationYearLabel" role="textbox">
                             </div>
                           </div>
                         </div>
@@ -199,21 +187,21 @@
                         <span class="form-label form-label-bold" id="companyAddressLine1Label">Address line 1</span> 
                         <span class="form-hint" id="companyAddressLine1Hint">Registered office address prior to your appointment</span>
                       </label>
-                      <input type="text" id="companyAddressLine1" class="form-control" name="companyAddressLine1" aria-labelledby="companyAddressLine1Label companyAddressLine1Hint" />
+                      <input type="text" id="companyAddressLine1" class="form-control" name="companyAddressLine1" aria-labelledby="companyAddressLine1Label companyAddressLine1Hint"  role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Company address line 2" role="group">
                       <label for="companyAddressLine2">
                         <span class="form-label form-label-bold" id="companyAddressLine2Label">Address line 2</span>   
                       </label>
-                      <input id="companyAddressLine2" class="form-control" name="companyAddressLine2" type="text" value="" aria-labelledby="companyAddressLine2Label" />
+                      <input id="companyAddressLine2" class="form-control" name="companyAddressLine2" type="text" value="" aria-labelledby="companyAddressLine2Label" role="textbox" />
                     </div>
 
                     <div class="form-group" aria-label="Company town/city" role="group">
                       <label  for="companyTownCity">
                         <span class="form-label form-label-bold" id="companyTownCityLabel">Town/city</span> 
                       </label>
-                      <input id="companyTownCity" class="form-control" name="companyTownCity" type="text" value="" aria-labelledby="companyTownCityLabel" />
+                      <input id="companyTownCity" class="form-control" name="companyTownCity" type="text" value="" aria-labelledby="companyTownCityLabel" role="textbox"  />
                     </div>
 
 
@@ -221,7 +209,7 @@
                       <label for="companyPostcode" class="form-label-bold">
                         <span class="form-label form-label-bold" id="companyPostcodeLabel">Postcode</span>   
                       </label>
-                      <input id="companyPostcode" class="form-control" name="companyPostcode" type="text" value="" aria-labelledby="companyPostcodeLabel" />
+                      <input id="companyPostcode" class="form-control" name="companyPostcode" type="text" value="" aria-labelledby="companyPostcodeLabel" role="textbox" />
                     </div>
 
 
@@ -229,54 +217,54 @@
                       <label for="companyCountry" class="form-label-bold">
                         <span class="form-label form-label-bold" id="companyCountryLabel">Country</span>     
                       </label>
-                      <input id="companyCountry" class="form-control" name="companyCountry" type="text" value="" aria-labelledby="companyCountryLabel" />
+                      <input id="companyCountry" class="form-control" name="companyCountry" type="text" value="" aria-labelledby="companyCountryLabel" role="textbox" />
                     </div>
                     
                 
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Is the principal trading address same as above?" >
+                        <div class="form-group" role="radiogroup" aria-label="Is the principal trading address same as above?" >
                           <legend class="bold-small" id="qPrincipalAddressSameLabel">Is the principal trading address same as above?</legend>
 
                           <label class="block-label" for="qPrincipalAddressSameYes">
-                            <input id="qPrincipalAddressYes" type="radio" name="qPrincipalAddressSame" value="Yes" aria-labelledby="qPrincipalAddressSameLabel">
+                            <input id="qPrincipalAddressYes" type="radio" name="qPrincipalAddressSame" value="Yes" aria-labelledby="qPrincipalAddressSameLabel" role="radio">
                             Yes
                           </label>
                           <label class="block-label" for="qPrincipalAddressSameNo" data-target="q1-sub">
-                            <input id="qPrincipalAddressSameNo" type="radio" name="qPrincipalAddressSame" value="No" aria-labelledby="qPrincipalAddressSameLabel" aria-controls="q1-sub">
+                            <input id="qPrincipalAddressSameNo" type="radio" name="qPrincipalAddressSame" value="No" aria-labelledby="qPrincipalAddressSameLabel" role="radio" aria-controls="q1-sub">
                             No
                           </label>
                         </div>
                     </fieldset>
                     
                     
-                    <div class="panel panel-border-narrow js-hidden" id="q1-sub">
+                    <div class="panel panel-border-narrow js-hidden" id="q1-sub" role="group">
                     
                         <div class="form-group" aria-label="Company's principal address line 1" role="group">
                           <label  for="principalCompanyAddressLine1">
                             <span class="form-label form-label-bold" id="principalCompanyAddressLine1Label">Address line 1</span> 
                           </label>
-                          <input type="text" id="principalCompanyAddressLine1" class="form-control" name="principalCompanyAddressLine1" aria-labelledby="principalCompanyAddressLine1Label" />
+                          <input type="text" id="principalCompanyAddressLine1" class="form-control" name="principalCompanyAddressLine1" aria-labelledby="principalCompanyAddressLine1Label" role="textbox" />
                         </div>
                         
                         <div class="form-group" aria-label="Company's principal address line 2" role="group">
                           <label for="principalCompanyAddressLine2">
                             <span class="form-label form-label-bold" id="principalCompanyAddressLine2Label">Address line 2</span>   
                           </label>
-                          <input id="principalCompanyAddressLine2" class="form-control" name="principalCompanyAddressLine2" type="text" value="" aria-labelledby="principalCompanyAddressLine2Label" />
+                          <input id="principalCompanyAddressLine2" class="form-control" name="principalCompanyAddressLine2" type="text" value="" aria-labelledby="principalCompanyAddressLine2Label" role="textbox" />
                         </div>
 
                         <div class="form-group" aria-label="Company's principal town/city" role="group">
                           <label  for="principalCompanyTownCity">
                             <span class="form-label form-label-bold" id="principalCompanyTownCityLabel">Town/city</span> 
                           </label>
-                          <input id="principalCompanyTownCity" class="form-control" name="principalCompanyTownCity" type="text" value="" aria-labelledby="principalCompanyTownCityLabel" />
+                          <input id="principalCompanyTownCity" class="form-control" name="principalCompanyTownCity" type="text" value="" aria-labelledby="principalCompanyTownCityLabel" role="textbox" />
                         </div>
 
                         <div class="form-group" aria-label="Company's principal postcode" role="group">
                           <label for="principalCompanyPostcode" class="form-label-bold">
                             <span class="form-label form-label-bold" id="principalCompanyPostcodeLabel">Postcode</span>   
                           </label>
-                          <input id="principalCompanyPostcode" class="form-control" name="principalCompanyPostcode" type="text" value="" aria-labelledby="principalCompanyPostcodeLabel" />
+                          <input id="principalCompanyPostcode" class="form-control" name="principalCompanyPostcode" type="text" value="" aria-labelledby="principalCompanyPostcodeLabel" role="textbox" />
                         </div>
 
 
@@ -284,7 +272,7 @@
                           <label for="principalCompanyCountry" class="form-label-bold">
                             <span class="form-label form-label-bold" id="principalCompanyCountryLabel">Country</span>     
                           </label>
-                          <input id="principalCompanyCountry" class="form-control" name="principalCompanyCountry" type="text" value="" aria-labelledby="principalCompanyCountryLabel" />
+                          <input id="principalCompanyCountry" class="form-control" name="principalCompanyCountry" type="text" value="" aria-labelledby="principalCompanyCountryLabel" role="textbox" />
                         </div>
                     
                     </div>
@@ -297,7 +285,7 @@
                       </div>
                 </form>
 
-                <a href="javascript:window.history.back();" class="link-back">Back</a>
+                <a href="javascript:window.history.back();" class="link-back" role="link">Back</a>
 
             </div>
 
@@ -325,7 +313,7 @@
                           <span class="visuallyhidden">Warning</span>
                         </i>
                         <strong class="bold-small">
-                          <a href="#">View case in PDF format </a>
+                          <a href="#">View PDF </a>
                         </strong>
                       </div>
 

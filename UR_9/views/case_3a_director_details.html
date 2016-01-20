@@ -57,18 +57,7 @@
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-      
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; } 
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
-          
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-      </style>
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
     
     
   </head>
@@ -110,7 +99,6 @@
               <ul id="proposition-links">
                 <li><a href="dashboard_stack_v2.html" class="active">Dashboard</a></li>
                 <li><a href="client_submitted_cases.html">Submitted Cases</a></li>
-                
                 <li><a href="change_password.html">Change Password</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -165,7 +153,7 @@
                     <h1 class="form-title heading-large">Director details</h1>
                     
                     <fieldset class="inline">
-                      <div class="form-group" role="group" aria-label="Title/salutation" >
+                      <div class="form-group" role="radiogroup" aria-label="Title/salutation" >
                         <legend class="visually-hidden">Title</legend>
                           <label for="titleMr" class="block-label">
                             <input name="title" id="titleMr" value="Mr" type="radio">Mr.
@@ -179,27 +167,35 @@
                           <label for="titleMs" class="block-label">
                             <input name="title" id="titleMs" value="Ms" type="radio">Ms.
                           </label>
-                          <label for="titleDr" class="block-label">
-                            <input name="title" id="titleDr" value="Dr" type="radio">Dr.
-                          </label>
-                          <label for="titleProf" class="block-label">
-                            <input name="title" id="titleProf" value="Prof" type="radio">Prof.
+                          <label for="titleOther" class="block-label" data-target="q1-sub">
+                            <input name="title" id="titleOther" value="Other" type="radio" aria-controls="q1-sub">Other
                           </label>
                       </div>
                     </fieldset>
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q1-sub" role="group">
+                        <div class="form-group" aria-label="If other, please specify" role="group">
+                          <label for="titleOther">
+                            <span class="form-label form-label-bold" id="titleOtherLabel">If other, specify</span>   
+                          </label>
+                          <input id="titleOther" class="form-control" name="titleOther" type="text" value="" aria-labelledby="titleOtherLabel" role="textbox" />
+                        </div>
+                    </div>
+                    
+                    
                     
                     <div class="form-group" aria-label="First name" role="group">
                       <label for="firstName">
                         <span class="form-label form-label-bold" id="firstNameLabel">First name</span>   
                       </label>
-                      <input id="firstName" class="form-control" name="firstName" type="text" value="" aria-labelledby="firstNameLabel" />
+                      <input id="firstName" class="form-control" name="firstName" type="text" value="" aria-labelledby="firstNameLabel" role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Last name" role="group">
                       <label for="lastName">
-                            
+                            <span class="form-label form-label-bold" id="lastNameLabel">Last name</span>  
                       </label>
-                      <input id="lastName" class="form-control" name="lastName" type="text" value="" aria-labelledby="lastNameLabel" />
+                      <input id="lastName" class="form-control" name="lastName" type="text" value="" aria-labelledby="lastNameLabel" role="textbox" />
                     </div>
                     
                     
@@ -214,75 +210,76 @@
                               <label for="dateOfBirthDay">
                                 <span class="form-label form-label-bold" id="dateOfBirthDayLabel">Day</span>
                               </label>
-                              <input class="form-control" id="dateOfBirthDay" name="dateOfBirthDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="dateOfBirthLabel dateOfBirthDayLabel">
+                              <input class="form-control" id="dateOfBirthDay" name="dateOfBirthDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="dateOfBirthLabel dateOfBirthDayLabel" role="textbox">
                             </div>
 
                             <div class="form-group form-group-month" role="group">
                               <label for="dateOfBirthMonth">
                                 <span class="form-label form-label-bold" id="dateOfBirthMonthLabel">Month</span>  
                               </label>
-                              <input class="form-control" id="dateOfBirthMonth" name="dateOfBirthMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="dateOfBirthLabel dateOfBirthMonthLabel">
+                              <input class="form-control" id="dateOfBirthMonth" name="dateOfBirthMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="dateOfBirthLabel dateOfBirthMonthLabel" role="textbox">
                             </div>
 
                             <div class="form-group form-group-year" role="group">
                               <label for="dateOfBirthYear">
                                 <span class="form-label form-label-bold" id="dateOfBirthYearLabel">Year</span>
                               </label>
-                              <input class="form-control" id="dateOfBirthYear" name="dateOfBirthYear" type="number" pattern="[0-9]*" min="0" max="2014" aria-labelledby="dateOfBirthLabel dateOfBirthYearLabel">
+                              <input class="form-control" id="dateOfBirthYear" name="dateOfBirthYear" type="number" pattern="[0-9]*" min="0" max="2014" aria-labelledby="dateOfBirthLabel dateOfBirthYearLabel" role="textbox">
                             </div>
                           </div>
                         </div>
                     </fieldset>
                     
                     
-                    <div class="form-group" aria-label="Director's address" role="group">
-                      <label  for="directorAddress">
-                        <span class="form-label form-label-bold" id="directorAddressLabel">Address</span>
+                    <div class="form-group" aria-label="Director's address line 1" role="group">
+                      <label  for="directorAddressLine1">
+                        <span class="form-label form-label-bold" id="directorAddressLine1Label">Address line 1</span>
                       </label>
-                      <textarea id="directorAddress" class="form-control" name="directorAddress" aria-labelledby="directorAddressLabel"></textarea>
+                      <input type="text" id="directorAddressLine1" class="form-control" name="directorAddressLine1" aria-labelledby="directorAddressLine1Label" role="textbox" />
+                    </div>
+                    
+                    <div class="form-group" aria-label="Director's address line 2" role="group">
+                      <label  for="directorAddressLine2">
+                        <span class="form-label form-label-bold" id="directorAddressLine2Label">Address line 2</span>
+                      </label>
+                      <input type="text" id="directorAddressLine2" class="form-control" name="directorAddressLine2" aria-labelledby="directorAddressLine2Label" role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's town/city" role="group">
                       <label  for="directorTown">
                         <span class="form-label form-label-bold" id="directorTownLabel">Town/city</span>  
                       </label>
-                      <input id="directorTown" class="form-control" name="directorTown" type="text" value="" aria-labelledby="directorTownLabel" />
+                      <input id="directorTown" class="form-control" name="directorTown" type="text" value="" aria-labelledby="directorTownLabel" role="textbox" />
                     </div>
                     
-                    <div class="form-group" aria-label="Director's county/region" role="group">
-                      <label for="directorCounty">
-                        <span class="form-label form-label-bold" id="directorCountyLabel">County/region</span>  
-                      </label>
-                      <input id="directorCounty" class="form-control" name="directorCounty" type="text" value="" aria-labelledby="directorCountyLabel" />
-                    </div>
 
                     
                     <div class="form-group" aria-label="Director's postcode" role="group">
                       <label for="directorPostcode">
                         <span class="form-label form-label-bold" id="directorPostcodeLabel">Postcode</span>    
                       </label>
-                      <input id="directorPostcode" class="form-control" name="directorPostcode" type="text" value="" aria-labelledby="directorPostcodeLabel" />
+                      <input id="directorPostcode" class="form-control" name="directorPostcode" type="text" value="" aria-labelledby="directorPostcodeLabel" role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's country" role="group">
                       <label for="directorCountry" class="form-label-bold">
                         <span class="form-label form-label-bold" id="directorCountryLabel">Country</span>   
                       </label>
-                      <input id="directorCountry" class="form-control" name="directorCountry" type="text" value="" aria-labelledby="directorCountryLabel" />
+                      <input id="directorCountry" class="form-control" name="directorCountry" type="text" value="" aria-labelledby="directorCountryLabel" role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's email" role="group">
                       <label for="directorEmailAddress" class="form-label-bold">
                         <span class="form-label form-label-bold" id="directorEmailAddressLabel">Email address</span>   
                       </label>
-                      <input id="directorEmailAddress" class="form-control" name="directorEmailAddress" type="text" value="" aria-labelledby="directorEmailAddress" />
+                      <input id="directorEmailAddress" class="form-control" name="directorEmailAddress" type="text" value="" aria-labelledby="directorEmailAddress" role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's phone number" role="group">
                       <label for="directorPhoneNumber" class="form-label-bold">
                         <span class="form-label form-label-bold" id="directorPhoneNumberLabel">Phone number</span>    
                       </label>
-                      <input id="directorPhoneNumber" class="form-control" name="directorPhoneNumber" type="text" value="" aria-labelledby="directorPhoneNumber" />
+                      <input id="directorPhoneNumber" class="form-control" name="directorPhoneNumber" type="text" value="" aria-labelledby="directorPhoneNumber" role="textbox" />
                     </div>
                     
                     <div>&nbsp;</div>
@@ -319,7 +316,7 @@
                           <span class="visuallyhidden">Warning</span>
                         </i>
                         <strong class="bold-small">
-                          <a href="#">View case in PDF format </a>
+                          <a href="#">View PDF </a>
                         </strong>
                       </div>
 

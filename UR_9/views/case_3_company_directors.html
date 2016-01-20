@@ -58,22 +58,7 @@
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; }
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
-
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-
-          .company-director { margin-top: 30px; margin-bottom: 40px; }
-
-          .status { padding: 0 10px; color: white;  }
-          .status-pending { background-color: #f0ad4e;  }
-      </style>
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
 
 
   </head>
@@ -115,7 +100,6 @@
               <ul id="proposition-links">
                 <li><a href="dashboard_stack_v2.html" class="active">Dashboard</a></li>
                 <li><a href="client_submitted_cases.html">Submitted Cases</a></li>
-                
                 <li><a href="change_password.html">Change Password</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -173,20 +157,22 @@
 
                     <ul class="company-director list font-small">
                         <li><a role="link" href="case_3a_director_details.html"><strong class="bold-medium">Sarah Smith</strong></a></li>
-                        <li>1 Windsor Drive, Birmingham, B36 RTF</li>
+                        <li>301 Gloucester St, JE2 3QR, Channel Islands</li>
                         <li>From 23-11-2011 &bull; to 21-08-2014</li>
                     </ul>
 
                     <ul class="company-director list font-small">
                         <li><span class="status status-pending">To confirm</span> <a role="link" href="case_3a_director_details.html"><strong class="bold-medium">Joe Blogg</strong></a></li>
-                        <li>1 Windsor Drive, Birmingham, B36 RTF</li>
+                        <li>Cube house, Cranbrook street, Birmingham, B36 RTF, United Kingdom</li>
                         <li>From 23-11-2011 &bull; to 21-08-2014</li>
+                        <li><a href="#">Remove</a></li>
                     </ul>
 
                     <ul class="company-director list font-small">
                         <li><span class="status status-pending">To confirm</span> <a role="link" href="case_3a_director_details.html"><strong class="bold-medium">Peter Smith</strong></a></li>
-                        <li>1 Windsor Drive, Birmingham, B36 RTF</li>
+                        <li>1 Windsor Drive, Birmingham, B36 RTF, United Kingdom</li>
                         <li>From 23-11-2011 &bull; to 21-08-2014</li>
+                        <li><a href="#">Remove</a></li>
                     </ul>
 
 
@@ -216,7 +202,7 @@
                           <span class="visuallyhidden">Warning</span>
                         </i>
                         <strong class="bold-small">
-                          <a href="#">View case in PDF format </a>
+                          <a href="#">View PDF </a>
                         </strong>
                       </div>
 
