@@ -19,6 +19,13 @@ aside {
 
 .panel[id*=sub] { margin-bottom: 30px; }
 
+
+.company-director { margin-top: 30px; margin-bottom: 40px; }
+
+.status { padding: 0 10px; color: white;  }
+.status-pending { background-color: #f0ad4e;  }
+
+
 /*
 aside ol { margin-left: 5px; }
 aside h2 { margin-bottom: 10px; }
@@ -28,3 +35,9 @@ aside .list-links li { background: url(../assets/images/to-do.png) bottom left n
 aside li.disabled-link { background-position: top left; }
 aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
 */
+
+
+
+
+
+  
