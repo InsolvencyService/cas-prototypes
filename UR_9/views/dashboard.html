@@ -57,31 +57,7 @@
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-    
-<style>
-    
-    .search-input-wrapper { width: 100%; margin: 0 auto;  }
-    .search-input-wrapper input[type="search"] { 
-      width: 60%; 
-      font-size: 160%; 
-      height: 54px; 
-      font-weight: bold; 
-      float: left; 
-      text-align: center;
-    }
-    .search-input-wrapper input[type="submit"] { 
-      float: left; 
-      border: none; 
-      width: 66px; 
-      height: 66px; 
-      text-indent: -10000px;
-      cursor: pointer;
-      background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat -40px 50%;
-    }
-    .clearfix { clear: both }
-
-</style>
-    
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -179,7 +155,7 @@
     <div class="clearfix"><!-- clear -->&nbsp;</div>
     
       <div class="cas-status-keys">
-            <ul>
+            <ul class="font-medium list-inline">
                 <li><a href="#cas-status-overdue"><span>All</span> (10)</a></li>
                 <li><a href="#cas-status-in-progress"><span>In progress</span> (3)</a></li>  
                 <li><a href="#cas-status-for-review"><span>For review</span> (2)</a></li>  
@@ -195,25 +171,56 @@
       </div>
       -->
       
-      <div id="cas-cases-container">
-          <div class="cas-case-wrapper cas-status-overdue">
+      <div id="cas-cases-container" class="font-small">
+          <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
+                  
+                  <div class="column-two-thirds">
+                      <div id="companyDetails" class="content">
+                          <ul>
+                            <li><h3 class="heading-large">A. Datum Corporation ltd.</h3></li>
+                            <li class="default-copy-colour">Reg. 0192828 &nbsp;&bull;&nbsp; Paul Reed</li>
+                          </ul>
+                      </div>
+                  </div>
+                  
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
                           <!-- <span>For review</span> -->
-                          <span>Overdue by 3 days</span>
+                          <ul>
+                            <li><h3 class="heading-small red-bg curvify"><span>Overdue by 3 days</span></h3></li>
+                            <li><strong class="bold-medium default-copy-colour case-status">For review</strong></li>
+                          </ul>
                       </div>
                   </div>
+                  
+              </div>
+              </a>
+          </div>
+          
+          <div class="cas-case-wrapper">
+              <a href="case_1_office_holder.html">
+              <div class="grid-row cas-case" >
                   
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">A. Datum Corporation ltd.</h3></li>
-                            <li>Reg. 0192828 <span class="muted-copy">&middot; Case NCL9299290</span></li>
+                            <li><h3 class="heading-large">The baguette house ltd.</h3></li>
+                            <li class="default-copy-colour">Reg. 01112993 &nbsp;&bull;&nbsp; Joe Blogg</li>
                           </ul>
                       </div>
                   </div>
+                  
+                  <div class="column-one-third">
+                      <div id="dueDate" class="c-align content">
+                          <ul>
+                            <li><h3 class="heading-small red-bg curvify"><span>Due in 1 day</span></h3></li>
+                            <li><strong class="bold-medium default-copy-colour case-status">In progress</strong></li>
+                          </ul>
+                      </div>
+                  </div>
+                  
               </div>
               </a>
           </div>
@@ -221,21 +228,26 @@
           <div class="cas-case-wrapper cas-status-overdue">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  <div class="column-one-third">
-                      <div id="dueDate" class="c-align content">
-                          <!-- <span>In progress</span>-->
-                          <span>Due in 1 day</span>
-                      </div>
-                  </div>
+                  
                   
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">The baguette house ltd.</h3></li>
-                            <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
+                            <li><h3 class="heading-large">Coho Vineyard &amp; Winery</h3></li>
+                            <li class="default-copy-colour">Reg. 01283838 &nbsp;&bull;&nbsp; Paul Reed</li>
                           </ul>
                       </div>
                   </div>
+                  
+                  <div class="column-one-third">
+                      <div id="dueDate" class="c-align content">
+                          <ul>
+                            <li><h3 class="heading-small red-bg curvify"><span>Due in 2 days</span></h3></li>
+                            <li><strong class="bold-medium default-copy-colour case-status">In progress</strong></li>
+                          </ul>
+                      </div>
+                  </div>
+                  
               </div>
               </a>
           </div>
@@ -243,70 +255,56 @@
           <div class="cas-case-wrapper cas-status-overdue">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  <div class="column-one-third">
-                      <div id="dueDate" class="c-align content">
-                          <!-- <span>In progress</span> -->
-                          <span>Due in 2 days</span>
-                      </div>
-                  </div>
                   
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Coho Vineyard &amp; Winery</h3></li>
-                            <li>Reg. 01283838 <span class="muted-copy">&middot; Case NCL839828</span></li>
+                            <li><h3 class="heading-large">Blue Yonder Airlines</h3></li>
+                            <li class="default-copy-colour">Reg. 01883736 &nbsp;&bull;&nbsp; Paul Reed</li>
                           </ul>
                       </div>
                   </div>
-              </div>
-              </a>
-          </div>
-          
-          <div class="cas-case-wrapper cas-status-overdue">
-              <a href="case_1_office_holder.html">
-              <div class="grid-row cas-case" >
+                  
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
-                          <!-- <span>For review</span> -->
-                          <span>Due in 10 days</span>
-                      </div>
-                  </div>
-                  
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Blue Yonder Airlines</h3></li>
-                            <li>Reg. 01883736 <span class="muted-copy">&middot; Case NCL8767282</span></li>
+                            <li><h3 class="heading-small red-bg curvify"><span>Due in 10 days</span></h3></li>
+                            <li><strong class="bold-medium default-copy-colour case-status">For review</strong></li>
                           </ul>
                       </div>
                   </div>
 
-
                   
               </div>
               </a>
           </div>
           
           
-          <div class="cas-case-wrapper cas-status-in-progress">
+          <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
+                  
+                  
+                  <div class="column-two-thirds">
+                      <div id="companyDetails" class="content">
+                          <ul>
+                            <li><h3 class="heading-large">Parnell Aerospace</h3></li>
+                            <li class="default-copy-colour">Reg. 02929222 &nbsp;&bull;&nbsp; Paul Reed</li>
+                          </ul>
+                      </div>
+                  </div>
                   
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
                           <!--  <span>Not started</span> -->
-                          <span>Due by 8-02-2016</span>
-                      </div>
-                  </div>
-                  
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Parnell Aerospace</h3></li>
-                            <li>Reg. 02929222 <span class="muted-copy">&middot; Case NCL982829</span></li>
+                            <li><h3 class="heading-small amber-bg curvify"><span>Due by 8-02-2016</span></h3></li>
+                            <li><strong class="bold-medium default-copy-colour case-status">Not started</strong></li>
                           </ul>
                       </div>
                   </div>
+                  
+                  
               </div>
               </a>
           </div>
@@ -314,63 +312,107 @@
           <div class="cas-case-wrapper cas-status-in-progress">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
+                  
+                  
+                  <div class="column-two-thirds">
+                      <div id="companyDetails" class="content">
+                          <ul>
+                            <li><h3 class="heading-large">School of Fine Art</h3></li>
+                            <li class="default-copy-colour">Reg. 01112993 &nbsp;&bull;&nbsp; Paul Reed</li>
+                          </ul>
+                      </div>
+                  </div>
+                  
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
                           <!--  <span>In progress</span> -->
-                          <span>Due by 17-02-2016</span>
-                      </div>
-                  </div>
-                  
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">School of Fine Art</h3></li>
-                            <li>Reg. 01112993 <span class="muted-copy">&middot; Case NCL9299290</span></li>
+                            <li><h3 class="heading-small amber-bg curvify"><span>Due by 17-02-2016</span></h3></li>
+                            <li><strong class="bold-medium default-copy-colour case-status">In progress</strong></li>
                           </ul>
                       </div>
                   </div>
+                  
               </div>
               </a>
           </div>
 
           
-          <div class="cas-case-wrapper cas-status-for-review">
+          <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
+                  
+                  <div class="column-two-thirds">
+                      <div id="companyDetails" class="content">
+                          <ul>
+                            <li><h3 class="heading-large">Lucerne Publishing</h3></li>
+                            <li class="default-copy-colour">Reg. 0837363 &nbsp;&bull;&nbsp; Paul Reed</li>
+                          </ul>
+                      </div>
+                  </div>
+                  
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
                           <!--  <span>Not started</span> -->
-                          <span>Due by 20-04-2016</span>
-                      </div>
-                  </div>
-                  
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Lucerne Publishing</h3></li>
-                            <li>Reg. 0837363 <span class="muted-copy">&middot; Case NCL8383910</span></li>
+                              <li><h3 class="heading-small green-bg curvify"><span>Due by 19-04-2016</span></h3></li>
+                              <li><strong class="bold-medium default-copy-colour case-status">Not started</strong></li>
                           </ul>
                       </div>
                   </div>
+                  
+                  
               </div>
               </a>
           </div>
           
-          <div class="cas-case-wrapper cas-status-for-review">
+          <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
+                  <div class="column-two-thirds">
+                      <div id="companyDetails" class="content">
+                          <ul>
+                            <li><h3 class="heading-large">The Phone Company</h3></li>
+                            <li class="default-copy-colour">Reg. 07723663 &nbsp;&bull;&nbsp; Paul Reed</li>
+                          </ul>
+                      </div>
+                  </div>
+                  
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
                           <!-- <span>Not started</span> -->
-                          <span>Due by 22-04-2016</span>
+                          <ul>
+                              <li><h3 class="heading-small green-bg curvify"><span>Due by 21-04-2016</span></h3></li>
+                              <li><strong class="bold-medium default-copy-colour case-status">Not started</strong></li>
+                          </ul>
                       </div>
                   </div>
+                  
+                  
+              </div>
+              </a>
+          </div>
+          
+          <div class="cas-case-wrapper">
+              <a href="case_1_office_holder.html">
+              <div class="grid-row cas-case" >
+                  
                   
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">The Phone Company</h3></li>
-                            <li>Reg. 07723663 <span class="muted-copy">&middot; Case NCL8381112</span></li>
+                            <li><h3 class="heading-large">Southbridge Video</h3></li>
+                            <li class="default-copy-colour">Reg. 099271623 &nbsp;&bull;&nbsp; Paul Reed</li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+                  <div class="column-one-third">
+                      <div id="dueDate" class="c-align content">
+
+                          <ul>
+                              <li><h3 class="heading-small green-bg curvify"><span>Due by 26-04-2016</span></h3></li>
+                              <li><strong class="bold-medium default-copy-colour case-status">Not started</strong></li>
                           </ul>
                       </div>
                   </div>
@@ -378,44 +420,27 @@
               </a>
           </div>
           
-          <div class="cas-case-wrapper cas-status-for-review">
+          <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  <div class="column-one-third">
-                      <div id="dueDate" class="c-align content">
-                          <span>Not started</span>
-                          <span>Due by 26-04-2016</span>
-                      </div>
-                  </div>
+                  
+                  
                   
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-2">Southbridge Video</h3></li>
-                            <li>Reg. 099271623 <span class="muted-copy">&middot; Case NCL2662738</span></li>
+                            <li><h3 class="heading-large">Dog groomers ltd.</h3></li>
+                            <li class="default-copy-colour">Reg. 03838733 &nbsp;&bull;&nbsp; Paul Reed</li>
                           </ul>
                       </div>
                   </div>
-              </div>
-              </a>
-          </div>
-          
-          <div class="cas-case-wrapper cas-status-for-review">
-              <a href="case_1_office_holder.html">
-              <div class="grid-row cas-case" >
                   
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
-                          <span>Not started</span>
-                          <span>Due by 30-04-2016</span>
-                      </div>
-                  </div>
-                  
-                  <div class="column-two-thirds">
-                      <div id="companyDetails" class="content">
+
                           <ul>
-                            <li><h3 class="heading-2">Dog groomers ltd.</h3></li>
-                            <li>Reg. 03838733 <span class="muted-copy">&middot; Case NCL82829190</span></li>
+                              <li><h3 class="heading-small green-bg curvify"><span>Due by 30-04-2016</span></h3></li>
+                              <li><strong class="bold-medium default-copy-colour case-status">Not started</strong></li>
                           </ul>
                       </div>
                   </div>
@@ -428,8 +453,10 @@
       </div>
         
 
-        
-      <div class="cas-load-more-wrapper"><a href="#" class="btn-load-more bold-xsmall">Show more cases</a></div>
+      
+      <div class="cas-load-more-wrapper">
+   
+          <a href="#" class="btn-load-more bold-medium">Show more cases</a></div>
 
     </div>
     

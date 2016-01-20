@@ -26,6 +26,47 @@ aside {
 .status-pending { background-color: #f0ad4e;  }
 
 
+.search-input-wrapper { width: 100%; margin: 0 auto;  }
+.search-input-wrapper input[type="search"] { 
+  width: 60%; 
+  font-size: 160%; 
+  height: 54px; 
+  font-weight: bold; 
+  float: left; 
+  text-align: center;
+}
+.search-input-wrapper input[type="submit"] { 
+  float: left; 
+  border: none; 
+  width: 66px; 
+  height: 66px; 
+  text-indent: -10000px;
+  cursor: pointer;
+  background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat -40px 50%;
+}
+
+.cas-status-keys li { margin: 40px 40px 20px 0; }
+.cas-case-wrapper{ padding-bottom: 2em;border-bottom: 4px solid #f8f8f8; }
+
+.cas-load-more-wrapper { padding-top: 50px; }
+
+#dueDate { padding-top: 25px; }
+#dueDate span { color: white; display: block; padding: 5px; font-weight: 300; }
+#dueDate .case-status { display: block; padding-top: 10px; }
+
+
+/** generic **/
+
+.red-bg { background-color: #B10E1E; }
+.amber-bg { background-color: #F47738; }
+.green-bg { background-color: #85994B; }
+.default-copy-colour { color: #0B0C0C; }
+
+.list-inline li { float: left; }
+.clearfix { clear: both }
+.c-align { text-align: center; }
+.curvify { border-radius: 3px; -moz-border-radius: 3px; -webkit-borders-radius: 3px; }
+
 /*
 aside ol { margin-left: 5px; }
 aside h2 { margin-bottom: 10px; }
