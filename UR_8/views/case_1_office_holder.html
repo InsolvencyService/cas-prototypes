@@ -57,20 +57,7 @@
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-
-      <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; }
-          .lb  { margin-top: 20px; }
-          aside ol { margin-left: 5px; }
-          aside h2 { margin-bottom: 10px; }
-
-          aside .list-links { list-style: none; }
-          aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
-          aside li.disabled-link { background-position: top left; }
-          aside li.disabled-link a { color: #6f777b; text-decoration: none;  }
-      </style>
-
-
+    <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -168,44 +155,44 @@
                       <label  for="officerName" class="form-label-bold">
                         <span class="form-label form-label-bold" id="officerNameLabel">Full name</span> 
                       </label>
-                      <input id="officerName" class="form-control" name="officerName" type="text" value="" aria-labelledby="officerNameLabel" />
+                      <input id="officerName" class="form-control" name="officerName" type="text" value="" role="textbox" aria-labelledby="officerNameLabel" />
                     </div>
 
                     <div class="form-group" aria-label="Officer's phone number" role="group">
                       <label  for="phoneNumber" class="form-label-bold">
                         <span class="form-label form-label-bold" id="phoneNumberLabel">Phone number</span>   
                       </label>
-                      <input id="phoneNumber" class="form-control" name="phoneNumber" type="text" value="" aria-labelledby="phoneNumberLabel" />
+                      <input id="phoneNumber" class="form-control" name="phoneNumber" type="text" value="" role="textbox" aria-labelledby="phoneNumberLabel" />
                     </div>
 
                     <div class="form-group" aria-label="Officer's email address" role="group">
                       <label for="emailAddress" class="form-label-bold">
                         <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>  
                       </label>
-                      <input id="emailAddress" class="form-control" name="emailAddress" type="text" value="" aria-labelledby="emailAddressLabel" />
+                      <input id="emailAddress" class="form-control" name="emailAddress" type="text" value="" role="textbox" aria-labelledby="emailAddressLabel" />
                     </div>
 
 
 
                     <fieldset>
-                      <div class="form-group" role="group" aria-label="Case type" >
+                      <div class="form-group" role="radiogroup" aria-label="Case type" >
                         <h1 class="form-title heading-large">Case type</h1>
                         <legend class="visually-hidden">Case type</legend>
                           <label for="caseTypeAdministration" class="block-label">
-                            <input name="caseType" id="caseTypeAdministration" value="Administration" type="radio">Administration
+                            <input name="caseType" id="caseTypeAdministration" value="Administration" type="radio" role="radio">Administration
                           </label>
                           <label for="caseTypeAdministrationReceivership" class="block-label">
-                            <input name="caseType" id="caseTypeAdministrationReceivership" value="Administrative Receivership" type="radio">Administrative Receivership
+                            <input name="caseType" id="caseTypeAdministrationReceivership" value="Administrative Receivership" type="radio" role="radio">Administrative Receivership
                           </label>
                            <label for="caseTypeLiquidation" class="block-label">
-                            <input name="caseType" id="caseTypeLiquidation" value="Liquidation" type="radio">Liquidation
+                            <input name="caseType" id="caseTypeLiquidation" value="Liquidation" type="radio" role="radio">Liquidation
                           </label>
                       </div>
                     </fieldset>
 
 
                     <fieldset>
-                      <div class="form-group" role="group" aria-label="Appointment date" >
+                      <div class="form-group" role="group" aria-label="Appointment date">
                           <h1 class="form-title heading-large">Appointment date</h1>
                           <legend class="visuallyhidden">Appointment date</legend>
                           <div class="form-date">
@@ -213,21 +200,21 @@
                               <label for="appointmentDateDay">
                                 <span class="form-label form-label-bold" id="appointmentDateDayLabel">Day</span>   
                               </label>
-                              <input class="form-control" id="appointmentDateDay" name="appointmentDateDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="appointmentDateDayLabel">
+                              <input class="form-control" id="appointmentDateDay" name="appointmentDateDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="appointmentDateDayLabel" role="textbox">
                             </div>
 
                             <div class="form-group form-group-month" role="group">
                               <label for="appointmentDateMonth">
                                   <span class="form-label form-label-bold" id="appointmentDateMonthLabel">Month</span> 
                               </label>
-                              <input class="form-control" id="appointmentDateMonth" name="appointmentDateMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="appointmentDateMonthLabel">
+                              <input class="form-control" id="appointmentDateMonth" name="appointmentDateMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="appointmentDateMonthLabel" role="textbox">
                             </div>
 
                             <div class="form-group form-group-year" role="group">
                               <label for="appointmentDateYear">
                                   <span class="form-label form-label-bold" id="appointmentDateYearLabel">Year</span> 
                               </label>
-                              <input class="form-control" id="appointmentDateYear" name="appointmentDateYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="appointmentDateYearLabel">
+                              <input class="form-control" id="appointmentDateYear" name="appointmentDateYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="appointmentDateYearLabel" role="textbox">
                             </div>
                           </div>
                         </div>
