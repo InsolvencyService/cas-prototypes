@@ -97,9 +97,9 @@
             <nav id="proposition-menu">
               <a href="/" id="proposition-name">Conduct Assessment Service</a>
               <ul id="proposition-links">
-                <li><a href="dashboard_stack_v2.html" class="active">Dashboard</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
                 <li><a href="client_submitted_cases.html">Submitted Cases</a></li>
-                <li><a href="change_password.html">Change Password</a></li>
+                <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
             </nav>
@@ -150,7 +150,7 @@
                 
                 
                 <form role="form" method="get" action="case_3b_director_details.html" aria-label="Director details">
-                    <h1 class="form-title heading-large">Director details</h1>
+                    <h1 class="form-title heading-large">Director details (1 of 2)</h1>
                     
                     <fieldset class="inline">
                       <div class="form-group" role="radiogroup" aria-label="Title/salutation" >
@@ -263,9 +263,10 @@
                     
                     <div class="form-group" aria-label="Director's country" role="group">
                       <label for="directorCountry" class="form-label-bold">
-                        <span class="form-label form-label-bold" id="directorCountryLabel">Country</span>   
+                        <span class="form-label form-label-bold" id="directorCountryLabel">Country</span>
+                        <span class="form-hint" id="directorCountryHint">e.g. United Kingdom</span>
                       </label>
-                      <input id="directorCountry" class="form-control" name="directorCountry" type="text" value="" aria-labelledby="directorCountryLabel" role="textbox" />
+                      <input id="directorCountry" class="form-control" name="directorCountry" type="text" value="" aria-labelledby="directorCountryLabel directorCountryHint" role="textbox" />
                     </div>
                     
                     <div class="form-group" aria-label="Director's email" role="group">
