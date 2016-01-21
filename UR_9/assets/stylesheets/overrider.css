@@ -11,10 +11,12 @@
 
 
 aside { 
+    /*
     display: block; 
     margin-top: 3.5em; 
     border-top: 10px solid #005ea5; 
     padding-top: 25px; 
+    */
 }
 
 .panel[id*=sub] { margin-bottom: 30px; }
@@ -49,7 +51,7 @@ aside {
 
 .cas-load-more-wrapper { padding-top: 50px; }
 
-#dueDate { padding-top: 25px; }
+#dueDate { padding-top: 25px; margin-left: 40px; }
 #dueDate span { color: white; display: block; padding: 5px; font-weight: 300; }
 #dueDate .case-status { display: block; padding-top: 10px; }
 
