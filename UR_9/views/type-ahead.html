@@ -153,6 +153,7 @@
                     
                   <div>&nbsp;<!-- --></div>
                   <div>
+                    <span class="form-hint" id="countryOutputHint"></span>
                     <ul id="countryOutput">
                       
                     </ul>
@@ -241,13 +242,28 @@
                 var inputValue = $('#country').val();
                 
                 $('#countryOutput li').remove();
+                $('#countryOutputHint').html('');
+                
                 if(inputValue == '')
                     return;
                 
+                var foundCount = 0;
                 $.each(arrCountries, function( i,d ) {
+                    
+                    
+                    
                     n = '_'+d.toLowerCase();
-                    if( n.indexOf('_'+inputValue.toLowerCase()) >= 0 )
-                        $('<li>'+d+'</li>').appendTo('#countryOutput');
+                    if( n.indexOf('_'+inputValue.toLowerCase()) >= 0 ){
+                        if(foundCount < 3)
+                            $('<li>'+d+'</li>').appendTo('#countryOutput');
+                        
+                        foundCount++;
+                    }
+                    
+                    
+                    if(foundCount > 3)
+                        $('#countryOutputHint').html('Showing 3 of ' + foundCount + ' countries');
+                    
                 });
                 
             });
