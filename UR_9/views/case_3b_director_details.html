@@ -153,7 +153,7 @@
 
                 <form role="form" method="get" action="case_3_company_directors.html" aria-label="Case information form">
                     <h1 class="form-title heading-large">Director details (2 of 2)</h1>
-
+                    <!-- 
                     <fieldset class="inline">
                       <div class="form-group" role="group" aria-label="Appointment Status" >
                         <legend class="bold-small">Appointment status</legend>
@@ -168,33 +168,76 @@
                           </label>
                       </div>
                     </fieldset>
+                    -->
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Are you aware of the person being known by any other names (including maiden name)?" >
+                          <legend class="bold-small">Are you aware of the person being known by any other names (including maiden name)?</legend>
+
+                          <label class="block-label" for="director_question_8_yes" data-target="q1-sub">
+                            <input id="director_question_8_yes" type="radio" name="director_question_8" value="Yes" aria-controls="q1-sub">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_8_no">
+                            <input id="director_question_8_no" type="radio" name="director_question_8" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q1-sub" role="group">
+                        <div class="form-group" aria-label="Other names known by" role="group">
+                          <label for="q8_alias">
+                            <span class="form-label form-label-bold" id="q8_alias_label" id="q8_alias_hint">Other names known by</span>   
+                            <span class="form-hint" id="q8_alias_hint">Enter one alias per line</span>   
+                          </label>
+                            <textarea id="q8_alias" class="form-control" name="q8_alias" type="text" value="" aria-labelledby="q8_alias_label q8_alias_hint"></textarea>
+                        </div>
+                    </div>
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Is this person recorded as a director of the company at Companies House?" >
+                          <legend class="bold-small">Is this person recorded as a director of the company at Companies House?</legend>
+
+                          <label class="block-label" for="director_question_1_yes">
+                            <input id="director_question_1_yes" type="radio" name="director_question_1" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_1_no" data-target="appointment-status-sub">
+                            <input id="director_question_1_no" type="radio" name="director_question_1" value="No" aria-controls="appointment-status-sub">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    
 
                     <div class="panel panel-border-narrow js-hidden" id="appointment-status-sub">
                         <fieldset class="inline">
                           <div class="form-group" role="group" aria-label="What evidence is there to show that the person acted as a director?" >
                             <legend class="bold-small">What evidence is there to show that the person acted as a director?</legend>
+                            <span class="form-hint" id="proceedings_hint">Tick all that apply</span> 
                               <label for="as_evidence_one" class="block-label">
-                                <input name="as_evidence" id="as_evidence_one" value="Company Books" type="radio">Company books
+                                <input name="as_evidence" id="as_evidence_one" value="Company Books" type="checkbox">Company books
                               </label>
-
                               <label for="as_evidence_two" class="block-label">
-                                <input name="as_evidence" id="as_evidence_two" value="Employees" type="radio">Employees
+                                <input name="as_evidence" id="as_evidence_two" value="Employees" type="checkbox">Employees
                               </label>
 
                                <label for="as_evidence_three" class="block-label">
-                                <input name="as_evidence" id="as_evidence_three" value="Company accountant" type="radio">Company accountant
+                                <input name="as_evidence" id="as_evidence_three" value="Company agent" type="checkbox">Company agent
                               </label>
 
                               <label for="as_evidence_four" class="block-label">
-                                <input name="as_evidence" id="as_evidence_four" value="Bank" type="radio">Bank
+                                <input name="as_evidence" id="as_evidence_four" value="Bank" type="checkbox">Bank
                               </label>
 
                               <label for="as_evidence_five" class="block-label">
-                                <input name="as_evidence" id="as_evidence_five" value="3rd parties" type="radio">3rd parties
+                                <input name="as_evidence" id="as_evidence_five" value="Creditors / Suppliers" type="checkbox">Creditors / Suppliers 
                               </label>
 
                               <label for="as_evidence_six" class="block-label">
-                                <input name="as_evidence" id="as_evidence_six" value="Hearsay" type="radio">Hearsay
+                                <input name="as_evidence" id="as_evidence_six" value="Other" type="checkbox">Other (including person admits they were a director)
                               </label>
                           </div>
                         </fieldset>
@@ -205,6 +248,8 @@
                       <div class="form-group" role="group" aria-label="Appointment date" >
 
                           <legend class="bold-small">Appointment date</legend>
+                          <span class="form-hint">Year must be in YYYY format</span>
+                          
                           <div class="form-date">
 
                             <div class="form-group form-group-day" role="group" aria-label="Day">
@@ -219,7 +264,7 @@
 
                             <div class="form-group form-group-year" role="group" aria-label="Year">
                               <label for="ad-year">Year</label>
-                              <input class="form-control" id="ad-year" name="ad-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                              <input class="form-control" id="ad-year" name="ad-year" type="number" pattern="[0-9]*" min="0" max="2016">
                             </div>
                           </div>
                         </div>
@@ -229,6 +274,8 @@
                     <fieldset>
                       <div class="form-group" role="group" aria-label="Termination date" >
                           <legend class="bold-small">Termination date</legend>
+                          <span class="form-hint">Year must be in YYYY format</span>
+                          
                           <div class="form-date">
 
                             <div class="form-group form-group-day" role="group" aria-label="Day">
@@ -243,7 +290,7 @@
 
                             <div class="form-group form-group-year" role="group" aria-label="Year">
                               <label for="td-year">Year</label>
-                              <input class="form-control" id="td-year" name="td-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                              <input class="form-control" id="td-year" name="td-year" type="number" pattern="[0-9]*" min="0" max="2016">
                             </div>
                           </div>
                         </div>
@@ -255,12 +302,12 @@
                         <div class="form-group" role="group" aria-label="Is director connected to 3 or more company failures in the last 5 years?" >
                           <legend class="bold-small">Is this the director's 3rd or more company failure in the last 5 years?</legend>
 
-                          <label class="block-label" for="director_question_1_yes">
-                            <input id="director_question_1_yes" type="radio" name="director_question_1" value="Yes">
+                          <label class="block-label" for="director_question_7_yes">
+                            <input id="director_question_7_yes" type="radio" name="director_question_7" value="Yes">
                             Yes
                           </label>
-                          <label class="block-label" for="director_question_1_no">
-                            <input id="director_question_1_no" type="radio" name="director_question_1" value="No">
+                          <label class="block-label" for="director_question_7_no">
+                            <input id="director_question_7_no" type="radio" name="director_question_7" value="No">
                             No
                           </label>
                         </div>
@@ -268,8 +315,8 @@
 
 
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Has director given a personal guarantee for any of the company's debt?" >
-                          <legend class="bold-small">Has director given a personal guarantee for any of the company's debt?</legend>
+                        <div class="form-group" role="group" aria-label="Are you aware if the director has given a personal guarantee for any of the company's debt?" >
+                          <legend class="bold-small">Are you aware if the director has given a personal guarantee for any of the company's debt?</legend>
 
                           <label class="block-label" for="director_question_2_yes">
                             <input id="director_question_2_yes" type="radio" name="director_question_2" value="Yes">
@@ -305,27 +352,27 @@
                           <div class="form-group" role="group" aria-label="What evidence is there that the person acted as a director whilst bankrupt, disqualified or otherwise restricted from acting?" >
                             <legend class="bold-small">What evidence is there that the person acted as a director whilst bankrupt, disqualified or otherwise restricted from acting?</legend>
                               <label for="q3_evidence_one" class="block-label">
-                                <input name="q3_evidence" id="q3_evidence_one" value="Company Books" type="radio">Company books
+                                <input name="q3_evidence" id="q3_evidence_one" value="Company Books" type="checkbox">Company books
                               </label>
 
                               <label for="q3_evidence_two" class="block-label">
-                                <input name="q3_evidence" id="q3_evidence_two" value="Employees" type="radio">Employees
+                                <input name="q3_evidence" id="q3_evidence_two" value="Employees" type="checkbox">Employees
                               </label>
 
                                <label for="q3_evidence_three" class="block-label">
-                                <input name="q3_evidence" id="q3_evidence_three" value="Company accountant" type="radio">Company accountant
+                                <input name="q3_evidence" id="q3_evidence_three" value="Company accountant" type="checkbox">Company agent
                               </label>
 
                               <label for="q3_evidence_four" class="block-label">
-                                <input name="q3_evidence" id="q3_evidence_four" value="Bank" type="radio">Bank
+                                <input name="q3_evidence" id="q3_evidence_four" value="Bank" type="checkbox">Bank
                               </label>
 
                               <label for="q3_evidence_five" class="block-label">
-                                <input name="q3_evidence" id="q3_evidence_five" value="3rd parties" type="radio">3rd parties
+                                <input name="q3_evidence" id="q3_evidence_five" value="Creditors / Suppliers" type="checkbox">Creditors / Suppliers 
                               </label>
 
                               <label for="q3_evidence_six" class="block-label">
-                                <input name="q3_evidence" id="q3_evidence_six" value="Hearsay" type="radio">Hearsay
+                                <input name="q3_evidence" id="q3_evidence_six" value="Other" type="checkbox">Other
                               </label>
                           </div>
                         </fieldset>
@@ -359,6 +406,36 @@
                           </div>
                         </fieldset>
                     </div>
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Are you satisfied that the director has co-operated with your reasonable enquiries?" >
+                          <legend class="bold-small">Are you satisfied that the director has co-operated with your reasonable enquiries?</legend>
+
+                          <label class="block-label" for="director_question_5_yes">
+                            <input id="director_question_5_yes" type="radio" name="director_question_5" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_5_no">
+                            <input id="director_question_5_no" type="radio" name="director_question_5" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Are you aware of the director suffering any serious ill-health issues, either currently or whilst the company was trading?" >
+                          <legend class="bold-small">Are you aware of the director suffering any serious ill-health issues, either currently or whilst the company was trading?</legend>
+
+                          <label class="block-label" for="director_question_6_yes">
+                            <input id="director_question_6_yes" type="radio" name="director_question_6" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="director_question_6_no">
+                            <input id="director_question_6_no" type="radio" name="director_question_6" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
 
                     <div>&nbsp;</div>
                     <div class="form-group">
