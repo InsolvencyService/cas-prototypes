@@ -224,7 +224,6 @@
       
     <script>
         $(document).ready(function(){
-            
             var arrCountries = [];
             
             $.ajax({
@@ -249,9 +248,7 @@
                 
                 var foundCount = 0;
                 $.each(arrCountries, function( i,d ) {
-                    
-                    
-                    
+                                        
                     n = '_'+d.toLowerCase();
                     if( n.indexOf('_'+inputValue.toLowerCase()) >= 0 ){
                         if(foundCount < 3)
@@ -260,12 +257,10 @@
                         foundCount++;
                     }
                     
-                    
                     if(foundCount > 3)
                         $('#countryOutputHint').html('Showing 3 of ' + foundCount + ' countries starting with \'<strong class="bold-small">' + inputValue + '</strong>\'');
                     
                 });
-                
             });
         });
     </script>
