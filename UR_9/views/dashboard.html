@@ -498,52 +498,71 @@
     <script>
         $(document).ready(function(){
             
-             for(i=8; i<$('.cas-case-wrapper').length; i++){
-                 $('.cas-case-wrapper:eq('+i+')').hide();
-             }
-
+            var maxCasesToShow = 8;
             
-            $('.btn-load-more').on('click', function(e){
+            $('.cas-load-more-wrapper .btn-load-more').on('click', function(e){
                 e.preventDefault();
-                for(i=8; i<$('.cas-case-wrapper').length; i++){
-                     $('.cas-case-wrapper:eq('+i+')').removeClass('hidden').slideDown();
-                 }
                 
+                $('.cas-case-wrapper.collapsed').each(function(i){
+                   if(i > maxCasesToShow-1)
+                       return false;
+                       
+                   $(this).fadeIn().removeClass('collapsed');
+                });
                 
-                if($('.cas-case-wrapper.hidden').length == 0)
-                    $('.btn-load-more').hide();
+                showHideMoreCasesOption();
             });
             
-            $('input[type="search"]').on('keyup', function(){
-                var searchStr = $(this).val();
-                $('.cas-case-wrapper').hide().each(function(){
-                    var t = $(this).find('#companyDetails li').text().toLowerCase();
-                    if(t.indexOf(searchStr) != -1)
-                        $(this).show();
-                }); 
-            });
-            
-             $('#cas-status-keys a').on('click', function(e){
+            $('#cas-status-keys a').on('click', function(e){
                 e.preventDefault();
                 var searchStr = $(this).find('span').text().toLowerCase(),
-                     _cnt = 0;
+                     _cnt = 0
+                       _t = 0;
                  
                  if (!$(this).hasClass('active')){
                      $('#cas-status-keys a.active').removeClass('active');
                      $(this).addClass('active');
                  }
+                
+                //$('.cas-case-wrapper.collapsed').show().removeClass('collapsed');
+                
                  
-                 if( searchStr == 'all cases' )
-                      $('.cas-case-wrapper').slideDown();
-                 else
+                 if( searchStr == 'all cases' ){
+                     $('.cas-case-wrapper').slideDown();
+                     _t = $('.cas-case-wrapper').length;
+                 } else {
                      $('.cas-case-wrapper').each(function(){
                          var t = $(this).find('#dueDate').text().toLowerCase();
-                         if(t.indexOf(searchStr) != -1)
+                         if(t.indexOf(searchStr) != -1) {
                             $(this).slideDown();
-                         else
+                            _t++;
+                         } else
                             $(this).slideUp();
                      });
+                 }
+                
+                console.log(_t);
+                showHideCases(_t);
+                
              });
+                        
+        
+            //init
+            showHideCases($('.cas-case-wrapper').length);
+            
+            function showHideMoreCasesOption(){
+                if($('.cas-case-wrapper.collapsed').length == 0)
+                   $('.cas-load-more-wrapper').hide();
+            }
+            
+            function showHideCases(totalCases){
+                if ( totalCases > maxCasesToShow ){
+                    for(i=maxCasesToShow; i<totalCases; i++)
+                        $('.cas-case-wrapper:eq('+i+')').hide().addClass('collapsed');
+                }
+                
+                showHideMoreCasesOption();
+            }
         });
     </script>
   </body>

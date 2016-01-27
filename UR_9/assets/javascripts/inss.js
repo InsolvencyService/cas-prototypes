@@ -19,3 +19,13 @@ $('form.validate').on('submit', function(e){
         }
     });
 });
+
+
+// user management widget
+
+oInviteCollaboratorsForm = $('#frmInviteCollaborators div');
+oInviteCollaboratorsForm.toggle();
+$('#btnInviteCollaborators').on('click', function(e){
+    e.preventDefault();
+     oInviteCollaboratorsForm.toggle();
+});
