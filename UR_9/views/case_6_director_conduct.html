@@ -154,13 +154,11 @@
                     
                     
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="
-Did the company incur any additional debt(s) at a time when the director(s) ought reasonably to have known that the company was insolvent?" >
-                          <legend class="bold-small">
-Did the company incur any additional debt(s) at a time when the director(s) ought reasonably to have known that the company was insolvent?</legend>
+                        <div class="form-group" role="group" aria-label="Does the company appear to have incurred additional debt(s) at a time when the director(s) ought reasonably to have known that the company was insolvent?" >
+                          <legend class="bold-small">Does the company appear to have incurred additional debt(s) at a time when the director(s) ought reasonably to have known that the company was insolvent?</legend>
 
                           <label class="block-label" for="insolvency_knowledge_q1_yes" data-target="q1-sub">
-                            <input id="insolvency_knowledge_q1_yes" type="radio" name="insolvency_knowledge_q1" value="Yes" aria-controls="q2-sub">
+                            <input id="insolvency_knowledge_q1_yes" type="radio" name="insolvency_knowledge_q1" value="Yes" aria-controls="q1-sub">
                             Yes
                           </label>
                           <label class="block-label" for="insolvency_knowledge_q1_no">
@@ -203,8 +201,8 @@ Did the company incur any additional debt(s) at a time when the director(s) ough
                         <div>&nbsp;<!-- spacer --></div>
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="How long before the company ceased to trade was the company insolvent?" >
-                            <legend class="bold-small">How long before the company ceased to trade was the company insolvent?</legend>
+                          <div class="form-group" role="group" aria-label="How long before the company ceased to trade does the company appear to have been insolvent?" >
+                            <legend class="bold-small">How long before the company ceased to trade does the company appear to have been insolvent?</legend>
                               <label for="q1_since_1_6" class="block-label">
                                 <input name="q1_since" id="q1_since_1_6" value="1 - 6 months" type="radio">1 - 6 months
                               </label>
@@ -247,9 +245,95 @@ Did the company incur any additional debt(s) at a time when the director(s) ough
                               <label for="q1_debt_over_500k" class="block-label">
                                 <input name="q1_debt" id="q1_debt_over_500k" value="Over &pound;500,000" type="radio">Over &pound;500,000
                               </label>
+                              
+                              <label for="q1_debt_uncertain" class="block-label">
+                                <input name="q1_debt" id="q1_debt_uncertain" value="Uncertain" type="radio">Uncertain
+                              </label>
                           </div>
                         </fieldset>
                     </div>
+                    
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Did the director(s) ever seek or receive  professional advice about the company's solvency?" >
+                          <legend class="bold-small">Did the director(s) ever seek or receive  professional advice about the company's solvency?</legend>
+
+                          <label class="block-label" for="professional_advice_q2_yes" data-target="q2-sub">
+                            <input id="professional_advice_q2_yes" type="radio" name="professional_advice_q2" value="Yes" aria-controls="q2-sub">
+                            Yes
+                          </label>
+                          <label class="block-label" for="professional_advice_q2_no">
+                            <input id="professional_advice_q2_no" type="radio" name="professional_advice_q2" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    
+                    <div class="panel panel-border-narrow js-hidden" id="q2-sub">
+                        <fieldset class="inline">
+                            <div class="form-group" role="group" aria-label="Do the director(s) appear to have acted on this advice and taken reasonable steps to try and remedy the situation?" >
+                              <legend class="bold-small">Do the director(s) appear to have acted on this advice and taken reasonable steps to try and remedy the situation?</legend>
+
+                              <label class="block-label" for="q3_acted_yes">
+                                <input id="q3_acted_yes" type="radio" name="q3_acted" value="Yes">
+                                Yes
+                              </label>
+                              <label class="block-label" for="q3_acted_no">
+                                <input id="q3_acted_no" type="radio" name="q3_acted" value="No">
+                                No
+                              </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Is there evidence to show the director(s) had a  reasonable belief that the company might recover it's solvency?" >
+                          <legend class="bold-small">Is there evidence to show the director(s) had a  reasonable belief that the company might recover it's solvency?</legend>
+
+                          <label class="block-label" for="evidence_recover_q4_yes">
+                            <input id="evidence_recover_q4_yes" type="radio" name="evidence_recover_q4" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="evidence_recover_q4_no">
+                            <input id="evidence_recover_q4_no" type="radio" name="evidence_recover_q4" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Once the company became insolvent, did the director(s), directly or indirectly,  introduce new funds or significantly reduce their own benefits?" >
+                          <legend class="bold-small">Once the company became insolvent, did the director(s), directly or indirectly,  introduce new funds or significantly reduce their own benefits? </legend>
+
+                          <label class="block-label" for="new_funds_q5_yes">
+                            <input id="new_funds_q5_yes" type="radio" name="new_funds_q5" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="new_funds_q5_no">
+                            <input id="new_funds_q5_no" type="radio" name="new_funds_q5" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
+                    
+                    <fieldset class="inline">
+                        <div class="form-group" role="group" aria-label="Once insolvent,  is there evidence to show that the company failed to treat all creditors equally?" >
+                          <legend class="bold-small">Once insolvent,  is there evidence to show that the company failed to treat all creditors equally?</legend>
+
+                          <label class="block-label" for="teatment_q6_yes">
+                            <input id="teatment_q6_yes" type="radio" name="teatment_q6" value="Yes">
+                            Yes
+                          </label>
+                          <label class="block-label" for="teatment_q6_no">
+                            <input id="teatment_q6_no" type="radio" name="teatment_q6" value="No">
+                            No
+                          </label>
+                        </div>
+                    </fieldset>
+                    
                     
                     <div>&nbsp;</div>
                     <div class="form-group">

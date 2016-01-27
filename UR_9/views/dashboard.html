@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-    <title>GOV.UK - The best place to find government services and information</title>
+    <title>GOV.UK</title>
 
     <script type="text/javascript">
       (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
@@ -124,15 +124,15 @@
       </div>
         
       <div id="global-breadcrumb">
-        <ol>
-          <li><a href="/">Conduct Assessment Service</a></li>
-          <li>Dashboard</li>
+        <ol role="navigation" aria-label="Breadcrumb">
+          <li role="option"><a role="link" href="/">Conduct Assessment Service</a></li>
+          <li role="option" aria-label="This is the Dashboard">Dashboard</li>
         </ol>
       </div>
         
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
     
-      <h1 class="heading-large">Dashboard</h1>
+      <h1 role="heading" class="heading-large">Dashboard</h1>
     
     <!--
 
@@ -147,41 +147,35 @@
         
       <div class="search-input-wrapper">
         <form role="form" method="get" action="ad_users_no_results.html">
-            <p class="visually-hidden" id="search-hint">Search case by name or number...</p>
-            <input type="search" role="search" placeholder="Search case..."  class="form-control" aria-describedby="search-hint"  />
+            <p class="visually-hidden" id="searchHint">Search case by name or number...</p>
+            <input type="search" role="search" placeholder="Search case..."  class="form-control" aria-describedby="searchHint"  />
             <input type="submit" role="button" aria-label="Search" value="Search" />
         </form>
       </div>
         
-    <div class="clearfix"><!-- clear -->&nbsp;</div>
+      <div class="clearfix"><!-- clear -->&nbsp;</div>
     
-      <div id="cas-status-keys">
-            <ul class="font-medium list-inline">
-                <li><a href="#" class="active"><span>All cases</span> (10)</a></li>
-                <li><a href="#cas-status-in-progress"><span>In progress</span> (3)</a></li>  
-                <li><a href="#cas-status-for-review"><span>Awaiting review</span> (2)</a></li>  
-                <li><a href="#cas-status-not-started"><span>Not started</span> (5)</a></li> 
-                
-                <!-- <li><i class="cas-status-submitted indicator cas-status-off"></i><a href="#">Submitted (0)</a></li> -->
-            </ul>
-            <div class="clearfix"><!-- clear --></div>
+      <div id="cas-status-keys" role="group">
+        <span id="filterOptionsLabel" class="visually-hidden">Filtering options</span>
+        <ul role="menu" class="font-medium list-inline">
+            <li role="option"><a role="menuitem" href="#" class="active" aria-label="All cases" aria-describedby="filterOptionsLabel"><span>All cases</span> (10)</a></li>
+            <li role="option"><a role="menuitem" href="#cas-status-in-progress" aria-label="Display cases that are in progress"><span>In progress</span> (3)</a></li>  
+            <li role="option"><a role="menuitem" href="#cas-status-for-review" aria-label="Display cases that are awaiting review"><span>Awaiting review</span> (2)</a></li>  
+            <li role="option"><a role="menuitem" href="#cas-status-not-started" aria-label="Display cases that have not started"><span>Not started</span> (5)</a></li> 
+        </ul>
+        <div class="clearfix"><!-- clear --></div>
       </div>
-    <!--
-      <div class="column-one-quarter cas-filter-cases">
-              
-      </div>
-      -->
-      
+ 
       <div id="cas-cases-container" class="font-small">
           <div class="cas-case-wrapper">
-              <a href="case_1_office_holder.html">
-              <div class="grid-row cas-case" >
+              <a href="case_1_office_holder.html" aria-label="Case: Datum Corporation limited.  Overdue by 3 days is awaiting review.">
+              <div class="grid-row cas-case">
                   
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
-                            <li><h3 class="heading-large">A. Datum Corporation ltd.</h3></li>
-                            <li class="default-copy-colour">Reg. 0192828 &nbsp;&bull;&nbsp; Paul Reed</li>
+                            <li><h3 class="heading-large">Datum Corporation ltd.</h3></li>
+                              <li class="default-copy-colour"><span>Reg. 0192828</span> &nbsp;&bull;&nbsp; <span id="case0192828IP"><span class="visually-hidden">Lead IP</span>Paul Reed</span></li>
                           </ul>
                       </div>
                   </div>
@@ -201,7 +195,7 @@
           </div>
           
           <div class="cas-case-wrapper">
-              <a href="case_1_office_holder.html">
+              <a href="case_1_office_holder.html" aria-label="Case: The baguette house ltd.  Due in 1 day is in progress.">
               <div class="grid-row cas-case" >
                   
                   <div class="column-two-thirds">
