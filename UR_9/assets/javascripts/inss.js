@@ -29,3 +29,13 @@ $('#btnInviteCollaborators').on('click', function(e){
     e.preventDefault();
      oInviteCollaboratorsForm.toggle();
 });
+
+
+$('input[type="search"]').on('focus', function(e){
+    $(this).parents('form').addClass('focus');
+});
+
+$('input[type="search"]').on('blur', function(e){
+    if($(this).val() == '')
+        $(this).parents('form').removeClass('focus');
+});

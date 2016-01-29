@@ -46,6 +46,30 @@ aside {
   background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat -40px 50%;
 }
 
+form[role="search"] { position: relative;  }
+            
+.search-input-with-placeholder { 
+    z-index: 2; 
+    background: transparent; 
+    position: relative;
+}
+
+
+.search-input-placeholder { 
+    position: absolute; 
+    width: 60%; 
+    top: 0; 
+    left: 0; 
+    text-align: center; 
+    padding: 10px; 
+    color: #BFC1C3;  
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1
+}
+
+form.focus .search-input-placeholder{ display: none; }
+
 
 .cas-case-wrapper{ padding-bottom: 2em;border-bottom: 4px solid #f8f8f8; }
 
@@ -58,6 +82,8 @@ aside {
 #cas-status-keys li { margin: 40px 40px 20px 0; }
 #cas-status-keys a { color: #0B0C0C; text-decoration: none; padding-bottom: 10px; }
 #cas-status-keys a.active { border-bottom: 5px solid #0B0C0C; }
+
+
 
 
 /** generic **/
