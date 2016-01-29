@@ -95,14 +95,12 @@
                 <!-- <a href="#proposition-links" class="js-header-toggle menu">Menu</a> -->
                 <nav id="proposition-menu">
                   <a href="/" id="proposition-name">Conduct Assessment Service</a>
-                    <!--
                   <ul id="proposition-links">
-                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="client_submitted_cases.html">Submitted Cases</a></li>
                     <li><a href="settings.html">Settings</a></li>
                     <li><a href="client_logout.html">Logout</a></li>
                   </ul>
-    -->
                 </nav>
               </div>
             </div>
@@ -139,7 +137,7 @@
     <div role="group">
         <h1 class="form-title heading-xlarge">Contact us</h1>
         <p>
-            Please use the form below to get in touch with The Insolvency Service. 
+            Please use the form below to contact us about this service. 
         </p>
         <form role="form" method="get" action="">
             
@@ -163,11 +161,11 @@
                       <div class="form-group" role="group" aria-label="Reason for contacting us" >
                         <legend class="bold-small">Reason for contacting us</legend>
                           <label for="cReason1" class="block-label">
-                            <input name="cReason" id="cReason1" value="Ammend/update case information" type="radio">Ammend case information
+                            <input name="cReason" id="cReason1" value="Ammend/update case information" type="radio">Apply for additional time to submit conduct report
                           </label>
 
                           <label for="cReason2" class="block-label">
-                            <input name="cReason" id="cReason2" value="Request extention" type="radio">Request extention of deadline
+                            <input name="cReason" id="cReason2" value="Request extention" type="radio">Provide additional or new  information about a case
                           </label>
 
                            <label for="cReason3" class="block-label">
@@ -182,8 +180,9 @@
             <div class="form-group" aria-label="Contact details" role="group">
               <label  for="cMessage" class="form-label-bold">
                 <span class="form-label form-label-bold" id="cMessageLabel">Message</span> 
+                <span class="form-hint" id="cMessageHint">For all case specific issues, please ensure you provide <br />the company name and reference number</span> 
               </label>
-                <textarea id="cMessage" class="form-control" name="cMessage" aria-labelledby="cMessageLabel" rows="10"></textarea>
+                <textarea id="cMessage" class="form-control" name="cMessage" aria-labelledby="cMessageLabel cMessageHint" rows="10"></textarea>
             </div>
 
             <div>&nbsp;</div>
