@@ -87,6 +87,8 @@ form.focus .search-input-placeholder{ display: none; }
 #reportBugWrapper a { color: #6F777B; }
 #reportBugWrapper .content { margin-top: 20px; }
 
+.confirmation { color: white; background-color: #28A197; padding: 50px 30px; text-align: center; }
+
 
 /** generic **/
 
