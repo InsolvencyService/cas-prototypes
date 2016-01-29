@@ -39,3 +39,10 @@ $('input[type="search"]').on('blur', function(e){
     if($(this).val() == '')
         $(this).parents('form').removeClass('focus');
 });
+
+
+$('#reportBugWrapper .content').toggle();
+$('#reportBugWrapper a').on('click', function(e){
+    e.preventDefault(); 
+    $(this).parent().find('.content').toggle();
+});

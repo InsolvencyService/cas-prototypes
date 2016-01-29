@@ -115,7 +115,7 @@
     <!--end global-header-bar-->
 
       
-    <div class="elements-index" id="content" role="main">
+    <main class="elements-index" id="content" role="main">
       <div class="phase-banner-beta">
         <p>
           <strong class="phase-tag">BETA</strong>
@@ -423,9 +423,6 @@
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
-                  
-                  
                   <div class="column-two-thirds">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -437,7 +434,6 @@
                   
                   <div class="column-one-third">
                       <div id="dueDate" class="c-align content">
-
                           <ul>
                               <li><h3 class="heading-small green-bg"><span>Due by 30-04-2016</span></h3></li>
                               <li><strong class="bold-medium default-copy-colour case-status">Not started</strong></li>
@@ -448,17 +444,43 @@
               </div>
               </a>
           </div>
-          
-          
       </div>
         
 
       
-      <div class="cas-load-more-wrapper">
-   
-          <a href="#" class="btn-load-more bold-medium">Show more cases</a></div>
+      <div class="cas-load-more-wrapper"><a href="#" class="btn-load-more bold-medium">Show more cases</a></div>
+        
+    <!-- bug reporter to be included
+        in all the app pages -->
+        <div id="reportBugWrapper">
+            <div class="grid-row">
+                <div class="column-two-thirds">
+                    <a href="#">Is there anything wrong with this page?</a>
+                    <div class="content">
+                        <h4 class="heading-medium">Help us improve GOV.UK</h4>
+                        <p>Don't include personal or financial information, eg your National Insurance number or credit card details.</p>
+                        <form>
+                            <div class="form-group" aria-label="What you were doing" role="group">
+                                <label  for="what_doing" class="form-label-bold">What you were doing</label>
+                                <input id="what_doing" class="form-control" name="what_doing" type="text" value="" role="textbox" />
+                            </div>
 
-    </div>
+                            <div class="form-group" aria-label="What went wrong" role="group">
+                                <label  for="what_wrong" class="form-label-bold">What went wrong</label>
+                                <input id="what_wrong" class="form-control" name="what_wrong" type="text" value="" role="textbox" />
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <button id="btnSend" class="button" role="button" aria-label="Send">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
     
 
     <!-- Page content goes here -->

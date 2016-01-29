@@ -83,7 +83,9 @@ form.focus .search-input-placeholder{ display: none; }
 #cas-status-keys a { color: #0B0C0C; text-decoration: none; padding-bottom: 10px; }
 #cas-status-keys a.active { border-bottom: 5px solid #0B0C0C; }
 
-
+#reportBugWrapper { margin-top: 100px; }
+#reportBugWrapper a { color: #6F777B; }
+#reportBugWrapper .content { margin-top: 20px; }
 
 
 /** generic **/
