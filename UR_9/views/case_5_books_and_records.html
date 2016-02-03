@@ -138,11 +138,7 @@
     <!-- start of form -->
         
         <div class="grid-row">
-            
-
-            
             <div class="column-two-thirds">
-                
                 
                 <h1 class="heading-xlarge">
                     <span class="heading-secondary">NCL18829292</span>
@@ -152,7 +148,6 @@
                 
                 <form role="form" method="get" action="case_6_director_conduct.html" aria-label="Case information form">
                     <h1 class="form-title heading-large">Books &amp; Records</h1>
-                    
                     
                     <fieldset class="inline">
                         <div class="form-group" role="group" aria-label="Having regard to the size and nature of the company's trading, are there material deficiencies in the company's available books and records?" >
@@ -169,17 +164,20 @@
                         </div>
                     </fieldset>
                     
-                    
                     <div class="panel panel-border-narrow js-hidden" id="q1-sub">
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Are draft or management accounts available up to the end of trading?" >
-                            <legend class="bold-small">Are draft or management accounts available up to the end of trading?</legend>
+                          <div class="form-group" role="group" aria-label="Does the company appear to have ever kept records sufficient to show and explain its transactions and  to disclose with reasonable accuracy its financial position at any given time?" >
+                            <legend class="bold-small">Does the company appear to have ever kept records sufficient to show and explain its transactions and  to disclose with reasonable accuracy its financial position at any given time?</legend>
                               <label for="q1_accounts_available_yes" class="block-label">
                                 <input name="q1_accounts_available" id="q1_accounts_available_yes" value="Yes" type="radio">Yes
                               </label>
 
                               <label for="q1_accounts_available_no" class="block-label">
                                 <input name="q1_accounts_available" id="q1_accounts_available_no" value="No" type="radio">No
+                              </label>
+                              
+                              <label for="q1_accounts_available_uncertain" class="block-label">
+                                <input name="q1_accounts_available" id="q1_accounts_available_uncertain" value="No" type="radio">Uncertain
                               </label>
                           </div>
                         </fieldset>
@@ -204,24 +202,9 @@
                               <label for="q1_gap_over_12" class="block-label">
                                 <input name="q1_gap" id="q1_gap_over_12" value="Over 12 months" type="radio">Over 12 months
                               </label>
-                          </div>
-                        </fieldset>
-                        
-                        <div>&nbsp;<!-- spacer --></div>
-                        
-                        <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Can all the company's transactions with the director(s) and any associated parties be identified?" >
-                            <legend class="bold-small">Can all the company's transactions with the director(s) and any associated parties be identified?</legend>
-                              <label for="q1_material_available_yes" class="block-label">
-                                <input name="q1_material_available" id="q1_material_available_yes" value="Yes" type="radio">Yes
-                              </label>
-
-                              <label for="q1_material_available_no" class="block-label">
-                                <input name="q1_material_available" id="q1_material_available_no" value="No" type="radio">No
-                              </label>
                               
-                              <label for="q1_material_available_uncertain" class="block-label">
-                                <input name="q1_material_available" id="q1_material_available_uncertain" value="Uncertain" type="radio">Uncertain
+                              <label for="q1_gap_over_never_filed" class="block-label">
+                                <input name="q1_gap" id="q1_gap_over_never_filed" value="Never filed accounts" type="radio">Never filed accounts
                               </label>
                           </div>
                         </fieldset>
@@ -241,6 +224,25 @@
                               
                               <label for="q1_position_change_uncertain" class="block-label">
                                 <input name="q1_position_change" id="q1_position_change_uncertain" value="Uncertain" type="radio">Uncertain
+                              </label>
+                          </div>
+                        </fieldset>
+                        
+                        <div>&nbsp;<!-- spacer --></div>
+                        
+                        <fieldset class="inline">
+                          <div class="form-group" role="group" aria-label="Can all the company's transactions with the director(s) and any associated parties be identified?" >
+                            <legend class="bold-small">Can all the company's transactions with the director(s) and any associated parties be identified?</legend>
+                              <label for="q1_material_available_yes" class="block-label">
+                                <input name="q1_material_available" id="q1_material_available_yes" value="Yes" type="radio">Yes
+                              </label>
+
+                              <label for="q1_material_available_no" class="block-label">
+                                <input name="q1_material_available" id="q1_material_available_no" value="No" type="radio">No
+                              </label>
+                              
+                              <label for="q1_material_available_uncertain" class="block-label">
+                                <input name="q1_material_available" id="q1_material_available_uncertain" value="Uncertain" type="radio">Uncertain
                               </label>
                           </div>
                         </fieldset>

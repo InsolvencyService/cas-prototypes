@@ -90,6 +90,8 @@ form.focus .search-input-placeholder{ display: none; }
 .confirmation { color: white; background-color: #28A197; padding: 50px 30px; text-align: center; }
 
 
+
+
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
@@ -102,6 +104,7 @@ form.focus .search-input-placeholder{ display: none; }
 .clearfix { clear: both }
 .c-align { text-align: center; }
 .curvify { border-radius: 3px; -moz-border-radius: 3px; -webkit-borders-radius: 3px; }
+.phase-tag a{ color: white; text-decoration: none; }
 
 /*
 aside ol { margin-left: 5px; }
