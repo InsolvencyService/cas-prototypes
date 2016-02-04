@@ -183,6 +183,7 @@
                 <span class="form-hint" id="cMessageHint">For all case specific issues, please ensure you provide <br />the company name and reference number</span> 
               </label>
                 <textarea id="cMessage" class="form-control" name="cMessage" aria-labelledby="cMessageLabel cMessageHint" rows="10"></textarea>
+                <div id="characterCounter" class="form-hint"><span>0</span> characters left</div>
             </div>
 
             <div>&nbsp;</div>
@@ -240,5 +241,35 @@
     <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
     <script src="../assets/javascripts/application.js" type="text/javascript"></script>
     <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
+      
+    <style>
+        #characterCounter { margin-top: 20px; }
+        .red-copy { color: #B10E1E; }
+    </style>
+      
+    <script>
+        $('#cMessage').on('keyup change copy cut paste', function(e){
+            countChar($(this));
+        });
+        
+        var maxCharactersAllowed = 3000;
+        $('#characterCounter span').text(maxCharactersAllowed);
+        
+        function countChar(t) {
+            var len = t.val().length;
+
+            if (len > maxCharactersAllowed) 
+              t.val( t.val().substring(0, maxCharactersAllowed) ); 
+            
+            var ccnt = maxCharactersAllowed - len < 0 ? 0 : maxCharactersAllowed - len;
+            $('#characterCounter span').text(ccnt);
+          
+            
+            if (maxCharactersAllowed - len < 100)
+                $('#characterCounter').addClass('red-copy');
+            else
+                $('#characterCounter').removeClass('red-copy');
+          };  
+    </script>
   </body>
 </html>
