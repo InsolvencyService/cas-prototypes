@@ -149,22 +149,22 @@
                 </h1>
                 
                 
-                <form role="form" method="get" action="case_6e_director_conduct.html" aria-label="Case information form">
-                    <h1 class="form-title heading-large">Director conduct (5 of 6)</h1>
+                <form role="form" method="get" action="case_7_confirm.html" aria-label="Case information form">
+                    <h1 class="form-title heading-large">Director conduct (6 of 6)</h1>
                     
                     
                     <fieldset class="inline">
-                        <div class="form-group" role="group" aria-label="Did this company trade in the same, or a substantially similar, way to one or more previous company failures?
+                        <div class="form-group" role="group" aria-label="Did the company without good cause fail to provide goods and services or fail to safeguard customer monies?
 " >
-                          <legend class="bold-small">Did this company trade in the same, or a substantially similar, way to one or more previous company failures?
+                          <legend class="bold-small">Did the company without good cause fail to provide goods and services or fail to safeguard customer monies?
 </legend>
 
-                          <label class="block-label" for="trade_method_q1_yes" data-target="q1-sub">
-                            <input id="trade_method_q1_yes" type="radio" name="trade_method_q1" value="Yes">
+                          <label class="block-label" for="safeguard_q1_yes" data-target="q1-sub">
+                            <input id="safeguard_q1_yes" type="radio" name="safeguard_q1" value="Yes">
                             Yes
                           </label>
-                          <label class="block-label" for="trade_method_q1_no">
-                            <input id="trade_method_q1_no" type="radio" name="trade_method_q1" value="No">
+                          <label class="block-label" for="safeguard_q1_no">
+                            <input id="safeguard_q1_no" type="radio" name="safeguard_q1" value="No">
                             No
                           </label>
                         </div>
@@ -175,14 +175,14 @@
                         
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Were one or more of the director(s) of this company involved in the previous failure(s)?" >
-                            <legend class="bold-small">Were one or more of the director(s) of this company involved in the previous failure(s)?</legend>
-                              <label for="q1_prev_failure_yes" class="block-label">
-                                <input name="q1_prev_failure" id="q1_prev_failure_yes" value="Yes" type="radio">Yes
+                          <div class="form-group" role="group" aria-label="Have you received creditor complaints that raise concerns about the nature of the company's trading?" >
+                            <legend class="bold-small">Have you received creditor complaints that raise concerns about the nature of the company's trading?</legend>
+                              <label for="q1_complaints_yes" class="block-label">
+                                <input name="q1_complaints" id="q1_complaints_yes" value="Yes" type="radio">Yes
                               </label>
 
-                              <label for="q1_prev_failure_no" class="block-label">
-                                <input name="q1_prev_failure" id="q1_prev_failure_no" value="No" type="radio">No
+                              <label for="q1_complaints_no" class="block-label">
+                                <input name="q1_complaints" id="q1_complaints_no" value="No" type="radio">No
                               </label>
                           </div>
                         </fieldset>
@@ -191,14 +191,14 @@
                         <div>&nbsp;<!-- spacer --></div>
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Had any new finance been introduced to address previous under capitalisation?" >
-                            <legend class="bold-small">Had any new finance been introduced to address previous under capitalisation?</legend>
-                              <label for="q1_new_finance_yes" class="block-label">
-                                <input name="q1_new_finance" id="q1_new_finance_yes" value="Yes" type="radio">Yes
+                          <div class="form-group" role="group" aria-label="Is there evidence that customers were misled or given false assurances?" >
+                            <legend class="bold-small">Is there evidence that customers were misled or given false assurances?</legend>
+                              <label for="q1_mislead_yes" class="block-label">
+                                <input name="q1_mislead" id="q1_mislead_yes" value="Yes" type="radio">Yes
                               </label>
 
-                              <label for="q1_new_finance_no" class="block-label">
-                                <input name="q1_new_finance" id="q1_new_finance_no" value="No" type="radio">No
+                              <label for="q1_mislead_no" class="block-label">
+                                <input name="q1_mislead" id="q1_mislead_no" value="No" type="radio">No
                               </label>
 
                           </div>
@@ -207,14 +207,18 @@
                         <div>&nbsp;<!-- spacer --></div>
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Had the director(s) made changes to increase the viability of this company?" >
-                            <legend class="bold-small">Had the director(s) made changes to increase the viability of this company?</legend>
-                              <label for="q1_changes_yes" class="block-label">
-                                <input name="q1_changes" id="q1_changes_yes" value="Yes" type="radio">Yes
+                          <div class="form-group" role="group" aria-label="Is there evidence that the company used customer monies to support general trading?" >
+                            <legend class="bold-small">Is there evidence that the company used customer monies to support general trading?</legend>
+                              <label for="q1_customer_money_yes" class="block-label">
+                                <input name="q1_customer_money" id="q1_customer_money_yes" value="Yes" type="radio">Yes
                               </label>
 
-                              <label for="q1_changes_no" class="block-label">
-                                <input name="q1_changes" id="q1_changes_no" value="No" type="radio">No
+                              <label for="q1_customer_money_no" class="block-label">
+                                <input name="q1_customer_money" id="q1_customer_money_no" value="No" type="radio">No
+                              </label>
+                              
+                              <label for="q1_customer_money_uncertain" class="block-label">
+                                <input name="q1_customer_money" id="q1_customer_money_uncertain" value="Uncertain" type="radio">Uncertain
                               </label>
                           </div>
                         </fieldset>
@@ -223,14 +227,18 @@
                         <div>&nbsp;<!-- spacer --></div>
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Is there evidence to support the director(s) belief  that this company would be viable financially?" >
-                            <legend class="bold-small">Is there evidence to support the director(s) belief  that this company would be viable financially?</legend>
-                              <label for="q1_director_belief_yes" class="block-label">
-                                <input name="q1_director_belief" id="q1_director_belief_yes" value="Yes" type="radio">Yes
+                          <div class="form-group" role="group" aria-label="Did the company fail to comply with any statutory or contractual obligations to safeguard / ring-fence customer monies?" >
+                            <legend class="bold-small">Did the company fail to comply with any statutory or contractual obligations to safeguard / ring-fence customer monies?</legend>
+                              <label for="q1_comply_yes" class="block-label">
+                                <input name="q1_comply" id="q1_comply_yes" value="Yes" type="radio">Yes
                               </label>
 
-                              <label for="q1_director_belief_no" class="block-label">
-                                <input name="q1_director_belief" id="q1_director_belief_no" value="No" type="radio">No
+                              <label for="q1_comply_no" class="block-label">
+                                <input name="q1_comply" id="q1_comply_no" value="No" type="radio">No
+                              </label>
+                              
+                              <label for="q1_comply_uncertain" class="block-label">
+                                <input name="q1_comply" id="q1_comply_uncertain" value="Uncertain" type="radio">Uncertain
                               </label>
                           </div>
                         </fieldset>
@@ -238,49 +246,21 @@
                         <div>&nbsp;<!-- spacer --></div>
                         
                         <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Was a business plan ever prepared?" >
-                            <legend class="bold-small">Was a business plan ever prepared?</legend>
-                              <label for="q1_bplan_yes" class="block-label">
-                                <input name="q1_bplan" id="q1_bplan_yes" value="Yes" type="radio">Yes
+                          <div class="form-group" role="group" aria-label=" Can the customers involved, and the amounts of money involved,  be identified in the company records?" >
+                            <legend class="bold-small"> Can the customers involved, and the amounts of money involved,  be identified in the company records?</legend>
+                              <label for="q1_identifiable_yes" class="block-label">
+                                <input name="q1_identifiable" id="q1_identifiable_yes" value="Yes" type="radio">Yes
                               </label>
 
-                              <label for="q1_bplan_no" class="block-label">
-                                <input name="q1_bplan" id="q1_bplan_no" value="No" type="radio">No
+                              <label for="q1_identifiable_no" class="block-label">
+                                <input name="q1_identifiable" id="q1_identifiable_no" value="No" type="radio">No
+                              </label>
+                              
+                              <label for="q1_identifiable_uncertain" class="block-label">
+                                <input name="q1_identifiable" id="q1_identifiable_uncertain" value="Uncertain" type="radio">Uncertain
                               </label>
                           </div>
-                        </fieldset>
-                        
-                        <div>&nbsp;<!-- spacer --></div>
-                        
-                        <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Did this company use the same or a similar trading style(s) to the earlier failure(s)?" >
-                            <legend class="bold-small">Did this company use the same or a similar trading style(s) to the earlier failure(s)?</legend>
-                              <label for="q1_trading_style_yes" class="block-label">
-                                <input name="q1_trading_style" id="q1_trading_style_yes" value="Yes" type="radio">Yes
-                              </label>
-
-                              <label for="q1_trading_style_no" class="block-label">
-                                <input name="q1_trading_style" id="q1_trading_style_no" value="No" type="radio">No
-                              </label>
-                          </div>
-                        </fieldset>
-                        
-                        
-                        <div>&nbsp;<!-- spacer --></div>
-                        
-                        <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Did any of the Section 216 exceptions apply to this company?" >
-                            <legend class="bold-small">Did any of the Section 216 exceptions apply to this company?</legend>
-                              <label for="q1_s26_yes" class="block-label">
-                                <input name="q1_s26" id="q1_s26_yes" value="Yes" type="radio">Yes
-                              </label>
-
-                              <label for="q1_s26_no" class="block-label">
-                                <input name="q1_s26" id="q1_s26_no" value="No" type="radio">No
-                              </label>
-                          </div>
-                        </fieldset>
-                        
+                        </fieldset>                    
                         
                     </div>
                     
