@@ -51,19 +51,19 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="../assets/images/opengraph-image.png">
-      
-      
+
+
     <!--[if gt IE 8]><!--><link href="../assets/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-      
+
       <style>
-          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; } 
+          aside { display: block; margin-top: 3.5em; border-top: 10px solid #005ea5; padding-top: 25px; }
           .lb  { margin-top: 20px; }
           aside ol { margin-left: 5px; }
           aside h2 { margin-bottom: 10px; }
-          
+
           aside .list-links { list-style: none; }
           aside .list-links li { background: url(../assets/images/to-do.png) bottom left no-repeat; padding-left: 25px; }
           aside li.disabled-link { background-position: top left; }
@@ -71,14 +71,14 @@
           .muted-copy{ color:#BFC1C3;  }
           .high-priority { padding: 0 5px; background: red; color: white;}
       </style>
-    
-    
+
+
   </head>
 
   <body>
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-    
+
 
     <div id="skiplink-container">
       <div>
@@ -87,13 +87,13 @@
     </div>
 
     <div id="global-cookie-message">
-      
+
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-      
+
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="with-proposition">
       <div class="header-wrapper">
         <div class="header-global">
@@ -119,17 +119,17 @@
         </div>
       </div>
     </header>
-      
+
 
     <!--end header-->
-    
 
-    
+
+
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
-      
-      
+
+
     <main class="elements-index" id="content" role="main">
       <div class="phase-banner-beta">
         <p>
@@ -137,7 +137,7 @@
           <span>This is a new service – your <a href="http://www.surveymonkey.com" target="_blank">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-        
+
       <div id="global-breadcrumb">
         <ol>
           <li><a href="index.html">Conduct Assessment Service</a></li>
@@ -145,33 +145,33 @@
           <li>AdventureWorks Cycles Limited</li>
         </ol>
       </div>
-    
-    <!-- start of form -->
-        
-        <div class="grid-row">
-            
 
-            
+    <!-- start of form -->
+
+        <div class="grid-row">
+
+
+
             <div class="column-two-thirds">
-                
-                
+
+
                 <h1 class="heading-xlarge">
                     <span class="heading-secondary"><span class="high-priority">High priority</span> NCL18829292</span>
                     AdventureWorks Cycles Limited
                 </h1>
-                
-                
+
+
                 <h1 class="form-title heading-large">Officer's details</h1>
                 <ul class="font-medium list">
-                    
+
                     <li>Peter James Anderson</li>
                     <li>020 9887 2882</li>
                     <li>peter.anderson@someinsolvencyfirm.co.uk</li>
-                
+
                 </ul>
-  
-                
-                
+
+
+
                 <h1 class="form-title heading-large">Submitted on 10-12-2015</h1>
                 <ul class="font-medium list">
                     <li>Submitted by Joe Blogg on behalf of Peter Anderson</li>
@@ -183,9 +183,9 @@
 
 
             </div>
-            
 
-            
+
+
             <div class="column-one-third">
                 <aside class="related">
                     <ul class="list bold-small">
@@ -196,32 +196,32 @@
                     </ul>
                 </aside>
             </div>
-            
+
         </div>
 
 <!-- end of form -->
-        
-        
+
+
 
     </main>
-    
+
 
     <!-- Page content goes here -->
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        
+
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            
+
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
+
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-              
+
             </div>
           </div>
 
@@ -241,18 +241,18 @@
 
     <script>
         $(document).ready(function(){
-            
 
-            
+
+
             $('input[type="search"]').on('keyup', function(){
                 var searchStr = $(this).val();
                 $('.cas-group a').hide().each(function(){
                     var t = $(this).find('li').text().toLowerCase();
                     if(t.indexOf(searchStr) != -1)
                         $(this).show();
-                }); 
+                });
             });
-            
+
 
         });
     </script>
