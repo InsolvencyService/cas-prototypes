@@ -259,8 +259,8 @@
                         <fieldset class="inline">
                           <div class="form-group" role="group" aria-label="Had the company entered into any Time-to-Pay arrangements with HMRC?" >
                             <legend class="bold-small">Had the company entered into any Time-to-Pay arrangements with HMRC?</legend>
-                              <label for="q4_hmrc_ttp_yes" class="block-label">
-                                <input name="q4_hmrc_ttp" id="q4_hmrc_ttp_yes" value="Yes" type="radio">Yes
+                              <label for="q4_hmrc_ttp_yes" class="block-label" data-target="q4-sub">
+                                <input name="q4_hmrc_ttp" id="q4_hmrc_ttp_yes" value="Yes" type="radio" aria-controls="q4-sub">Yes
                               </label>
 
                               <label for="q4_hmrc_ttp_no" class="block-label">
@@ -271,21 +271,21 @@
                         </fieldset>
                         
                         
-                        <div>&nbsp;<!-- spacer --></div>
-                        
-                        <fieldset class="inline">
-                          <div class="form-group" role="group" aria-label="Did the company comply with the terms of any Time-to-Pay arrangements?" >
-                            <legend class="bold-small">Did the company comply with the terms of any Time-to-Pay arrangements?</legend>
-                              <label for="q5_hmrc_comply_yes" class="block-label">
-                                <input name="q5_hmrc_comply" id="q5_hmrc_comply_yes" value="Yes" type="radio">Yes
-                              </label>
+                        <div class="panel panel-border-narrow js-hidden" id="q4-sub">
+                            <fieldset class="inline">
+                              <div class="form-group" role="group" aria-label="Did the company comply with the terms of any Time-to-Pay arrangements?" >
+                                <legend class="bold-small">Did the company comply with the terms of any Time-to-Pay arrangements?</legend>
+                                  <label for="q5_hmrc_comply_yes" class="block-label">
+                                    <input name="q5_hmrc_comply" id="q5_hmrc_comply_yes" value="Yes" type="radio">Yes
+                                  </label>
 
-                              <label for="q5_hmrc_comply_no" class="block-label">
-                                <input name="q5_hmrc_comply" id="q5_hmrc_comply_no" value="No" type="radio">No
-                              </label>
+                                  <label for="q5_hmrc_comply_no" class="block-label">
+                                    <input name="q5_hmrc_comply" id="q5_hmrc_comply_no" value="No" type="radio">No
+                                  </label>
 
-                          </div>
-                        </fieldset>
+                              </div>
+                            </fieldset>
+                        </div>
                         
                         <div>&nbsp;<!-- spacer --></div>
                         

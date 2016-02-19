@@ -1,3 +1,5 @@
+var URI = '../';
+
 // JS for CAS
 $('form.validate').on('submit', function(e){
     e.preventDefault();
@@ -31,18 +33,25 @@ $('#btnInviteCollaborators').on('click', function(e){
 });
 
 
-$('input[type="search"]').on('focus', function(e){
-    $(this).parents('form').addClass('focus');
-});
-
-$('input[type="search"]').on('blur', function(e){
-    if($(this).val() == '')
-        $(this).parents('form').removeClass('focus');
-});
-
-
 $('#reportBugWrapper .content').toggle();
 $('#reportBugWrapper a').on('click', function(e){
     e.preventDefault(); 
     $(this).parent().find('.content').toggle();
+});
+
+$('#reportBugWrapper').on('submit', function(e){
+    e.preventDefault();
+    
+    var error = false,
+        oError = $(this).find('.error');
+    
+    oError.addClass('hidden');
+    
+    $(this).find('input[type="text"]').each(function(e){
+        if ($.trim($(this).val()) == '')
+            error = true;
+    });
+    
+    if(error)
+        oError.removeClass('hidden');
 });

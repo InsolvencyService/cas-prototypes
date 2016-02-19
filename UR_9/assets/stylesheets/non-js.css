@@ -1,8 +1,11 @@
-/*****
+/* css for non js clients */
+/**
 
-
-Search 'placeholder' (dashboard etc.)
+X Search 'placeholder' (dashboard etc.)
 Conditional radios
+X hide the counter from dashboard filter.
+X hide 'Show more cases'
 
+**/
 
-*****/
+.js-item { display: none; }
