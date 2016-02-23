@@ -61,7 +61,7 @@ form[role="search"] { position: relative;  }
     top: 0; 
     left: 0; 
     text-align: center; 
-    padding: 10px; 
+    padding: 15px; 
     color: #BFC1C3;  
     font-size: 30px;
     font-weight: bold;
@@ -96,6 +96,8 @@ form.focus .search-input-placeholder{ display: none; }
 
 .info-container { padding: 30px; margin-top: 20px; }
 .btn-skip-to-submit { margin-top: 10px; }
+
+.list-submitted-cases ul { margin-top: 40px; }
 
 /** generic **/
 
