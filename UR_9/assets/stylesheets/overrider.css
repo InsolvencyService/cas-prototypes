@@ -9,16 +9,6 @@
     border-color: #3c763d;
 }
 
-
-aside { 
-    /*
-    display: block; 
-    margin-top: 3.5em; 
-    border-top: 10px solid #005ea5; 
-    padding-top: 25px; 
-    */
-}
-
 .panel[id*=sub] { margin-bottom: 30px; }
 
 .company-director { margin-top: 30px; margin-bottom: 40px; }
@@ -61,7 +51,7 @@ form[role="search"] { position: relative;  }
     top: 0; 
     left: 0; 
     text-align: center; 
-    padding: 10px; 
+    padding: 15px; 
     color: #BFC1C3;  
     font-size: 30px;
     font-weight: bold;
@@ -90,6 +80,9 @@ form.focus .search-input-placeholder{ display: none; }
 #reportBugWrapper .content { margin-top: 20px; }
 
 .confirmation { color: white; background-color: #28A197; padding: 50px 30px; text-align: center; }
+
+
+.list-submitted-cases ul { margin-top: 40px; }
 
 
 /** generic **/
