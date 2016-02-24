@@ -99,6 +99,28 @@ form.focus .search-input-placeholder{ display: none; }
 
 .list-submitted-cases ul { margin-top: 40px; }
 
+
+.answer {
+    background: #0B0C0C;
+    color: #fff;
+    padding: 15px;
+}
+
+.inline-answer {
+
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    text-align: center;
+}
+
+.question-yes-no { 
+    padding-right: 100px;
+    position: relative;
+}
+
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
@@ -116,6 +138,7 @@ form.focus .search-input-placeholder{ display: none; }
 .list-inline li { float: left; }
 .clearfix { clear: both }
 .c-align { text-align: center; }
+.r-align { text-align: right; }
 .curvify { border-radius: 3px; -moz-border-radius: 3px; -webkit-borders-radius: 3px; }
 .phase-tag a{ color: white; text-decoration: none; }
 .no-js-item { display: none; }
@@ -129,6 +152,7 @@ form.focus .search-input-placeholder{ display: none; }
 
 .p-group { margin-bottom: 0; }
 .title-deco { border-top: 2px solid #0B0C0C; padding-top: 30px; }
+
 
 /*
 aside ol { margin-left: 5px; }
