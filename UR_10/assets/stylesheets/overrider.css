@@ -121,6 +121,8 @@ form.focus .search-input-placeholder{ display: none; }
     position: relative;
 }
 
+.grid-row .column-one-half:first-child px { text-align: right; }
+
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
@@ -150,9 +152,10 @@ form.focus .search-input-placeholder{ display: none; }
     margin-top: 3.5em;
 }
 
-.p-group { margin-bottom: 0; }
-.title-deco { border-top: 2px solid #0B0C0C; padding-top: 30px; }
-
+#casePreview .p-group { margin-bottom: 0; }
+#casePreview .section-divider { border-top: 2px solid #0B0C0C; padding-top: 30px; }
+#casePreview h2 { margin-top: 0.15em; }
+#casePreviewHeader p { margin-top: 4.5em; }
 
 /*
 aside ol { margin-left: 5px; }
