@@ -23,6 +23,36 @@ $('form.validate').on('submit', function(e){
 });
 
 
+$(function() {
+   var clonedTitle;
+
+   $(".section").each(function() {
+       clonedTitle = $(this).find('h2');
+       clonedTitle
+         .before(clonedTitle.clone())
+         .css("width", clonedTitle.width())
+         .addClass("sticky-title invisible");
+         
+   });
+    
+    $(window).on('scroll', function(e){    
+       $('.section').each(function(){
+
+           var scrollTop = $(window).scrollTop(),
+               offset = $(this).offset(),
+               stickyTitle = $(this).find('.sticky-title');
+
+            if ((scrollTop > offset.top) && (scrollTop < offset.top + $(this).height()))
+               stickyTitle.removeClass('invisible');
+            else
+               stickyTitle.addClass('invisible');
+
+       });
+    });
+});
+
+
+
 // user management widget
 
 oInviteCollaboratorsForm = $('#frmInviteCollaborators div');

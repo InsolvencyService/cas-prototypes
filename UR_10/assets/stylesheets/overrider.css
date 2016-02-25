@@ -123,6 +123,12 @@ form.focus .search-input-placeholder{ display: none; }
 
 .grid-row .column-one-half:first-child px { text-align: right; }
 
+.invisible { visibility: hidden; }
+.sticky-title {
+  position: fixed;
+  top: 0;
+}
+
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
