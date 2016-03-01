@@ -124,9 +124,10 @@ form.focus .search-input-placeholder{ display: none; }
 .grid-row .column-one-half:first-child px { text-align: right; }
 
 .invisible { visibility: hidden; }
+.blend-with-bg { color: white; }
 .sticky-title {
   position: fixed;
-  top: 0;
+  top: 30px;
 }
 
 /** generic **/
@@ -160,6 +161,7 @@ form.focus .search-input-placeholder{ display: none; }
 
 #casePreview .p-group { margin-bottom: 0; }
 #casePreview .section-divider { border-top: 2px solid #0B0C0C; padding-top: 30px; }
+#casePreview .section-divider-no-border { padding-top: 32px; }
 #casePreview h2 { margin-top: 0.15em; }
 #casePreviewHeader p { margin-top: 4.5em; }
 
