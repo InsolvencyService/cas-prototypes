@@ -2348,3 +2348,10 @@ input[type=number] {
 .example-button .swatch-wrapper {
   width: 100%;
 }
+
+
+/** added by Z **/
+ol.list { padding-top: 10px; padding-bottom: 10px; border-right: 2px solid #BFC1C3; }
+ol li {  }
+ol li a { display: block; text-decoration: none; padding: 8px;}
+ol li.active { background: #005ea5; color: white; padding: 8px;}
