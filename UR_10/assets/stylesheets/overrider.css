@@ -79,11 +79,12 @@ form.focus .search-input-placeholder{ display: none; }
 #dueDate span { color: white; display: block; padding: 5px; font-weight: 300; }
 #dueDate .case-status { display: block; padding-top: 10px; }
 
-#cas-status-keys li { margin: 40px 40px 20px 0; }
-#cas-status-keys a { color: #0B0C0C; text-decoration: none; padding-bottom: 10px; }
-#cas-status-keys a.active { border-bottom: 5px solid #0B0C0C; }
-#cas-status-keys li.disabled a { cursor: default; color: #BFC1C3 }
+
+#cas-status-keys a { color: #0B0C0C; text-decoration: none; padding: 10px 15px 10px 15px; background: #DEE0E2; margin-right: 1px; }
+#cas-status-keys li.disabled a { cursor: default; color: #6F777B; }
 #cas-status-keys li.disabled a.active { border-bottom: none; }
+#cas-status-keys { border-bottom: 1px solid #BFC1C3; padding-top: 40px; padding-bottom: 10px; }
+#cas-status-keys a.active { background-color: #005ea5; color: white; }
 
 #reportBugWrapper { margin-top: 100px; }
 #reportBugWrapper a { color: #6F777B; }
@@ -121,15 +122,6 @@ form.focus .search-input-placeholder{ display: none; }
     position: relative;
 }
 
-.grid-row .column-one-half:first-child px { text-align: right; }
-
-.invisible { visibility: hidden; }
-.blend-with-bg { color: white; }
-.sticky-title {
-  position: fixed;
-  top: 30px;
-}
-
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
@@ -159,11 +151,9 @@ form.focus .search-input-placeholder{ display: none; }
     margin-top: 3.5em;
 }
 
-#casePreview .p-group { margin-bottom: 0; }
-#casePreview .section-divider { border-top: 2px solid #0B0C0C; padding-top: 30px; }
-#casePreview .section-divider-no-border { padding-top: 32px; }
-#casePreview h2 { margin-top: 0.15em; }
-#casePreviewHeader p { margin-top: 4.5em; }
+.p-group { margin-bottom: 0; }
+.title-deco { border-top: 2px solid #0B0C0C; padding-top: 30px; }
+
 
 /*
 aside ol { margin-left: 5px; }
@@ -183,5 +173,24 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
+@media (max-width: 641px) {
+    #cas-status-keys li { display: block; float: none; margin-bottom: 1px; }
+    #cas-status-keys li a {  display: block; padding: 10px 5px; }
+    #dueDate { margin-left: 0; padding-top: 0; }
+    #dueDate.c-align { text-align: left; }
+    .cas-case-wrapper a { text-decoration: none; }
+    .search-input-placeholder { font-size: 18px; text-align: left; padding: 10px 0 0 10px; }
+    .search-input-wrapper input[type="search"] { height: 38px; width: 99%; padding: 0; }
+    .search-input-wrapper input[type="submit"] { 
+        width: 100%; 
+        background: #0b0c0c; 
+        color: white; 
+        text-indent: 0;
+        font-size: 22px;
+        margin-top: 3px;
+        height: inherit;
+        padding: 10px 0;
+    }
+}
 
   
