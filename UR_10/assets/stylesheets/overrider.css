@@ -122,6 +122,15 @@ form.focus .search-input-placeholder{ display: none; }
     position: relative;
 }
 
+.grid-row .column-one-half:first-child pXX { text-align: right; }
+
+.invisible { visibility: hidden; }
+.blend-with-bg { color: white; }
+.sticky-title {
+  position: fixed;
+  top: 30px;
+}
+
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
@@ -150,6 +159,12 @@ form.focus .search-input-placeholder{ display: none; }
     padding-top: 5px;
     margin-top: 3.5em;
 }
+
+#casePreview .p-group { margin-bottom: 0; }
+#casePreview .section-divider { border-top: 2px solid #0B0C0C; padding-top: 30px; }
+#casePreview .section-divider-no-border { padding-top: 32px; }
+#casePreview h2 { margin-top: 0.15em; }
+#casePreviewHeader p { margin-top: 4.5em; }
 
 .p-group { margin-bottom: 0; }
 .title-deco { border-top: 2px solid #0B0C0C; padding-top: 30px; }
