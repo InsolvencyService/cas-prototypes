@@ -176,7 +176,7 @@
                             <legend class="bold-small">Which tax is involved?</legend>
                             <span class="form-hint">Tick all that apply</span>
                               <label for="q1_hmrc_tax_all" class="block-label">
-                                <input name="q1_hmrc_tax" id="q1_hmrc_tax_all" value="All" type="checkbox">All
+                                <input name="q1_hmrc_tax" id="q1_hmrc_tax_all" value="All" type="checkbox" data-parent="true">All
                               </label>
 
                               <label for="q1_hmrc_tax_vat" class="block-label">
@@ -308,8 +308,9 @@
                         <fieldset class="inline">
                           <div class="form-group" role="group" aria-label="In comparison with HMRC who was treated better?" >
                             <legend class="bold-small">In comparison with HMRC who was treated better?</legend>
+                            <span class="form-hint">Tick all that apply</span>
                               <label for="q6_hmrc_compare_everyone" class="block-label">
-                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_everyone" value="Everyone" type="checkbox">Everyone
+                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_everyone" value="Everyone" type="checkbox" data-parent="true">Everyone
                               </label>
 
                               <label for="q6_hmrc_compare_connected" class="block-label">
@@ -321,7 +322,7 @@
                               </label>
 
                               <label for="q6_hmrc_compare_uncertain" class="block-label">
-                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_uncertain" value="Uncertain" type="checkbox">Uncertain
+                                <input name="q6_hmrc_compare" id="q6_hmrc_compare_uncertain" value="Uncertain" type="checkbox" data-disowned="true">Uncertain
                               </label>
 
                           </div>
@@ -428,5 +429,6 @@
 
     <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
     <script src="../assets/javascripts/application.js" type="text/javascript"></script>
+    <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
   </body>
 </html>

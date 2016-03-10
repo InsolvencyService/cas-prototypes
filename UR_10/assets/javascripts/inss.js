@@ -22,6 +22,40 @@ $('form.validate').on('submit', function(e){
     });
 });
 
+$('input[type="checkbox"]').on('click', function(e){
+    
+   var g = $(this).parents('.form-group')
+   
+   if($(this).attr('data-disowned')){
+       if($(this).is(':checked')){
+           g.find('input[type="checkbox"]').prop('checked', false).parent().removeClass('selected');
+           $(this).prop('checked', true).parent().addClass('selected');
+       }
+       
+       return;
+   }
+    
+   g.find('input[data-disowned="true"]').prop('checked', false).parent().removeClass('selected');
+   
+    
+   if($(this).attr('data-parent')){
+       var checked = $(this).is(':checked');
+       
+       g.find('input[type="checkbox"]').each(function(){
+
+           if(checked && !$(this).attr('data-disowned') )
+               $(this).prop('checked', true).parent().addClass('selected');
+           else
+               $(this).prop('checked', false).parent().removeClass('selected');
+       });
+           
+   } else {
+       
+       g.find('input[data-parent="true"]').prop('checked', false).parent().removeClass('selected');
+       
+   }
+});
+
 
 // user management widget
 
