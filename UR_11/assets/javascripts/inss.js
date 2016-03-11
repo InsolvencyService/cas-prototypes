@@ -22,6 +22,34 @@ $('form.validate').on('submit', function(e){
     });
 });
 
+//
+$('input.validate').on('keypress', function(e){
+    
+    var validationType = $(this).attr('data-validation'),
+        valid = false;
+
+    switch(validationType){
+        case 'letters':
+                if(e.which >= 65 && e.which <= 96 
+                   || e.which >= 97 && e.which <= 122 ){
+                    valid = true;
+                }
+            break;
+            
+        case 'number':
+                if(e.which >= 48 && e.which <= 57){
+                    valid = true;
+                }
+            break;
+    }
+    
+    if(!valid){
+        e.preventDefault();
+        return false;
+    }
+    
+});
+
 $('input[type="checkbox"]').on('click', function(e){
     
    var g = $(this).parents('.form-group')
