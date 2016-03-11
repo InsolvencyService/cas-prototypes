@@ -131,6 +131,11 @@ form.focus .search-input-placeholder{ display: none; }
   top: 30px;
 }
 
+.blend-with-bg a.link-back:link, 
+.blend-with-bg a.link-back:visited, 
+.blend-with-bg a.link-back:hover, 
+.blend-with-bg a.link-back:active { color: white; border-bottom: none; }
+
 /** generic **/
 
 .red-bg { background-color: #B10E1E; }
