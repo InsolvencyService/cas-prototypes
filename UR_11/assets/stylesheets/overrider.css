@@ -169,6 +169,9 @@ form.focus .search-input-placeholder{ display: none; }
 .p-group { margin-bottom: 0; }
 .title-deco { border-top: 2px solid #0B0C0C; padding-top: 30px; }
 
+.link-top { padding-left: 0;  }
+.link-top::before { content: none; }
+
 
 /*
 aside ol { margin-left: 5px; }
