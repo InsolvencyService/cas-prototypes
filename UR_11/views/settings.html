@@ -142,6 +142,7 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <form role="form" method="get" action="">
+                <!--
                 <h1 class="form-title heading-large">Notification preferences</h1>
                 <div class="form-group" role="group">
                   <p id="notificationsCopyDescription">Enter email address of colleagues you wish to send a copy of notifications to</p>
@@ -153,15 +154,17 @@
                 </div>
                 
                 <div>&nbsp;</div>
+-->
                 
                 <h1 class="form-title heading-large">Service managers</h1>
                 <div class="form-group" role="group">
-                  <p>This option allows you to choose users who can manage cases and other users on your behalf</p>
+                  <p>This option allows you to choose users who can manage cases and other users on your behalf.</p>
+                    <p>NB. Service managers cannot submit a case.</p>
                   <fieldset class="inline">
                       <div class="form-group">
-                        <legend class="visually-hidden">This option allows you to choose users who can manage cases and other users on your behalf</legend>
-                        <span class="form-hint">NB. Service managers cannot submit a case</span>
-
+                        <legend class="visually-hidden">This option allows you to choose users who can manage cases and other users on your behalf. NB. Service managers cannot submit a case.</legend>
+                    
+                          <!--
                           <label for="sm_1" class="block-label">
                             <input name="sm" id="sm_1" value="Kate Adams" type="checkbox" checked>Kate Adams
                           </label>
@@ -181,13 +184,21 @@
                           <label for="sm_5" class="block-label">
                             <input name="sm" id="sm_5" value="Sam Evans" type="checkbox" checked>Jackie Carter
                           </label>
-
+-->
+                          <label for="sm">
+                            <span class="form-label form-label-bold">Enter email address</span>
+                            <span class="form-hint">One email address per line</span>
+                          </label>
+                          <textarea id="sm" class="form-control" name="sm" type="text" value=""></textarea>
+                          
+                          <div>&nbsp;</div>
+                          <ul class="list list-bullet font-medium">
+                            <li>Katie Adams <span class="font-small">(<a href="#">Remove</a>)</span></li>
+                            <li>Heather Wilkin <span class="font-small">(<a href="#">Remove</a>)</span></li>
+                          </ul>
                       </div>
                     </fieldset>
                 </div>
-                
-                <div>&nbsp;</div>
-                
 
                 <h1 class="form-title heading-large">Change password</h1>
                 <p>You are currently logged in as Joe B. ( joe.blogg@insolvencyfirm.co.uk )</p>
@@ -216,7 +227,7 @@
                 
                 
                 <div class="form-group" role="group">
-                    <button class="button" role="button" id="btnContinue">Continue</button>
+                    <button class="button" role="button" id="btnContinue">Save</button>
                 </div>
             </form>
             
@@ -228,7 +239,7 @@
                         <h4 class="heading-medium">Settings</h4>
                         <nav>
                             <ul class="list list-links clear-list-styling">
-                                <li><a href="#">Notification preferences</a></li>
+                                <!-- <li><a href="#">Notification preferences</a></li> -->
                                 <li><a href="#">Service managers</a></li>
                                 <li><a href="#">Change Password</a></li>
                             </ul>
