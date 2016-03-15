@@ -58,7 +58,7 @@
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
-    
+
 
   </head>
 
@@ -98,7 +98,7 @@
               <a href="index.html" id="proposition-name">Director Conduct Assessment Service</a>
               <ul id="proposition-links">
                 <li><a href="dashboard.html">Insolvency cases</a></li>
-                
+
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -134,142 +134,146 @@
         </ol>
       </div>
 
-    <!-- start of form -->
+      <!-- start of form -->
+
+      <div class="info-container c-align light-bg">
+          <p class="font-large p-group">Case ready for submission</p>
+          <p><a href="case_7_confirm_fasttrack.html">Skip to the submit page</a></p>
+      </div>
+
+          <div class="grid-row">
+              <div class="column-two-thirds">
+                  <h1 class="heading-xlarge">
+                      <span class="heading-secondary">NCL18829292</span>
+                      AdventureWorks Cycles Limited
+                  </h1>
 
 
-        <div class="grid-row">
-            <div class="column-two-thirds">
-                <h1 class="heading-xlarge">
-                    <span class="heading-secondary">NCL18829292</span>
-                    AdventureWorks Cycles Limited
-                </h1>
-
-
-                <form role="form" method="get" action="case_2_company_details.html" aria-label="Case details form">
-                    <h1 class="form-title heading-large">Contact details</h1>
-                    <p>This is the individual who has day to day responsibility for the case</p>
-                    <div class="form-group" aria-label="Contact details" role="group">
-                      <label  for="officerName" class="form-label-bold">
-                        <span class="form-label form-label-bold" id="officerNameLabel">Full name</span> 
-                      </label>
-                      <input id="officerName" class="form-control validate" data-validation="letters" name="officerName" type="text" value="" role="textbox" aria-labelledby="officerNameLabel" />
-                    </div>
-
-                    <div class="form-group" aria-label="Officer's phone number" role="group">
-                      <label  for="phoneNumber" class="form-label-bold">
-                        <span class="form-label form-label-bold" id="phoneNumberLabel">Phone number</span>   
-                      </label>
-                      <input id="phoneNumber" class="form-control validate" data-validation="number" name="phoneNumber" type="text" value="" role="textbox" aria-labelledby="phoneNumberLabel" />
-                    </div>
-
-                    <div class="form-group" aria-label="Officer's email address" role="group">
-                      <label for="emailAddress" class="form-label-bold">
-                        <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>  
-                      </label>
-                      <input id="emailAddress" class="form-control" name="emailAddress" type="text" value="" role="textbox" aria-labelledby="emailAddressLabel" />
-                    </div>
-
-
-
-                    <fieldset>
-                      <div class="form-group" role="radiogroup" aria-label="Case type" >
-                        <h1 class="form-title heading-large">Case type</h1>
-                        <legend class="visually-hidden">Case type</legend>
-                          <label for="caseTypeAdministration" class="block-label">
-                            <input name="caseType" id="caseTypeAdministration" value="Administration" type="radio" role="radio">Administration
-                          </label>
-                          <label for="caseTypeAdministrationReceivership" class="block-label">
-                            <input name="caseType" id="caseTypeAdministrationReceivership" value="Administrative Receivership" type="radio" role="radio">Administrative Receivership
-                          </label>
-                           <label for="caseTypeLiquidation" class="block-label">
-                            <input name="caseType" id="caseTypeLiquidation" value="Liquidation" type="radio" role="radio">Liquidation
-                          </label>
+                  <form role="form" method="get" action="case_2_company_details.html" aria-label="Case details form">
+                      <h1 class="form-title heading-large">Contact details</h1>
+                      <p>This is the individual who has day to day responsibility for the case</p>
+                      <div class="form-group" aria-label="Contact details" role="group">
+                        <label  for="officerName" class="form-label-bold">
+                          <span class="form-label form-label-bold" id="officerNameLabel">Full name</span>
+                        </label>
+                        <input id="officerName" class="form-control" name="officerName" type="text" value="" role="textbox" aria-labelledby="officerNameLabel" />
                       </div>
-                    </fieldset>
+
+                      <div class="form-group" aria-label="Officer's phone number" role="group">
+                        <label  for="phoneNumber" class="form-label-bold">
+                          <span class="form-label form-label-bold" id="phoneNumberLabel">Phone number</span>
+                        </label>
+                        <input id="phoneNumber" class="form-control" name="phoneNumber" type="text" value="" role="textbox" aria-labelledby="phoneNumberLabel" />
+                      </div>
+
+                      <div class="form-group" aria-label="Officer's email address" role="group">
+                        <label for="emailAddress" class="form-label-bold">
+                          <span class="form-label form-label-bold" id="emailAddressLabel">Email address</span>
+                        </label>
+                        <input id="emailAddress" class="form-control" name="emailAddress" type="text" value="" role="textbox" aria-labelledby="emailAddressLabel" />
+                      </div>
 
 
-                    <fieldset>
-                      <div class="form-group" role="group" aria-label="Appointment date">
-                          <h1 class="form-title heading-large">Appointment date</h1>
-                          <legend class="visuallyhidden">Appointment date</legend>
-                          <span class="form-hint">Year must be in YYYY format</span>
-                          <div class="form-date">
-                            <div class="form-group form-group-day" role="group">
-                              <label for="appointmentDateDay">
-                                <span class="form-label form-label-bold" id="appointmentDateDayLabel">Day</span>   
-                              </label>
-                              <input class="form-control" id="appointmentDateDay" name="appointmentDateDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="appointmentDateDayLabel" role="textbox">
-                            </div>
 
-                            <div class="form-group form-group-month" role="group">
-                              <label for="appointmentDateMonth">
-                                  <span class="form-label form-label-bold" id="appointmentDateMonthLabel">Month</span> 
-                              </label>
-                              <input class="form-control" id="appointmentDateMonth" name="appointmentDateMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="appointmentDateMonthLabel" role="textbox">
-                            </div>
+                      <fieldset>
+                        <div class="form-group" role="radiogroup" aria-label="Case type" >
+                          <h1 class="form-title heading-large">Case type</h1>
+                          <legend class="visually-hidden">Case type</legend>
+                            <label for="caseTypeAdministration" class="block-label">
+                              <input name="caseType" id="caseTypeAdministration" value="Administration" type="radio" role="radio">Administration
+                            </label>
+                            <label for="caseTypeAdministrationReceivership" class="block-label">
+                              <input name="caseType" id="caseTypeAdministrationReceivership" value="Administrative Receivership" type="radio" role="radio">Administrative Receivership
+                            </label>
+                             <label for="caseTypeLiquidation" class="block-label">
+                              <input name="caseType" id="caseTypeLiquidation" value="Liquidation" type="radio" role="radio">Liquidation
+                            </label>
+                        </div>
+                      </fieldset>
 
-                            <div class="form-group form-group-year" role="group">
-                              <label for="appointmentDateYear">
-                                  <span class="form-label form-label-bold" id="appointmentDateYearLabel">Year</span> 
-                              </label>
-                              <input class="form-control" id="appointmentDateYear" name="appointmentDateYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="appointmentDateYearLabel" role="textbox">
+
+                      <fieldset>
+                        <div class="form-group" role="group" aria-label="Appointment date">
+                            <h1 class="form-title heading-large">Appointment date</h1>
+                            <legend class="visuallyhidden">Appointment date</legend>
+                            <span class="form-hint">Year must be in YYYY format</span>
+                            <div class="form-date">
+                              <div class="form-group form-group-day" role="group">
+                                <label for="appointmentDateDay">
+                                  <span class="form-label form-label-bold" id="appointmentDateDayLabel">Day</span>
+                                </label>
+                                <input class="form-control" id="appointmentDateDay" name="appointmentDateDay" type="number" pattern="[0-9]*" min="0" max="31" aria-labelledby="appointmentDateDayLabel" role="textbox">
+                              </div>
+
+                              <div class="form-group form-group-month" role="group">
+                                <label for="appointmentDateMonth">
+                                    <span class="form-label form-label-bold" id="appointmentDateMonthLabel">Month</span>
+                                </label>
+                                <input class="form-control" id="appointmentDateMonth" name="appointmentDateMonth" type="number" pattern="[0-9]*" min="0" max="12" aria-labelledby="appointmentDateMonthLabel" role="textbox">
+                              </div>
+
+                              <div class="form-group form-group-year" role="group">
+                                <label for="appointmentDateYear">
+                                    <span class="form-label form-label-bold" id="appointmentDateYearLabel">Year</span>
+                                </label>
+                                <input class="form-control" id="appointmentDateYear" name="appointmentDateYear" type="number" pattern="[0-9]*" min="0" max="2016" aria-labelledby="appointmentDateYearLabel" role="textbox">
+                              </div>
                             </div>
                           </div>
+                      </fieldset>
+  <!-- -->
+                      <div>&nbsp;</div>
+                      <div class="form-group">
+                          <button id="btnSaveAndContinue" class="button" role="button" aria-label="Save and continue">Save and continue</button>
                         </div>
-                    </fieldset>
-<!-- -->
-                    <div>&nbsp;</div>
-                    <div class="form-group">
-                        <button id="btnSaveAndContinue" class="button" role="button" aria-label="Save and continue">Save and continue</button>
+                  </form>
+
+              </div>
+
+
+
+              <div class="column-one-third">
+                  <aside class="related">
+
+                      <div>
+                          <h4 class="heading-medium">Case options</h4>
+                          <nav>
+                              <ul class="list list-links clear-list-styling">
+                                  <li><a href="case_preview.html">One-page preview</a></li>
+                                  <li><a href="case_7_confirm_fasttrack.html">Go to the submit page</a></li>
+                              </ul>
+                          </nav>
                       </div>
-                </form>
 
-            </div>
+                      <div>
+                          <h4 class="heading-medium">Case team</h4>
+                          <nav>
+                              <ul id="collaboratorsList" class="list list-links clear-list-styling">
+                                  <li>Joe Bloggs <br /><a href="#" class="font-xsmall">Remove</a></li>
+                                  <li>David Thomas <span class="hint">(Pending)</span><br /><a href="#" class="font-xsmall">Remove</a></li>
+                              </ul>
+                          </nav>
+                      </div>
 
+                      <div class="lb">
+                          <h4 class="heading-medium"><a href="#" id="btnInviteCollaborators">Invite team members</a></h4>
+                          <form role="form" id="frmInviteCollaborators" method="post" action="/">
+                              <div class="form-group" aria-label="Enter colleagues' email address" role="group">
+                                <label  for="teamEmailAddress">
+                                  <label for="teamEmailAddress" class="form-label-bold" id="teamEmailAddressLabel">Email address</label>
+                                  <span class="form-hint" id="teamEmailAddressHint">Enter email and press enter</span>
+                                </label>
+                                  <input type="text" id="teamEmailAddress" class="form-control" name="teamEmailAddress" aria-labelledby="teamEmailAddressLabel" aria-describedby="teamEmailAddressHint" />
+                              </div>
+                          </form>
+                      </div>
 
+                  </aside>
+              </div>
 
-            <div class="column-one-third">
-                <aside class="related">
-                    
-                    <div>
-                        <h4 class="heading-medium">Case options</h4>
-                        <nav>
-                            <ul class="list list-links clear-list-styling">
-                                <li><a href="case_preview.html">One-page preview</a></li>
-                                <li><a href="case_7_confirm.html">Go to the submit page</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    
-                    <div>
-                        <h4 class="heading-medium">Case team</h4>
-                        <nav>
-                            <ul id="collaboratorsList" class="list list-links clear-list-styling">
-                                <li>Joe Blogg <br /><a href="#" class="font-xsmall">Remove</a></li>
-                                <li>David Thomas <span class="hint">(Pending)</span><br /><a href="#" class="font-xsmall">Remove</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    
-                    <div class="lb">
-                        <h4 class="heading-medium"><a href="#" id="btnInviteCollaborators">Invite collaborators</a></h4>
-                        <form role="form" id="frmInviteCollaborators" method="post" action="/">
-                            <div class="form-group" aria-label="Enter colleagues' email address" role="group">
-                              <label  for="teamEmailAddress">
-                                <label for="teamEmailAddress" class="form-label-bold" id="teamEmailAddressLabel">Email address</label>
-                                <span class="form-hint" id="teamEmailAddressHint">Enter email and press enter</span>
-                              </label>
-                                <input type="text" id="teamEmailAddress" class="form-control" name="teamEmailAddress" aria-labelledby="teamEmailAddressLabel" aria-describedby="teamEmailAddressHint" />
-                            </div>
-                        </form>
-                    </div>
- 
-                </aside>
-            </div>
+          </div>
 
-        </div>
-
-<!-- end of form -->
+  <!-- end of form -->
 
 
 
