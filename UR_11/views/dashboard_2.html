@@ -97,8 +97,8 @@
             <nav id="proposition-menu">
               <a href="index.html" id="proposition-name">Director Conduct Assessment Service</a>
               <ul id="proposition-links">
-                <li><a href="dashboard.html" class="active">Case dashboard</a></li>
-                <li><a href="client_submitted_cases.html">Submitted cases</a></li>
+                <li><a href="dashboard.html" class="active">Insolvency cases</a></li>
+
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -127,13 +127,13 @@
           <div id="global-breadcrumb">
             <ol role="navigation" aria-label="Breadcrumb">
               <li role="option"><a role="link" href="index.html">Conduct Assessment Service</a></li>
-              <li role="option">Case dashboard</li>
+              <li role="option">Insolvency cases</li>
             </ol>
           </div>
 
           <div><!-- TO DO:  Place holder -- filtering and search --></div>
 
-          <h1 class="heading-large">Case dashboard</h1>
+          <h1 class="heading-large">Insolvency cases</h1>
 
         <!--
 
@@ -166,17 +166,17 @@
           <div id="cas-status-keys" role="group">
             <span id="filterOptionsLabel" class="visually-hidden">Filtering options</span>
             <ul role="menu" class="font-medium list-inline">
-                <li role="option"><a role="menuitem" href="#" class="active" aria-label="All cases" aria-describedby="filterOptionsLabel"><span>All cases (10)</span></a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-for-review"><span>Awaiting review (2)</span> </a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-in-progress"><span>In progress (3)</span></a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-not-started"><span>Not started (5)</span></a></li>
-                <!-- <li role="option"><a role="menuitem" href="#cas-status-submitted" ><span>Submitted cases</span></a></li> -->
+                <li role="option"><a role="menuitem" href="#" class="active" aria-label="All cases" aria-describedby="filterOptionsLabel"><span>Live cases</span></a></li>
+                <li role="option"><a role="menuitem" href="#cas-status-for-review"><span>Awaiting review</span> </a></li>
+                <li role="option"><a role="menuitem" href="#cas-status-in-progress"><span>In progress</span></a></li>
+                <li role="option"><a role="menuitem" href="#cas-status-not-started"><span>Not started</span></a></li>
+                <li role="option"><a role="menuitem" href="#cas-status-submitted" ><span>Submitted</span></a></li>
             </ul>
             <div class="clearfix"><!-- clear --></div>
           </div>
 
           <div id="cas-cases-container" class="font-small">
-              <div class="cas-case-wrapper">
+              <div class="cas-case-wrapper cas-status-overdue">
                   <a href="case_1_office_holder_2.html" aria-label="Case: AdventureWorks Cycles Ltd.  Overdue by 3 days is awaiting review.">
                   <div class="grid-row cas-case">
 

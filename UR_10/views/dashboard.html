@@ -51,8 +51,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="../assets/images/opengraph-image.png">
-      
-      
+
+
     <!--[if gt IE 8]><!--><link href="../assets/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -63,7 +63,7 @@
   <body>
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-    
+
 
     <div id="skiplink-container">
       <div>
@@ -72,13 +72,13 @@
     </div>
 
     <div id="global-cookie-message">
-      
+
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-      
+
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="with-proposition">
       <div class="header-wrapper">
         <div class="header-global">
@@ -97,7 +97,7 @@
               <ul id="proposition-links">
                 <li><a href="dashboard.html" class="active">Dashboard</a></li>
                 <li><a href="client_submitted_cases.html">Submitted Cases</a></li>
-                
+
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -107,9 +107,9 @@
       </div>
     </header>
     <!--end header-->
-    
 
-    
+
+
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
@@ -164,9 +164,9 @@
             <span id="filterOptionsLabel" class="visually-hidden">Filtering options</span>
             <ul role="menu" class="font-medium list-inline">
                 <li role="option"><a role="menuitem" href="#" class="active" aria-label="All cases" aria-describedby="filterOptionsLabel"><span>All cases</span> (10)</a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-in-progress" aria-label="Display cases that are in progress"><span>In progress</span> (3)</a></li>  
-                <li role="option"><a role="menuitem" href="#cas-status-for-review" aria-label="Display cases that are awaiting review"><span>Awaiting review</span> (2)</a></li>  
-                <li role="option"><a role="menuitem" href="#cas-status-not-started" aria-label="Display cases that have not started"><span>Not started</span> (5)</a></li> 
+                <li role="option"><a role="menuitem" href="#cas-status-in-progress" aria-label="Display cases that are in progress"><span>In progress</span> (3)</a></li>
+                <li role="option"><a role="menuitem" href="#cas-status-for-review" aria-label="Display cases that are awaiting review"><span>Awaiting review</span> (2)</a></li>
+                <li role="option"><a role="menuitem" href="#cas-status-not-started" aria-label="Display cases that have not started"><span>Not started</span> (5)</a></li>
             </ul>
             <div class="clearfix"><!-- clear --></div>
           </div>
@@ -181,7 +181,7 @@
                               <ul>
                                 <li><h2 class="heading-large">AdventureWorks Cycles Ltd.</h2></li>
                                   <li class="default-copy-colour">
-                                      <span>Reg. 0192828</span> 
+                                      <span>Reg. 0192828</span>
                                       &nbsp;&bull;&nbsp; <span id="case0192828IP"><span class="visually-hidden">Lead IP</span>Paul Reed</span></li>
                               </ul>
                           </div>
@@ -452,9 +452,9 @@
 
           <div class="cas-load-more-wrapper"><a href="#" class="btn-load-more bold-medium">Show more cases</a></div>
         </main>
-        
-        
-        
+
+
+
     <!-- bug reporter to be included
         in all the app pages -->
         <div id="reportBugWrapper" class="font-small">
@@ -475,14 +475,14 @@
                             <div class="form-group" aria-label="What went wrong" role="group">
                                 <label  for="what_wrong" class="form-label-bold">What went wrong</label>
                                 <input id="what_wrong" class="form-control" name="what_wrong" type="text" value="" role="textbox" max="300" />
-                            </div>                            
+                            </div>
                             <div class="form-group">
                                 <div class="error hidden">
                                     <p class="error-message">
                                         Please complete all the fields.
                                     </p>
                                 </div>
-                                
+
                                 <div>&nbsp;</div>
                                 <p class="form-hint no-js-item">Have you saved? You will lose any unsaved modifications on this page</p>
                                 <button id="btnSend" class="button" role="button" aria-label="Send">Send</button>
@@ -492,24 +492,24 @@
         </div>
 
     </div>
-    
+
 
     <!-- Page content goes here -->
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        
+
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            
+
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
+
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-              
+
             </div>
           </div>
 
@@ -531,23 +531,23 @@
 
     <script>
         $(document).ready(function(){
-            
-            var maxCasesToShow = 8;           
-        
+
+            var maxCasesToShow = 8;
+
             //init
             showHideCases($('.cas-case-wrapper').length);
-            
+
             function showHideMoreCasesOption(){
                 if($('.cas-case-wrapper.collapsed').length == 0)
                    $('.cas-load-more-wrapper').hide();
             }
-            
+
             function showHideCases(totalCases){
                 if ( totalCases > maxCasesToShow ){
                     for(i=maxCasesToShow; i<totalCases; i++)
                         $('.cas-case-wrapper:eq('+i+')').hide().addClass('collapsed');
                 }
-                
+
                 showHideMoreCasesOption();
             }
         });
