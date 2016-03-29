@@ -51,39 +51,39 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="../assets/images/opengraph-image.png">
-      
-      
+
+
     <!--[if gt IE 8]><!--><link href="../assets/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-    
+
 <style>
-    td span { display: block;}   
+    td span { display: block;}
 
     .cas-case-wrapper { border: 0 solid #bfc1c3 ; margin-bottom: 15px; }
     .r-align { text-align: right; }
     .c-align { text-align: center; }
     .cas-case .content { padding: 15px; }
     .cas-case #companyDetails { background-color:#f8f8f8;  }
-    .cas-case #dueDate span { 
-        display: block; 
-        padding: 2px 30px 0 0; 
-        font-weight: 700; 
-        color: white; 
+    .cas-case #dueDate span {
+        display: block;
+        padding: 2px 30px 0 0;
+        font-weight: 700;
+        color: white;
         font-size: 19px;
-        line-height: 1.3157894737; 
+        line-height: 1.3157894737;
     }
-    
+
     .cas-status-keys,
     .cas-filter-cases { margin-top: 15px; margin-bottom: 15px; }
     .cas-status-keys li { display: inline-block;  padding-left: 5px; /*width: 160px;*/ margin-right: 30px;  }
-    .cas-status-keys .indicator { 
+    .cas-status-keys .indicator {
         display: block;
-        width: 19px; 
-        height:19px; 
-        margin: 0 5px 15px 0; 
-        
+        width: 19px;
+        height:19px;
+        margin: 0 5px 15px 0;
+
         -webkit-border-radius:10px;
         -moz-border-radius:10px;
         border-radius:10px;
@@ -91,32 +91,32 @@
         border: 1px solid white;
     }
     .clearfix { clear: both;}
-    
+
     .cas-status-approaching-deadline { border-color: #f0ad4e; }
     .cas-status-other { border-color: #5cb85c; }
     .cas-status-past-deadline { border-color: #d9534f; }
-    
+
     /*
     .cas-case-wrapper.cas-status-in-progress { border-color: #f0ad4e; }
     .cas-case-wrapper.cas-status-for-review { border-color: #5cb85c; }
     .cas-case-wrapper.cas-status-overdue { border-color: #d9534f; }
     .cas-case-wrapper.cas-status-not-started { border-color: #999; }
     */
-    
+
     .cas-status-off { background: none; border-color: #bfc1c3 !important; border-style: dotted; }
-    
+
     .cas-load-more-wrapper { padding: 30px 0; text-align: center;}
-    
+
     .cas-search-wrapper { text-align: center; }
-    .cas-search-wrapper input[type="search"] { 
-        width: 45%; 
-        padding: 5px; 
-        margin: 30px 0; 
+    .cas-search-wrapper input[type="search"] {
+        width: 45%;
+        padding: 5px;
+        margin: 30px 0;
     }
 
 
     input[type="submit"] {
-        
+
         width: 35px;
         height: 35px;
         border: 1px solid #005ea5;
@@ -139,30 +139,30 @@
         top: 0;
         */
     }
- 
+
     .heading-1,
     .heading-2,
-    .heading-3{     
+    .heading-3{
         font-family: "nta",Arial,sans-serif;
         font-size: 24px;
         line-height: 1.25;
         font-weight: 700;
-        text-transform: none; 
+        text-transform: none;
     }
-    
+
     .heading-3 { font-size: 30px; }
     .heading-1 { font-size: 19px; }
-    
+
     .muted-copy{ color:#BFC1C3;  }
 
 </style>
-    
+
   </head>
 
   <body>
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-    
+
 
     <div id="skiplink-container">
       <div>
@@ -171,13 +171,13 @@
     </div>
 
     <div id="global-cookie-message">
-      
+
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-      
+
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="with-proposition">
       <div class="header-wrapper">
         <div class="header-global">
@@ -192,11 +192,10 @@
           <div class="content">
             <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
             <nav id="proposition-menu">
-              <a href="index.html" id="proposition-name">Director Conduct Assessment Service</a>
+              <a href="index.html" id="proposition-name">Director Conduct Reporting Service</a>
               <ul id="proposition-links">
-                <li><a href="dashboard.html">Insolvency cases</a></li>
-                
-                
+                <li><a href="dashboard.html" class="active">Case dashboard</a></li>
+                <li><a href="client_submitted_cases.html">Submitted cases</a></li>
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -205,17 +204,17 @@
         </div>
       </div>
     </header>
-      
+
 
     <!--end header-->
-    
 
-    
+
+
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
-      
-      
+
+
     <div class="elements-index" id="content" role="main">
       <div class="phase-banner-beta">
         <p>
@@ -223,19 +222,19 @@
           <span>This is a new service – your <a href="http://www.surveymonkey.com" target="_blank">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-        
+
       <div id="global-breadcrumb">
         <ol>
           <li><a href="index.html">Conduct Assessment Service</a></li>
           <li>Dashboard</li>
         </ol>
       </div>
-        
+
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
-    
+
     <!--
 
-        
+
       <div class="grid-row">
           <div class="column-two-thirds">
                 <h3 class="heading-2">Sorry, we don't have anything to show you.</h3>
@@ -243,12 +242,12 @@
       </div>
 
 -->
-        
+
       <div class="cas-search-wrapper">
         <form action="/g-cloud/search" method="get" class="search-box" role="search">
             <input type="search" class="text-box" name="q" placeholder="Search company name or registration number">
             <input class="submit" type="submit" value="Search">
-        </form>  
+        </form>
       </div>
 
     <style>
@@ -257,25 +256,25 @@
         #casCases a:hover h3 { text-decoration: underline;}
         #casCases h4 { margin-bottom: 30px;  }
         #casCases .lb { margin-top: 10px; }
-        #casCases .badge { background:#333; 
-                        padding: 5px 20px 3px 20px; 
-                        border-radius:50px; 
-                        color: white; } 
+        #casCases .badge { background:#333;
+                        padding: 5px 20px 3px 20px;
+                        border-radius:50px;
+                        color: white; }
         #dueDate { font-size: 19px; }
     </style>
-        
-        
+
+
     <div class="c-align">
         <!-- Sort by <a href="#">Overdue</a> | <a href="#">A-Z</a> -->
     </div>
     <div>&nbsp;</div>
-        
+
     <div id="casCases" class="grid-row">
             <div class="column-one-third">
             <div class="cas-group">
                 <h4 class="heading-2"><span class="badge">5</span> Not started</h4>
 
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-approaching-deadline">
                         <ul>
@@ -285,7 +284,7 @@
                         </ul>
                     </div>
                 </a>
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-other">
                         <ul>
@@ -295,7 +294,7 @@
                         </ul>
                     </div>
                 </a>
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-other">
                         <ul>
@@ -329,7 +328,7 @@
                         </ul>
                     </div>
                 </a>
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-past-deadline">
                         <ul>
@@ -339,7 +338,7 @@
                         </ul>
                     </div>
                 </a>
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-approaching-deadline">
                         <ul>
@@ -349,7 +348,7 @@
                         </ul>
                     </div>
                 </a>
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-approaching-deadline">
                         <ul>
@@ -373,7 +372,7 @@
                         </ul>
                     </div>
                 </a>
-                
+
                 <a href="case_1_office_holder.html">
                     <div class="cas-case cas-status-past-deadline">
                         <ul>
@@ -386,29 +385,29 @@
             </div>
         </div>
     </div>
-        
 
-        
+
+
 
     </div>
-    
+
 
     <!-- Page content goes here -->
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        
+
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            
+
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
+
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-              
+
             </div>
           </div>
 
@@ -428,18 +427,18 @@
 
     <script>
         $(document).ready(function(){
-            
 
-            
+
+
             $('input[type="search"]').on('keyup', function(){
                 var searchStr = $(this).val();
                 $('.cas-group a').hide().each(function(){
                     var t = $(this).find('li').text().toLowerCase();
                     if(t.indexOf(searchStr) != -1)
                         $(this).show();
-                }); 
+                });
             });
-            
+
 
         });
     </script>

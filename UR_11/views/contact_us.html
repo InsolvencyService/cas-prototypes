@@ -90,20 +90,21 @@
             </a>
           </div>
         </div>
-          <div class="header-proposition">
-              <div class="content">
-                <!-- <a href="#proposition-links" class="js-header-toggle menu">Menu</a> -->
-                <nav id="proposition-menu">
-                  <a href="index.html" id="proposition-name">Director Conduct Assessment Service</a>
-                  <ul id="proposition-links">
-                    <li><a href="dashboard.html">Insolvency cases</a></li>
-                    
-                    <li><a href="settings.html">Settings</a></li>
-                    <li><a href="client_logout.html">Logout</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+
+        <div class="header-proposition">
+          <div class="content">
+            <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+            <nav id="proposition-menu">
+              <a href="index.html" id="proposition-name">Director Conduct Reporting Service</a>
+              <ul id="proposition-links">
+                <li><a href="dashboard.html">Case dashboard</a></li>
+                <li><a href="client_submitted_cases.html">Submitted cases</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="client_logout.html">Logout</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <!--end header-->
@@ -137,22 +138,22 @@
     <div role="group">
         <h1 class="form-title heading-xlarge">Contact us</h1>
         <p>
-            Please use the form below to contact us about this service. 
+            Please use the form below to contact us about this service.
         </p>
         <form role="form" method="get" action="contact_us_success.html">
-            
+
             <div class="grid-row">
                 <div class="column-two-thirds">
                     <div class="form-group" aria-label="Contact details" role="group">
                       <label  for="cName" class="form-label-bold">
-                        <span class="form-label form-label-bold" id="cNameLabel">Your name</span> 
+                        <span class="form-label form-label-bold" id="cNameLabel">Your name</span>
                       </label>
                       <input id="cName" class="form-control" name="cName" type="text" value="" role="textbox" aria-labelledby="cNameLabel" />
                     </div>
 
                     <div class="form-group" aria-label="Contact details" role="group">
                       <label  for="cEmail" class="form-label-bold">
-                        <span class="form-label form-label-bold" id="cEmailLabel">Email address</span> 
+                        <span class="form-label form-label-bold" id="cEmailLabel">Email address</span>
                       </label>
                       <input id="cEmail" class="form-control" name="cEmail" type="text" value="" role="textbox" aria-labelledby="cEmailLabel" />
                     </div>
@@ -179,8 +180,8 @@
 
             <div class="form-group" aria-label="Contact details" role="group">
               <label  for="cMessage" class="form-label-bold">
-                <span class="form-label form-label-bold" id="cMessageLabel">Message</span> 
-                <span class="form-hint" id="cMessageHint">For all case specific issues, please ensure you provide <br />the company name and reference number</span> 
+                <span class="form-label form-label-bold" id="cMessageLabel">Message</span>
+                <span class="form-hint" id="cMessageHint">For all case specific issues, please ensure you provide <br />the company name and reference number</span>
               </label>
                 <textarea id="cMessage" class="form-control" name="cMessage" aria-labelledby="cMessageLabel cMessageHint" rows="10"></textarea>
                 <div id="characterCounter" class="form-hint"><span>0</span> characters left</div>
@@ -241,35 +242,35 @@
     <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
     <script src="../assets/javascripts/application.js" type="text/javascript"></script>
     <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
-      
+
     <style>
         #characterCounter { margin-top: 20px; }
         .red-copy { color: #B10E1E; }
     </style>
-      
+
     <script>
         $('#cMessage').on('keyup change copy cut paste', function(e){
             countChar($(this));
         });
-        
+
         var maxCharactersAllowed = 3000;
         $('#characterCounter span').text(maxCharactersAllowed);
-        
+
         function countChar(t) {
             var len = t.val().length;
 
-            if (len > maxCharactersAllowed) 
-              t.val( t.val().substring(0, maxCharactersAllowed) ); 
-            
+            if (len > maxCharactersAllowed)
+              t.val( t.val().substring(0, maxCharactersAllowed) );
+
             var ccnt = maxCharactersAllowed - len < 0 ? 0 : maxCharactersAllowed - len;
             $('#characterCounter span').text(ccnt);
-          
-            
+
+
             if (maxCharactersAllowed - len < 100)
                 $('#characterCounter').addClass('red-copy');
             else
                 $('#characterCounter').removeClass('red-copy');
-          };  
+          };
     </script>
   </body>
 </html>

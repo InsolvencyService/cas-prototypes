@@ -52,8 +52,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="../assets/images/opengraph-image.png">
-      
-      
+
+
     <!--[if gt IE 8]><!--><link href="../assets/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -64,7 +64,7 @@
   <body>
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-    
+
 
     <div id="skiplink-container">
       <div>
@@ -73,13 +73,13 @@
     </div>
 
     <div id="global-cookie-message">
-      
+
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-      
+
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="with-proposition">
       <div class="header-wrapper">
         <div class="header-global">
@@ -94,11 +94,10 @@
           <div class="content">
             <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
             <nav id="proposition-menu">
-              <a href="index.html" id="proposition-name">Director Conduct Assessment Service</a>
+              <a href="index.html" id="proposition-name">Director Conduct Reporting Service</a>
               <ul id="proposition-links">
-                <li><a href="dashboard.html">Insolvency cases</a></li>
-                
-                
+                <li><a href="dashboard.html" class="active">Case dashboard</a></li>
+                <li><a href="client_submitted_cases.html">Submitted cases</a></li>
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -108,14 +107,14 @@
       </div>
     </header>
     <!--end header-->
-    
 
-    
+
+
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
-      
-      
+
+
     <div class="elements-index" id="content" role="main">
       <div class="phase-banner-beta">
         <p>
@@ -123,20 +122,20 @@
           <span>This is a new service – your <a href="http://www.surveymonkey.com" target="_blank">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-        
+
       <div id="global-breadcrumb">
         <ol>
           <li><a href="index.html">Conduct Assessment Service</a></li>
           <li>Dashboard</li>
         </ol>
       </div>
-        
+
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
 
-    
+
     <!--
 
-        
+
       <div class="grid-row">
           <div class="column-one-half">
                 <h3 class="heading-2">Sorry, we don't have anything to show you.</h3>
@@ -144,7 +143,7 @@
       </div>
 
 -->
-        
+
       <div class="search-input-wrapper">
         <form role="form" method="get" action="ad_users_no_results.html">
             <p class="visually-hidden" id="search-hint">Search case by name or number...</p>
@@ -152,31 +151,31 @@
             <input type="submit" role="button" aria-label="Search" value="Search" />
         </form>
       </div>
-        
+
     <div class="clearfix"><!-- clear -->&nbsp;</div>
-    
+
       <div class="cas-status-keys">
             <ul class="font-medium list-inline">
                 <li><a href="#cas-status-overdue"><span>All</span> (10)</a></li>
-                <li><a href="#cas-status-in-progress"><span>In progress</span> (3)</a></li>  
-                <li><a href="#cas-status-for-review"><span>For review</span> (2)</a></li>  
-                <li><a href="#cas-status-not-started"><span>Not started</span> (5)</a></li> 
-                
+                <li><a href="#cas-status-in-progress"><span>In progress</span> (3)</a></li>
+                <li><a href="#cas-status-for-review"><span>For review</span> (2)</a></li>
+                <li><a href="#cas-status-not-started"><span>Not started</span> (5)</a></li>
+
                 <!-- <li><i class="cas-status-submitted indicator cas-status-off"></i><a href="#">Submitted (0)</a></li> -->
             </ul>
             <div class="clearfix"><!-- clear --></div>
       </div>
     <!--
       <div class="column-one-quarter cas-filter-cases">
-              
+
       </div>
       -->
-      
+
       <div id="cas-cases-container" class="font-small">
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -185,7 +184,7 @@
                           </ul>
                       </div>
                   </div>
-                
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <!-- <span>For review</span> -->
@@ -195,17 +194,17 @@
                           </ul>
                       </div>
                   </div>
-                  
+
               </div>
               </a>
           </div>
-          
+
            <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -214,7 +213,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <ul>
@@ -223,18 +222,18 @@
                           </ul>
                       </div>
                   </div>
-                  
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper cas-status-overdue">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
-                  
+
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -243,7 +242,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <ul>
@@ -252,17 +251,17 @@
                           </ul>
                       </div>
                   </div>
-                  
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper cas-status-overdue">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -271,7 +270,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <ul>
@@ -281,19 +280,19 @@
                       </div>
                   </div>
 
-                  
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
-          
+
+
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
-                  
+
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -302,7 +301,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <!--  <span>Not started</span> -->
@@ -312,19 +311,19 @@
                           </ul>
                       </div>
                   </div>
-                  
-                  
+
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper cas-status-in-progress">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
-                  
+
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -333,7 +332,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <!--  <span>In progress</span> -->
@@ -343,18 +342,18 @@
                           </ul>
                       </div>
                   </div>
-                  
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
 
-          
+
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -363,7 +362,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <!--  <span>Not started</span> -->
@@ -373,14 +372,14 @@
                           </ul>
                       </div>
                   </div>
-                  
-                  
+
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
@@ -392,7 +391,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
                           <!-- <span>Not started</span> -->
@@ -402,19 +401,19 @@
                           </ul>
                       </div>
                   </div>
-                  
-                  
+
+
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
-                  
+
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -423,7 +422,7 @@
                           </ul>
                       </div>
                   </div>
-                  
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
 
@@ -436,15 +435,15 @@
               </div>
               </a>
           </div>
-          
+
           <div class="column-three-quarters dashboard-divider">&nbsp;</div>
-          
+
           <div class="cas-case-wrapper">
               <a href="case_1_office_holder.html">
               <div class="grid-row cas-case" >
-                  
-                  
-                  
+
+
+
                   <div class="column-one-half">
                       <div id="companyDetails" class="content">
                           <ul>
@@ -453,8 +452,8 @@
                           </ul>
                       </div>
                   </div>
-                  
-                  
+
+
                   <div class="column-one-quarter">
                       <div id="dueDate" class="c-align content">
 
@@ -464,39 +463,39 @@
                           </ul>
                       </div>
                   </div>
-                  
+
               </div>
               </a>
           </div>
-          
-          
-      </div>
-        
 
-      
+
+      </div>
+
+
+
       <div class="cas-load-more-wrapper">
-   
+
           <a href="#" class="btn-load-more bold-medium">Show more cases</a></div>
 
     </div>
-    
+
 
     <!-- Page content goes here -->
 
     <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        
+
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-            
+
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
+
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-              
+
             </div>
           </div>
 
@@ -516,32 +515,32 @@
 
     <script>
         $(document).ready(function(){
-            
+
              for(i=8; i<$('.cas-case-wrapper').length; i++){
                  $('.cas-case-wrapper:eq('+i+')').hide();
              }
 
-            
+
             $('.btn-load-more').on('click', function(e){
                 e.preventDefault();
                 for(i=8; i<$('.cas-case-wrapper').length; i++){
                      $('.cas-case-wrapper:eq('+i+')').removeClass('hidden').slideDown();
                  }
-                
-                
+
+
                 if($('.cas-case-wrapper.hidden').length == 0)
                     $('.btn-load-more').hide();
             });
-            
+
             $('input[type="search"]').on('keyup', function(){
                 var searchStr = $(this).val();
                 $('.cas-case-wrapper').hide().each(function(){
                     var t = $(this).find('#companyDetails li').text().toLowerCase();
                     if(t.indexOf(searchStr) != -1)
                         $(this).show();
-                }); 
+                });
             });
-            
+
              $('.cas-status-keys a').on('click', function(e){
                 e.preventDefault();
                  var searchStr = $(this).find('span').text().toLowerCase(),

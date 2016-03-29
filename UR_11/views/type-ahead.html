@@ -51,21 +51,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:image" content="../assets/images/opengraph-image.png">
-      
-      
+
+
     <!--[if gt IE 8]><!--><link href="../assets/stylesheets/elements-page.css"  rel="stylesheet" type="text/css"><!--<![endif]-->
     <!--[if IE 6]><link href="../assets/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="../assets/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 8]><link href="../assets/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-    
+
     <link href="../assets/stylesheets/overrider.css" media="screen" rel="stylesheet" type="text/css" />
-    
+
   </head>
 
   <body>
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
-    
+
 
     <div id="skiplink-container">
       <div>
@@ -74,13 +74,13 @@
     </div>
 
     <div id="global-cookie-message">
-      
+
         <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
-      
+
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="with-proposition">
       <div class="header-wrapper">
         <div class="header-global">
@@ -94,13 +94,13 @@
         <div class="header-proposition">
           <div class="content">
             <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-              
+
             <nav id="proposition-menu">
               <a href="index.html" id="proposition-name">Director Conduct Assessment Service</a>
               <ul id="proposition-links">
                 <li><a href="dashboard.html">Insolvency cases</a></li>
-                
-                
+
+
                 <li><a href="change_password.html">Change Password</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -111,37 +111,37 @@
       </div>
     </header>
     <!--end header-->
-    
 
-    
+
+
 
     <div id="global-header-bar"></div>
     <!--end global-header-bar-->
-      
-      
+
+
     <main class="elements-index" id="content" role="main">
-        
+
       <div class="phase-banner-beta">
         <p>
           <strong class="phase-tag">BETA</strong>
           <span>This is a new service – your <a href="http://www.surveymonkey.com" target="_blank">feedback</a> will help us to improve it.</span>
         </p>
       </div>
-        
+
       <div id="global-breadcrumb">
         <ol>
           <li><a href="/">Home</a></li>
-          <li>Conduct Assessment Service</li>
+          <li>Director Conduct Reporting Service</li>
         </ol>
       </div>
-        
+
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
-        
-    
+
+
     <div class="grid-row">
         <div class="column-two-thirds">
             <h1 class="form-title heading-xlarge">JS playground</h1>
-            
+
             <form role="form" method="post" action="/">
                 <div class="form-group" role="group">
 
@@ -149,42 +149,42 @@
                     <span class="form-label form-label-bold" id="countryLabel">Country</span>
                   </label>
 
-                  <input role="textbox" id="country" class="form-control validate" data-validation="required email" name="country" type="text" value="" aria-labelledby="countryLabel" /> 
-                    
+                  <input role="textbox" id="country" class="form-control validate" data-validation="required email" name="country" type="text" value="" aria-labelledby="countryLabel" />
+
                   <div>&nbsp;<!-- --></div>
                   <div>
                     <span class="form-hint" id="countryOutputHint"></span>
                     <ul id="countryOutput">
-                      
+
                     </ul>
-                  </div>    
+                  </div>
                 </div>
-                
+
                 <div class="form-group" role="group">
                     <button class="button" role="button">Log in</button>
                 </div>
             </form>
-            
-            
+
+
 
         </div>
-        
 
-        
+
+
     </div>
-      
+
     </main>
-    
+
 
     <!-- Page content goes here -->
    <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
-        
+
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
-              
+
             <ul>
               <li><a href="#">Privacy</a></li>
               <li><a href="#">Cookies</a></li>
@@ -195,9 +195,9 @@
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
+
                 <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
-              
+
             </div>
           </div>
 
@@ -214,57 +214,57 @@
 
     <script src="../assets/javascripts/govuk-template.js" type="text/javascript"></script>
     <script src="../assets/javascripts/jquery.js" type="text/javascript"></script>
-    
+
     <script src="../assets/javascripts/vendor/bind.js" type="text/javascript"></script>
     <script src="../assets/javascripts/selection-buttons.js" type="text/javascript"></script>
-      
+
     <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
     <script src="../assets/javascripts/application.js" type="text/javascript"></script>
     <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
-      
+
     <script>
         $(document).ready(function(){
             var arrCountries = [];
-            
+
             $.ajax({
               url: "../assets/feed/countrylist.json",
               context: document.body
             }).done(function(d) {
                 arrCountries = d;
             });
-            
+
             $('#country').on('keyup', function(e){
-                
+
                 if (e.which==20)
                     return;
-                
+
                 var inputValue = $('#country').val();
-                
+
                 $('#countryOutput li').remove();
                 $('#countryOutputHint').html('');
-                
+
                 if(inputValue == '')
                     return;
-                
+
                 var foundCount = 0;
                 $.each(arrCountries, function( i,d ) {
-                                        
+
                     n = '_'+d.toLowerCase();
                     if( n.indexOf('_'+inputValue.toLowerCase()) >= 0 ){
                         if(foundCount < 3)
                             $('<li>'+d+'</li>').appendTo('#countryOutput');
-                        
+
                         foundCount++;
                     }
-                    
+
                     if(foundCount > 3)
                         $('#countryOutputHint').html('Showing 3 of ' + foundCount + ' countries starting with \'<strong class="bold-small">' + inputValue + '</strong>\'');
-                    
+
                 });
             });
         });
     </script>
-      
-      
+
+
   </body>
 </html>
