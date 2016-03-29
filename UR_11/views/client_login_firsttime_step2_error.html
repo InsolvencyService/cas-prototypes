@@ -149,7 +149,7 @@
         <ul class="error-summary-list">
           <li><a href="#tempPassword">Invalid temporary password</a></li>
           <li><a href="#password">Enter a different password</a></li>
-          <li><a href="#confirmPassword">Re-enter confirm password</a></li>
+          <li><a href="#password">Passwords do not match</a></li>
         </ul>
 
       </div>
@@ -159,7 +159,7 @@
         <div class="column-two-thirds">
             <form role="form" method="get" action="dashboard_no_cases.html">
 
-                <h1 class="form-title heading-large">One last thing before we take you to the dashboard, Joe...</h1>
+                <h1 class="form-title heading-large">One last thing before we take you to the dashboard.</h1>
                 <p>Please change your password to something that you can remember.</p>
 
                 <div class="form-group error" role="group">
@@ -174,7 +174,7 @@
                 <div class="form-group error" role="group">
                   <label  for="password">
                       <span class="form-label form-label-bold" id="passwordLabel">New password</span>
-                      <span class="form-hint" id="passwordHint">Your password must be at least 8 characters long and must contain at least 1 lower-case letter, 1 capital letter and 1 number</span>
+                      <span class="form-hint" id="passwordHint">Your password must be between 8-20 characters long and must contain at least 1 lower-case letter, 1 capital letter, 1 number, and 1 special character [list of special characters]</span>
                       <span class="error-message" id="errorMessagePassword">Password does not meet the requirements</span>
                   </label>
                   <input role="textbox" id="password" class="form-control" name="password" type="password" maxlength="20" value="" aria-labelledby="passwordLabel passwordHint" />
@@ -183,7 +183,7 @@
                 <div class="form-group error" role="group">
                   <label  for="confirmPassword">
                       <span class="form-label form-label-bold" id="confirmPasswordLabel">Re-enter password</span>
-                      <span class="error-message" id="errorMessageConfirmPassword">Does not match password</span>
+                      <span class="error-message" id="errorMessageConfirmPassword">Passwords do not match</span>
                   </label>
                   <input role="textbox" id="confirmPassword" class="form-control" name="confirmPassword" type="password" maxlength="20" value="" aria-labelledby="confirmPasswordLabel" aria-describedby="errorMessageConfirmPassword" />
                 </div>
