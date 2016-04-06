@@ -98,7 +98,7 @@
               <a href="index.html" id="proposition-name">Director Conduct Reporting Service</a>
               <ul id="proposition-links">
                 <li><a href="dashboard.html">Case dashboard</a></li>
-                <li><a href="client_submitted_cases.html" class="active">Submitted cases</a></li>
+                <li><a href="client_submitted_cases.html">Submitted cases</a></li>
                 <li><a href="settings.html">Settings</a></li>
                 <li><a href="client_logout.html">Logout</a></li>
               </ul>
@@ -128,68 +128,59 @@
       <div id="global-breadcrumb">
         <ol>
           <li><a href="index.html">Director Conduct Reporting Service</a></li>
-          <li>Submitted cases</li>
+          <li>Provide new information</li>
         </ol>
       </div>
 
       <div><!-- TO DO:  Place holder -- filtering and search --></div>
 
-      <h1 class="heading-large">Submitted cases</h1>
 
-      <div class="search-input-wrapper">
-        <form role="search" method="get" action="ad_users_no_results.html">
-            <label class="search-input-placeholder">Search case...</label>
-            <input autocomplete="off" type="search" class="form-control search-input-with-placeholder" aria-label="Filter cases using case name"  />
-            <input type="submit" role="button" aria-label="Search" value="Search" />
-            <div class="clearfix"><!-- clear --></div>
-        </form>
-      </div>
+    <div role="group">
+        <h1 class="form-title heading-xlarge">Provide new information</h1>
+        <p>
+            Please use the form below to contact us about any new information you have regarding a case.
+        </p>
+        <form role="form" method="get" action="contact_us_success.html">
 
-          <div class="clearfix"><!-- clear -->&nbsp;</div>
+            <div class="grid-row">
+                <div class="column-two-thirds">
+                    <div class="form-group" aria-label="Contact details" role="group">
+                      <label  for="cName" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="cNameLabel">Your name</span>
+                      </label>
+                      <input id="cName" class="form-control" name="cName" type="text" value="" role="textbox" aria-labelledby="cNameLabel" />
+                    </div>
 
-          <div id="cas-status-keys" role="group">
-            <span id="filterOptionsLabel" class="visually-hidden">Filtering options</span>
-            <ul role="menu" class="font-medium list-inline">
-                <li role="option"><a role="menuitem" href="#" class="active" aria-label="All cases" aria-describedby="filterOptionsLabel"><span>All cases</span> (3)</a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-in-progress" aria-label="Display cases that have sifted in"><span>Sifted in</span> (1)</a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-for-review" aria-label="Display cases that have sifted out"><span>Sifted out</span> (1)</a></li>
-                <li role="option"><a role="menuitem" href="#cas-status-not-started" aria-label="Display cases that are pending"><span>Awaiting sift decision</span> (1)</a></li>
-            </ul>
-            <div class="clearfix"><!-- clear --></div>
-          </div>
+                    <div class="form-group" aria-label="Contact details" role="group">
+                      <label  for="cEmail" class="form-label-bold">
+                        <span class="form-label form-label-bold" id="cEmailLabel">Email address</span>
+                      </label>
+                      <input id="cEmail" class="form-control" name="cEmail" type="text" value="" role="textbox" aria-labelledby="cEmailLabel" />
+                    </div>
+                </div>
+            </div>
 
-    <div class="grid-row">
-        <div class="column-two-thirds list-submitted-cases">
-
-          <ul class="list">
-                <li><a href="#" class="bold-large">The baguette house ltd.</a></li>
-                <li><span class="form-hint">Submitted on 23-03-2016 &nbsp;&bull;&nbsp; Awaiting sift decision</span></li>
-            </ul>
-
-            <ul class="list">
-                <li><a href="case_preview_submitted.html" class="bold-large">AdventureWorks Cycles Limited</a></li>
-                <li><span class="form-hint">Submitted on 01-02-2016 &nbsp;&bull;&nbsp; Sifted in </span></li>
-                <li><span class="form-hint"><a href="contact_new_info.html">Provide new information</a></span></span></li>
-            </ul>
-
-
-            <ul class="list">
-                <li><!-- <span class="font-medium high-priority">Action required</span>--> <a href="#" class="bold-large">Coho Vineyard &amp; Winery</a></li>
-                <li><span class="form-hint">Submitted on 21-01-2016 &nbsp;&bull;&nbsp; Sifted out</span></span></li>
-                <li><span class="form-hint"><a href="#">Provide new information</a></span></span></li>
-            </ul>
+            <div class="form-group" aria-label="Contact details" role="group">
+              <label  for="cMessage" class="form-label-bold">
+                <span class="form-label form-label-bold" id="cMessageLabel">Message</span>
+                <span class="form-hint" id="cMessageHint">Please ensure you provide the company name and </br >reference number</span>
+              </label>
+                <textarea id="cMessage" class="form-control" name="cMessage" aria-labelledby="cMessageLabel cMessageHint" rows="10"></textarea>
+                <div id="characterCounter" class="form-hint"><span>0</span> characters left</div>
+            </div>
 
             <div>&nbsp;</div>
-            <!-- <p><a href="#"><strong class="bold-small">Show more cases</strong></a></p> -->
-        </div>
+            <div class="form-group">
+                <button id="btnSubmit" class="button" role="button" aria-label="Submit">Submit</button>
+            </div>
+        </form>
     </div>
 
     </main>
 
 
     <!-- Page content goes here -->
-
-    <footer class="group js-footer" id="footer" role="contentinfo">
+   <footer class="group js-footer" id="footer" role="contentinfo">
 
       <div class="footer-wrapper">
 
@@ -233,6 +224,35 @@
     <script src="../assets/javascripts/vendor/details.polyfill.js" type="text/javascript"></script>
     <script src="../assets/javascripts/application.js" type="text/javascript"></script>
     <script src="../assets/javascripts/inss.js" type="text/javascript"></script>
-    <script src="../assets/javascripts/inss_submitted_cases.js" type="text/javascript"></script>
+
+    <style>
+        #characterCounter { margin-top: 20px; }
+        .red-copy { color: #B10E1E; }
+    </style>
+
+    <script>
+        $('#cMessage').on('keyup change copy cut paste', function(e){
+            countChar($(this));
+        });
+
+        var maxCharactersAllowed = 3000;
+        $('#characterCounter span').text(maxCharactersAllowed);
+
+        function countChar(t) {
+            var len = t.val().length;
+
+            if (len > maxCharactersAllowed)
+              t.val( t.val().substring(0, maxCharactersAllowed) );
+
+            var ccnt = maxCharactersAllowed - len < 0 ? 0 : maxCharactersAllowed - len;
+            $('#characterCounter span').text(ccnt);
+
+
+            if (maxCharactersAllowed - len < 100)
+                $('#characterCounter').addClass('red-copy');
+            else
+                $('#characterCounter').removeClass('red-copy');
+          };
+    </script>
   </body>
 </html>

@@ -149,6 +149,7 @@ form.focus .search-input-placeholder{ display: none; }
 
 .highlight-red { background-color: red; }
 .highlight-grey { background-color: grey; }
+.highlight-green { background-color: #006435; }
 .highlight { color: white; padding: 0 10px; }
 
 .list-inline li { float: left; }
